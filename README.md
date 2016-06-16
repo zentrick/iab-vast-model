@@ -5,9 +5,9 @@
 Base classes for IAB VAST handling. Supports the full IAB VAST 3.0 specification.
 
 To parse a tag into model objects, use
-[iab-vast-parser](https://github.com/zentrick/iab-vast-parser).
+[iab-vast-parser](https://www.npmjs.com/package/iab-vast-parser).
 To load and parse a chain of VAST files, use
-[iab-vast-loader](https://github.com/zentrick/iab-vast-loader).
+[iab-vast-loader](https://www.npmjs.com/package/iab-vast-loader).
 
 ## Usage
 
