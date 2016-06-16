@@ -1,0 +1,22 @@
+{
+  "source": {
+    "include": "src"
+  },
+  "templates": {
+    "cleverLinks": true,
+    "systemName": "iab-vast-model",
+    "copyright": "Copyright &copy; 2016 Zentrick nv",
+    "sort": false
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "opts": {
+    "recurse": true,
+    "destination": "doc",
+    "encoding": "utf8",
+    "verbose": true,
+    "template": "node_modules/ink-docstrap/template",
+    "readme": "README.md"
+  }
+}
