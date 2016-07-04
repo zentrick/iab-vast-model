@@ -1,7 +1,7 @@
 /**
  * Represents a tracking event configuration.
  *
- * @class TrackingEvents
+ * @class TrackingEvent
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
