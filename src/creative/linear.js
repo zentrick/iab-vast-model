@@ -22,7 +22,7 @@ export class Linear extends Creative {
   /**
    * The time interval after which this linear creative can be skipped.
    *
-   * @type {Skipoffset}
+   * @type {TimeOffset}
    */
   get skipoffset () {
     return this._skipoffset
