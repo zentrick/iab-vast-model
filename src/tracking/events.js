@@ -1,5 +1,6 @@
 /**
- * Configures tracking events. Binds VAST event types to URIs.
+ * Configures tracking events. Binds VAST event types to arrays of
+ * {@link TrackingEvent} instances.
  *
  * @class TrackingEvents
  * @author Tim De Pauw <tim.depauw@zentrick.com>
@@ -20,23 +21,23 @@ export class TrackingEvents {
   }
 
   /**
-   * Gets the tracking URIs for the given event type.
+   * Gets the tracking event configurations for the given event type.
    *
    * @param {string} event - the event type.
-   * @return {string[]} the URIs.
+   * @return {TrackingEvent[]} the tracking event configurations.
    */
   get (event) {
     return this._map[event] || []
   }
 
   /**
-   * Adds a tracking URI for the given event type.
+   * Adds a tracking event configuration for the given event type.
    *
    * @param {string} event - the event type.
-   * @param {string} uri - the URI.
+   * @param {TrackingEvent} config - the tracking event configuration.
    */
-  add (event, uri) {
+  add (event, config) {
     this._map[event] = this._map[event] || []
-    this._map[event].push(uri)
+    this._map[event].push(config)
   }
 }

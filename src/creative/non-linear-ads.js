@@ -1,5 +1,5 @@
 import {Creative} from './base'
-import {TrackingEvents} from '../util/tracking-events'
+import {TrackingEvents} from '../tracking/events'
 
 /**
  * Represents a creative with non-linear ads.

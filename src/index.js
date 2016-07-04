@@ -32,9 +32,10 @@ export {Click} from './util/click'
 export {IconClicks} from './clicks/icon'
 export {VideoClicks} from './clicks/video'
 
-export {TrackingEvents} from './util/tracking-events'
+export {TrackingEvent} from './tracking/event'
+export {TrackingEvents} from './tracking/events'
 
-export {AbsoluteSkipoffset} from './skipoffset/absolute'
-export {RelativeSkipoffset} from './skipoffset/relative'
+export {AbsoluteTimeOffset} from './time-offset/absolute'
+export {RelativeTimeOffset} from './time-offset/relative'
 
 export {SortedList} from './util/sorted-list'

@@ -1,4 +1,5 @@
-import {TrackingEvents} from '../../../src/util/tracking-events'
+import {TrackingEvent} from '../../../src/tracking/event'
+import {TrackingEvents} from '../../../src/tracking/events'
 
 describe('TrackingEvents', () => {
   const createInstance = () => {
@@ -10,20 +11,23 @@ describe('TrackingEvents', () => {
     it('adds a binding', () => {
       const inst = createInstance()
       const type = 'firstQuartile'
-      const uri = 'https://example.com/firstQuartile'
-      inst.add(type, uri)
-      expect(inst.get(type)).to.contain(uri)
+      const conf = new TrackingEvent()
+      conf.uri = 'https://example.com/firstQuartile'
+      inst.add(type, conf)
+      expect(inst.get(type)).to.contain(conf)
     })
 
     it('adds multiple bindings for the same type', () => {
       const inst = createInstance()
       const type = 'firstQuartile'
-      const uri1 = 'https://example.com/firstQuartile1'
-      const uri2 = 'https://example.com/firstQuartile2'
-      inst.add(type, uri1)
-      inst.add(type, uri2)
-      expect(inst.get(type)).to.contain(uri1)
-      expect(inst.get(type)).to.contain(uri2)
+      const conf1 = new TrackingEvent()
+      conf1.uri = 'https://example.com/firstQuartile1'
+      const conf2 = new TrackingEvent()
+      conf2.uri = 'https://example.com/firstQuartile2'
+      inst.add(type, conf1)
+      inst.add(type, conf2)
+      expect(inst.get(type)).to.contain(conf1)
+      expect(inst.get(type)).to.contain(conf2)
     })
   })
 
@@ -44,8 +48,9 @@ describe('TrackingEvents', () => {
     it('adds a type', () => {
       const inst = createInstance()
       const type = 'firstQuartile'
-      const uri = 'https://example.com/firstQuartile'
-      inst.add(type, uri)
+      const conf = new TrackingEvent()
+      conf.uri = 'https://example.com/firstQuartile'
+      inst.add(type, conf)
       expect(inst.types).to.contain(type)
     })
   })

@@ -1,14 +1,14 @@
 /**
- * Represents a skip offset for a skippable {@link Linear}.
+ * Represents a time offset.
  *
- * @class Skipoffset
+ * @class TimeOffset
  * @abstract
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class Skipoffset {
+export class TimeOffset {
   /**
-   * The value for this skip offset.
+   * The value for this offset.
    *
    * @type {number}
    */

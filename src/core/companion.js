@@ -1,4 +1,4 @@
-import {TrackingEvents} from '../util/tracking-events'
+import {TrackingEvents} from '../tracking/events'
 
 /**
  * Represents a single companion ad. Used in a {@link CompanionAds} creative.

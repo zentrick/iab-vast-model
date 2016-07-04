@@ -1,0 +1,11 @@
+import {AbsoluteTimeOffset} from '../../../src/time-offset/absolute'
+import testBase from './_base'
+
+describe('AbsoluteTimeOffset', () => {
+  const createInstance = () => {
+    const inst = new AbsoluteTimeOffset()
+    return inst
+  }
+
+  testBase(createInstance)
+})

@@ -1,5 +1,5 @@
 import {NonLinearAds} from '../../../src/creative/non-linear-ads'
-import {TrackingEvents} from '../../../src/util/tracking-events'
+import {TrackingEvents} from '../../../src/tracking/events'
 import testBase from './_base'
 
 describe('NonLinearAds', () => {

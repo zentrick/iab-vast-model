@@ -1,7 +1,7 @@
 import {Linear} from '../../../src/creative/linear'
 import {VideoClicks} from '../../../src/clicks/video'
-import {TrackingEvents} from '../../../src/util/tracking-events'
-import {AbsoluteSkipoffset} from '../../../src/skipoffset/absolute'
+import {TrackingEvents} from '../../../src/tracking/events'
+import {AbsoluteTimeOffset} from '../../../src/time-offset/absolute'
 import testBase from './_base'
 
 describe('Linear', () => {
@@ -43,7 +43,7 @@ describe('Linear', () => {
   describe('#skipoffset', () => {
     it('sets skipoffset', () => {
       const inst = createInstance()
-      const value = new AbsoluteSkipoffset()
+      const value = new AbsoluteTimeOffset()
       value.value = 12.6
       inst.skipoffset = value
       expect(inst.skipoffset).to.equal(value)

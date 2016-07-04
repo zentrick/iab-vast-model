@@ -1,5 +1,5 @@
 import {Companion} from '../../../src/core/companion'
-import {TrackingEvents} from '../../../src/util/tracking-events'
+import {TrackingEvents} from '../../../src/tracking/events'
 import {StaticResource} from '../../../src/resource/static'
 
 describe('Companion', () => {
