@@ -1,15 +1,18 @@
 import {SortedList} from '../util/sorted-list'
+import {SortedListItem} from '../util/sorted-list-item'
 
 /**
  * Base class for ads.
  *
  * @class Ad
  * @abstract
+ * @extends SortedListItem
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class Ad {
+export class Ad extends SortedListItem {
   constructor () {
+    super()
     this._creatives = new SortedList()
     this._impressions = []
     this._extensions = []
@@ -26,19 +29,6 @@ export class Ad {
 
   set id (value) {
     this._id = value
-  }
-
-  /**
-   * The sequence number of this ad within its {@link AdPod}.
-   *
-   * @type {number}
-   */
-  get sequence () {
-    return this._sequence
-  }
-
-  set sequence (value) {
-    this._sequence = value
   }
 
   /**

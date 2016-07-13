@@ -15,15 +15,6 @@ export default (createInstance) => {
     })
   })
 
-  describe('#sequence', () => {
-    it('sets sequence', () => {
-      const inst = createInstance()
-      const value = 42
-      inst.sequence = value
-      expect(inst.sequence).to.equal(value)
-    })
-  })
-
   describe('#adID', () => {
     it('sets adID', () => {
       const inst = createInstance()

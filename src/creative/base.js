@@ -1,13 +1,17 @@
+import {SortedListItem} from '../util/sorted-list-item'
+
 /**
  * Base class for creatives.
  *
  * @class Creative
  * @abstract
+ * @extends SortedListItem
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class Creative {
+export class Creative extends SortedListItem {
   constructor () {
+    super()
     this._extensions = []
   }
 
@@ -22,19 +26,6 @@ export class Creative {
 
   set id (value) {
     this._id = value
-  }
-
-  /**
-   * The sequence number of this creative within its {@link Ad}.
-   *
-   * @type {string}
-   */
-  get sequence () {
-    return this._sequence
-  }
-
-  set sequence (value) {
-    this._sequence = value
   }
 
   /**

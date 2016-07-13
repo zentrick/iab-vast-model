@@ -39,3 +39,4 @@ export {AbsoluteTimeOffset} from './time-offset/absolute'
 export {RelativeTimeOffset} from './time-offset/relative'
 
 export {SortedList} from './util/sorted-list'
+export {SortedListItem} from './util/sorted-list-item'
