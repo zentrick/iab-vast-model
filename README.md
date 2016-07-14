@@ -20,11 +20,27 @@ const vast = new VAST()
 
 ## API
 
-API documentation will be available soon. For now, you can easily build it
-yourself by running `gulp doc` and opening `doc/index.html` in a Web browser.
+Automatically generated API documentation can be found on
+[GitHub Pages](https://zentrick.github.io/iab-vast-model/doc/). You can also
+build it yourself by running `gulp doc` and opening `doc/index.html` in a Web
+browser.
 
 Additionally, feel free to look at the source code. We recommend starting with
 `src/index.js`, which should export all the classes you need.
+
+## TODO
+
+The main thing that's missing is **validation**. There are a few steps to this:
+
+- Use [validator](https://www.npmjs.com/package/validator) to check all values
+  passed to setters.
+- Verify that every required property is set.
+- Write tests for the validation code.
+- Enclose all validation code in marker comments (e.g., `// <strict>`). This
+  will allow us to strip it out and produce a lightweight "loose" build without
+  any validation, making tags load faster.
+
+PRs welcome!
 
 ## Maintainer
 
