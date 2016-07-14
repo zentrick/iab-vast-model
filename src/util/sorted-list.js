@@ -15,6 +15,7 @@ export class SortedList {
    * The length of this list.
    *
    * @type {number}
+   * @readonly
    */
   get length () {
     return this._contents.length
