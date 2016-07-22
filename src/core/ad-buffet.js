@@ -34,4 +34,8 @@ export class AdBuffet {
   set adPod (value) {
     this._adPod = value
   }
+
+  get $type () {
+    return 'AdBuffet'
+  }
 }

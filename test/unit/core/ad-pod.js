@@ -13,4 +13,11 @@ describe('AdPod', () => {
       expect(inst.ads).to.be.an.instanceof(SortedList)
     })
   })
+
+  describe('#$type', () => {
+    it('is AdPod', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('AdPod')
+    })
+  })
 })

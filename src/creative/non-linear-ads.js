@@ -35,4 +35,8 @@ export class NonLinearAds extends Creative {
   get trackingEvents () {
     return this._trackingEvents
   }
+
+  get $type () {
+    return 'NonLinearAds'
+  }
 }

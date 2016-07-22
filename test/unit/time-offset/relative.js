@@ -8,4 +8,11 @@ describe('RelativeTimeOffset', () => {
   }
 
   testBase(createInstance)
+
+  describe('#$type', () => {
+    it('is RelativeTimeOffset', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('RelativeTimeOffset')
+    })
+  })
 })

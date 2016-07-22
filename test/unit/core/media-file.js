@@ -122,4 +122,11 @@ describe('MediaFile', () => {
       expect(inst.uri).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is MediaFile', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('MediaFile')
+    })
+  })
 })

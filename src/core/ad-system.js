@@ -31,4 +31,8 @@ export class AdSystem {
   set version (value) {
     this._version = value
   }
+
+  get $type () {
+    return 'AdSystem'
+  }
 }

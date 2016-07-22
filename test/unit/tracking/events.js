@@ -54,4 +54,11 @@ describe('TrackingEvents', () => {
       expect(inst.types).to.contain(type)
     })
   })
+
+  describe('#$type', () => {
+    it('is TrackingEvents', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('TrackingEvents')
+    })
+  })
 })

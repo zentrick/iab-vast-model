@@ -8,4 +8,8 @@ import {Resource} from './base'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class IFrameResource extends Resource {}
+export class IFrameResource extends Resource {
+  get $type () {
+    return 'IFrameResource'
+  }
+}

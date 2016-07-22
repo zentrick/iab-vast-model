@@ -23,4 +23,11 @@ describe('AdSystem', () => {
       expect(inst.version).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is AdSystem', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('AdSystem')
+    })
+  })
 })

@@ -8,4 +8,11 @@ describe('IFrameResource', () => {
   }
 
   testBase(createInstance)
+
+  describe('#$type', () => {
+    it('is IFrameResource', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('IFrameResource')
+    })
+  })
 })

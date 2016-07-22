@@ -138,4 +138,11 @@ describe('Companion', () => {
       expect(inst.clickThrough).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is Companion', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('Companion')
+    })
+  })
 })

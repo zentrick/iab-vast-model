@@ -23,4 +23,11 @@ describe('AdBuffet', () => {
       expect(inst.adPod).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is AdBuffet', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('AdBuffet')
+    })
+  })
 })

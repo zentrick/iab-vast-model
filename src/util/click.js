@@ -31,4 +31,8 @@ export class Click {
   set uri (value) {
     this._uri = value
   }
+
+  get $type () {
+    return 'Click'
+  }
 }

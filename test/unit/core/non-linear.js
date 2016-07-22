@@ -121,4 +121,11 @@ describe('NonLinear', () => {
       expect(inst.adParameters).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is NonLinear', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('NonLinear')
+    })
+  })
 })

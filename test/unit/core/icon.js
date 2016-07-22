@@ -102,4 +102,11 @@ describe('Icon', () => {
       expect(inst.resource).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is Icon', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('Icon')
+    })
+  })
 })

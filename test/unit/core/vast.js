@@ -21,4 +21,11 @@ describe('VAST', () => {
       expect(inst.version).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is VAST', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('VAST')
+    })
+  })
 })

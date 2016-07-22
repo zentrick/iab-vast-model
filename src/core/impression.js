@@ -31,4 +31,8 @@ export class Impression {
   set uri (value) {
     this._uri = value
   }
+
+  get $type () {
+    return 'Impression'
+  }
 }

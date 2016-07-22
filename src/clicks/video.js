@@ -22,4 +22,8 @@ export class VideoClicks extends AbstractClicks {
   get customClicks () {
     return this._customClicks
   }
+
+  get $type () {
+    return 'VideoClicks'
+  }
 }

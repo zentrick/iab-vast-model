@@ -40,4 +40,8 @@ export class TrackingEvents {
     this._map[event] = this._map[event] || []
     this._map[event].push(config)
   }
+
+  get $type () {
+    return 'TrackingEvents'
+  }
 }

@@ -38,4 +38,8 @@ export class CompanionAds extends Creative {
   set required (value) {
     this._required = value
   }
+
+  get $type () {
+    return 'CompanionAds'
+  }
 }

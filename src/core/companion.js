@@ -201,4 +201,8 @@ export class Companion {
   get trackingEvents () {
     return this._trackingEvents
   }
+
+  get $type () {
+    return 'Companion'
+  }
 }

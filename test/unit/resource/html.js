@@ -8,4 +8,11 @@ describe('HTMLResource', () => {
   }
 
   testBase(createInstance)
+
+  describe('#$type', () => {
+    it('is HTMLResource', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('HTMLResource')
+    })
+  })
 })

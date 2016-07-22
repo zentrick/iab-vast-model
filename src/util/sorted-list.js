@@ -80,4 +80,8 @@ export class SortedList {
   toArray () {
     return this._contents.slice()
   }
+
+  get $type () {
+    return 'SortedList'
+  }
 }

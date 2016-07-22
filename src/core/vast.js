@@ -36,4 +36,8 @@ export class VAST extends AdBuffet {
   get errors () {
     return this._errors
   }
+
+  get $type () {
+    return 'VAST'
+  }
 }

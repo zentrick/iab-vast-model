@@ -23,4 +23,11 @@ describe('Impression', () => {
       expect(inst.uri).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is Impression', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('Impression')
+    })
+  })
 })

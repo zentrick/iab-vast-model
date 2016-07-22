@@ -8,4 +8,8 @@ import {AbstractClicks} from './abstract'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class IconClicks extends AbstractClicks {}
+export class IconClicks extends AbstractClicks {
+  get $type () {
+    return 'IconClicks'
+  }
+}

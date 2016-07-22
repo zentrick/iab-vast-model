@@ -73,4 +73,8 @@ export class InLine extends Ad {
   set pricing (value) {
     this._pricing = value
   }
+
+  get $type () {
+    return 'InLine'
+  }
 }

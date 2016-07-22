@@ -97,4 +97,8 @@ export class Linear extends Creative {
   get icons () {
     return this._icons
   }
+
+  get $type () {
+    return 'Linear'
+  }
 }

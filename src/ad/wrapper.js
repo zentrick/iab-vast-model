@@ -61,4 +61,8 @@ export class Wrapper extends Ad {
   set fallbackOnNoAd (value) {
     this._fallbackOnNoAd = value
   }
+
+  get $type () {
+    return 'Wrapper'
+  }
 }

@@ -44,4 +44,11 @@ describe('Wrapper', () => {
       expect(inst.fallbackOnNoAd).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is Wrapper', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('Wrapper')
+    })
+  })
 })

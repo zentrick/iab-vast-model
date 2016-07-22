@@ -15,4 +15,11 @@ describe('VideoClicks', () => {
       expect(inst.customClicks).to.be.an.instanceof(Array)
     })
   })
+
+  describe('#$type', () => {
+    it('is VideoClicks', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('VideoClicks')
+    })
+  })
 })

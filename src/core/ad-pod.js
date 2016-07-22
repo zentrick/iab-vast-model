@@ -21,4 +21,8 @@ export class AdPod {
   get ads () {
     return this._ads
   }
+
+  get $type () {
+    return 'AdPod'
+  }
 }

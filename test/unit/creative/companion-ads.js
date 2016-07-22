@@ -24,4 +24,11 @@ describe('CompanionAds', () => {
       expect(inst.required).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is CompanionAds', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('CompanionAds')
+    })
+  })
 })

@@ -130,4 +130,11 @@ describe('SortedList', () => {
     list.add(item2)
     expect(list.toArray()).to.eql([item1, item2])
   })
+
+  describe('#$type', () => {
+    it('is SortedList', () => {
+      const inst = new SortedList()
+      expect(inst.$type).to.equal('SortedList')
+    })
+  })
 })

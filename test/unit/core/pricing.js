@@ -32,4 +32,11 @@ describe('Pricing', () => {
       expect(inst.value).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is Pricing', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('Pricing')
+    })
+  })
 })

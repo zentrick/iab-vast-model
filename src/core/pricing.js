@@ -44,4 +44,8 @@ export class Pricing {
   set value (value) {
     this._value = value
   }
+
+  get $type () {
+    return 'Pricing'
+  }
 }

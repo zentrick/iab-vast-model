@@ -8,4 +8,8 @@ import {AbstractExtension} from './abstract'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class CreativeExtension extends AbstractExtension {}
+export class CreativeExtension extends AbstractExtension {
+  get $type () {
+    return 'CreativeExtension'
+  }
+}

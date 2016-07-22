@@ -17,4 +17,11 @@ describe('StaticResource', () => {
       expect(inst.creativeType).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is StaticResource', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('StaticResource')
+    })
+  })
 })

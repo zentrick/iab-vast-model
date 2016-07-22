@@ -54,4 +54,11 @@ describe('InLine', () => {
       expect(inst.pricing).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is InLine', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('InLine')
+    })
+  })
 })

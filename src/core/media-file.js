@@ -174,4 +174,8 @@ export class MediaFile {
   set uri (value) {
     this._uri = value
   }
+
+  get $type () {
+    return 'MediaFile'
+  }
 }

@@ -23,4 +23,11 @@ describe('NonLinearAds', () => {
       expect(inst.trackingEvents).to.be.an.instanceof(TrackingEvents)
     })
   })
+
+  describe('#$type', () => {
+    it('is NonLinearAds', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('NonLinearAds')
+    })
+  })
 })

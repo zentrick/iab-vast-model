@@ -32,4 +32,8 @@ export class TrackingEvent {
   set offset (value) {
     this._offset = value
   }
+
+  get $type () {
+    return 'TrackingEvent'
+  }
 }

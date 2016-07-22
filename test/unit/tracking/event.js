@@ -24,4 +24,11 @@ describe('TrackingEvent', () => {
       expect(inst.offset).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is TrackingEvent', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('TrackingEvent')
+    })
+  })
 })

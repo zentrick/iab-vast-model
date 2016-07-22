@@ -175,4 +175,8 @@ export class NonLinear {
   set adParameters (value) {
     this._adParameters = value
   }
+
+  get $type () {
+    return 'NonLinear'
+  }
 }

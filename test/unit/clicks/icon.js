@@ -8,4 +8,11 @@ describe('IconClicks', () => {
   }
 
   testBase(createInstance)
+
+  describe('#$type', () => {
+    it('is IconClicks', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('IconClicks')
+    })
+  })
 })

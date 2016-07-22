@@ -8,4 +8,11 @@ describe('Extension', () => {
   }
 
   testBase(createInstance)
+
+  describe('#$type', () => {
+    it('is Extension', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('Extension')
+    })
+  })
 })

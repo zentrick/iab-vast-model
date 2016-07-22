@@ -8,4 +8,8 @@ import {TimeOffset} from './base'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class AbsoluteTimeOffset extends TimeOffset {}
+export class AbsoluteTimeOffset extends TimeOffset {
+  get $type () {
+    return 'AbsoluteTimeOffset'
+  }
+}

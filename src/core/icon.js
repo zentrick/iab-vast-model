@@ -148,4 +148,8 @@ export class Icon {
   get viewTrackings () {
     return this._viewTrackings
   }
+
+  get $type () {
+    return 'Icon'
+  }
 }

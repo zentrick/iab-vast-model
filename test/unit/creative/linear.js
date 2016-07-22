@@ -67,4 +67,11 @@ describe('Linear', () => {
       expect(inst.duration).to.equal(value)
     })
   })
+
+  describe('#$type', () => {
+    it('is Linear', () => {
+      const inst = createInstance()
+      expect(inst.$type).to.equal('Linear')
+    })
+  })
 })

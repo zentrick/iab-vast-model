@@ -21,4 +21,8 @@ export class StaticResource extends Resource {
   set creativeType (value) {
     this._creativeType = value
   }
+
+  get $type () {
+    return 'StaticResource'
+  }
 }
