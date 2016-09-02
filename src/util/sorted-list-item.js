@@ -1,5 +1,5 @@
 /**
- * Represent an item in a {@link SortedList}. Base class for {@link Ad} and
+ * Represents an item in a {@link SortedList}. Base class for {@link Ad} and
  * {@link Creative}.
  *
  * @class SortedListItem
