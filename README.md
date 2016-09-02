@@ -21,9 +21,9 @@ const vast = new VAST()
 ## API
 
 Automatically generated API documentation can be found on
-[GitHub Pages](https://zentrick.github.io/iab-vast-model/doc/). You can also
-build it yourself by running `gulp doc` and opening `doc/index.html` in a Web
-browser.
+[GitHub Pages](https://zentrick.github.io/iab-vast-model/). You can also
+open `docs/index.html` in a Web browser. Running `gulp doc` will (re)build the
+`docs` directory.
 
 Additionally, feel free to look at the source code. We recommend starting with
 `src/index.js`, which should export all the classes you need.

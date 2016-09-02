@@ -6,14 +6,19 @@
     "cleverLinks": true,
     "systemName": "iab-vast-model",
     "copyright": "Copyright &copy; 2016 Zentrick nv",
-    "sort": false
+    "sort": false,
+    "default": {
+      "staticFiles": {
+        "include": ["./etc/docs"]
+      }
+    }
   },
   "plugins": [
     "plugins/markdown"
   ],
   "opts": {
     "recurse": true,
-    "destination": "doc",
+    "destination": "docs",
     "encoding": "utf8",
     "verbose": true,
     "template": "node_modules/ink-docstrap/template",

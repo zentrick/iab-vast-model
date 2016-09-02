@@ -73,7 +73,7 @@ gulp.task('test', (cb) => seq('lint', 'coverage', 'coveralls', cb))
 
 gulp.task('watch', () => gulp.watch('src/**/*', ['build']))
 
-gulp.task('doc:clean', () => del('doc'))
+gulp.task('doc:clean', () => del('docs'))
 
 gulp.task('doc', ['doc:clean'], () => {
   const cmd = 'node_modules/.bin/jsdoc'
