@@ -66,8 +66,8 @@ export class SortedList {
     let i = 0
     return {
       next () {
-        return (i < that.length) ? {value: that.get(i++), done: false}
-          : {value: undefined, done: true}
+        return (i < that.length) ? { value: that.get(i++), done: false }
+          : { value: undefined, done: true }
       }
     }
   }

@@ -1,4 +1,4 @@
-import {StaticResource} from '../../../src/resource/static'
+import { StaticResource } from '../../../src/resource/static'
 import testBase from './_base'
 
 describe('StaticResource', () => {

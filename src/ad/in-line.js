@@ -1,4 +1,4 @@
-import {Ad} from './base'
+import { Ad } from './base'
 
 /**
  * Inline ad.

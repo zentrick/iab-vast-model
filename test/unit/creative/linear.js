@@ -1,7 +1,7 @@
-import {Linear} from '../../../src/creative/linear'
-import {VideoClicks} from '../../../src/clicks/video'
-import {TrackingEvents} from '../../../src/tracking/events'
-import {AbsoluteTimeOffset} from '../../../src/time-offset/absolute'
+import { Linear } from '../../../src/creative/linear'
+import { VideoClicks } from '../../../src/clicks/video'
+import { TrackingEvents } from '../../../src/tracking/events'
+import { AbsoluteTimeOffset } from '../../../src/time-offset/absolute'
 import testBase from './_base'
 
 describe('Linear', () => {

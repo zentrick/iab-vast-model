@@ -1,4 +1,4 @@
-import {MediaFile} from '../../../src/core/media-file'
+import { MediaFile } from '../../../src/core/media-file'
 
 describe('MediaFile', () => {
   const createInstance = () => {

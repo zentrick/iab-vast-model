@@ -1,4 +1,4 @@
-import {SortedList} from '../util/sorted-list'
+import { SortedList } from '../util/sorted-list'
 
 /**
  * Represents a VAST ad pod.

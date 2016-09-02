@@ -1,4 +1,4 @@
-import {AbsoluteTimeOffset} from '../../../src/time-offset/absolute'
+import { AbsoluteTimeOffset } from '../../../src/time-offset/absolute'
 import testBase from './_base'
 
 describe('AbsoluteTimeOffset', () => {

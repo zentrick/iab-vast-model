@@ -1,4 +1,4 @@
-import {VAST} from '../../../src/core/vast'
+import { VAST } from '../../../src/core/vast'
 
 describe('VAST', () => {
   const createInstance = () => {

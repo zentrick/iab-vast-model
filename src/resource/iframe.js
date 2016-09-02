@@ -1,4 +1,4 @@
-import {Resource} from './base'
+import { Resource } from './base'
 
 /**
  * Describes an HTML page for display within an iframe.

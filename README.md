@@ -12,7 +12,7 @@ To load and parse a chain of VAST files, use
 ## Usage
 
 ```javascript
-import {VAST} from 'iab-vast-model'
+import { VAST } from 'iab-vast-model'
 
 const vast = new VAST()
 // ... Do your thing ...

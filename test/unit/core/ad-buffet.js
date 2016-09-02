@@ -1,6 +1,6 @@
-import {AdBuffet} from '../../../src/core/ad-buffet'
-import {AdPod} from '../../../src/core/ad-pod'
-import {SortedList} from '../../../src/util/sorted-list'
+import { AdBuffet } from '../../../src/core/ad-buffet'
+import { AdPod } from '../../../src/core/ad-pod'
+import { SortedList } from '../../../src/util/sorted-list'
 
 describe('AdBuffet', () => {
   const createInstance = () => {

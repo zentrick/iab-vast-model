@@ -1,4 +1,4 @@
-import {TimeOffset} from './base'
+import { TimeOffset } from './base'
 
 /**
  * Represents a time offset expressed as an absolute duration in seconds.

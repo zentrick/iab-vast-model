@@ -1,4 +1,4 @@
-import {IFrameResource} from '../../../src/resource/iframe'
+import { IFrameResource } from '../../../src/resource/iframe'
 import testBase from './_base'
 
 describe('IFrameResource', () => {

@@ -1,4 +1,4 @@
-import {VideoClicks} from '../../../src/clicks/video'
+import { VideoClicks } from '../../../src/clicks/video'
 import testBase from './_base'
 
 describe('VideoClicks', () => {

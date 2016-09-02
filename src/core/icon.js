@@ -1,4 +1,4 @@
-import {IconClicks} from '../clicks/icon'
+import { IconClicks } from '../clicks/icon'
 
 /**
  * Represents an icon used in a {@link Linear} creative.

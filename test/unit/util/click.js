@@ -1,4 +1,4 @@
-import {Click} from '../../../src/util/click'
+import { Click } from '../../../src/util/click'
 
 describe('Click', () => {
   const createInstance = () => {

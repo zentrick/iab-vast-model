@@ -1,4 +1,4 @@
-import {AdSystem} from '../../../src/core/ad-system'
+import { AdSystem } from '../../../src/core/ad-system'
 
 describe('AdSystem', () => {
   const createInstance = () => {

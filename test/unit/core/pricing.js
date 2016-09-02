@@ -1,4 +1,4 @@
-import {Pricing} from '../../../src/core/pricing'
+import { Pricing } from '../../../src/core/pricing'
 
 describe('Pricing', () => {
   const createInstance = () => {

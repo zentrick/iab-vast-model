@@ -1,5 +1,5 @@
-import {TrackingEvent} from '../../../src/tracking/event'
-import {RelativeTimeOffset} from '../../../src/time-offset/relative'
+import { TrackingEvent } from '../../../src/tracking/event'
+import { RelativeTimeOffset } from '../../../src/time-offset/relative'
 
 describe('TrackingEvent', () => {
   const createInstance = () => {

@@ -1,6 +1,6 @@
-import {Companion} from '../../../src/core/companion'
-import {TrackingEvents} from '../../../src/tracking/events'
-import {StaticResource} from '../../../src/resource/static'
+import { Companion } from '../../../src/core/companion'
+import { TrackingEvents } from '../../../src/tracking/events'
+import { StaticResource } from '../../../src/resource/static'
 
 describe('Companion', () => {
   const createInstance = () => {

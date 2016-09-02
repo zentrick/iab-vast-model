@@ -1,5 +1,5 @@
-import {SortedList} from '../util/sorted-list'
-import {SortedListItem} from '../util/sorted-list-item'
+import { SortedList } from '../util/sorted-list'
+import { SortedListItem } from '../util/sorted-list-item'
 
 /**
  * Base class for ads.

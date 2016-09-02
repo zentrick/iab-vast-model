@@ -1,5 +1,5 @@
-import {InLine} from '../../../src/ad/in-line'
-import {Pricing} from '../../../src/core/pricing'
+import { InLine } from '../../../src/ad/in-line'
+import { Pricing } from '../../../src/core/pricing'
 import testBase from './_base'
 
 describe('InLine', () => {

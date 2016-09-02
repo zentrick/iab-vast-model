@@ -1,4 +1,4 @@
-import {Wrapper} from '../../../src/ad/wrapper'
+import { Wrapper } from '../../../src/ad/wrapper'
 import testBase from './_base'
 
 describe('Wrapper', () => {

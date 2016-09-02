@@ -1,4 +1,4 @@
-import {TimeOffset} from './base'
+import { TimeOffset } from './base'
 
 /**
  * Represents a time offset expressed as a percentage (between 0 and 100).

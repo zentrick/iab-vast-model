@@ -1,6 +1,6 @@
-import {Creative} from './base'
-import {VideoClicks} from '../clicks/video'
-import {TrackingEvents} from '../tracking/events'
+import { Creative } from './base'
+import { VideoClicks } from '../clicks/video'
+import { TrackingEvents } from '../tracking/events'
 
 /**
  * Represents a linear creative.

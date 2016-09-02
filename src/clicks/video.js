@@ -1,4 +1,4 @@
-import {AbstractClicks} from './abstract'
+import { AbstractClicks } from './abstract'
 
 /**
  * Represents the click tracking configuration for a {@link Linear} creative.

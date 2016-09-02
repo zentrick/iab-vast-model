@@ -1,4 +1,4 @@
-import {CompanionAds} from '../../../src/creative/companion-ads'
+import { CompanionAds } from '../../../src/creative/companion-ads'
 import testBase from './_base'
 
 describe('CompanionAds', () => {

@@ -1,4 +1,4 @@
-import {SortedList} from '../../../src/util/sorted-list'
+import { SortedList } from '../../../src/util/sorted-list'
 
 export default (createInstance) => {
   describe('#creatives', () => {

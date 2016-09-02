@@ -1,4 +1,4 @@
-import {HTMLResource} from '../../../src/resource/html'
+import { HTMLResource } from '../../../src/resource/html'
 import testBase from './_base'
 
 describe('HTMLResource', () => {

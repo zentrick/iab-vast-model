@@ -1,4 +1,4 @@
-import {Creative} from './base'
+import { Creative } from './base'
 
 /**
  * Represents a creative with companion ads.

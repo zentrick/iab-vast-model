@@ -1,4 +1,4 @@
-import {Impression} from '../../../src/core/impression'
+import { Impression } from '../../../src/core/impression'
 
 describe('Impression', () => {
   const createInstance = () => {

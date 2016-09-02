@@ -1,5 +1,5 @@
-import {TrackingEvent} from '../../../src/tracking/event'
-import {TrackingEvents} from '../../../src/tracking/events'
+import { TrackingEvent } from '../../../src/tracking/event'
+import { TrackingEvents } from '../../../src/tracking/events'
 
 describe('TrackingEvents', () => {
   const createInstance = () => {

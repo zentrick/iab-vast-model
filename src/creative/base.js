@@ -1,4 +1,4 @@
-import {SortedListItem} from '../util/sorted-list-item'
+import { SortedListItem } from '../util/sorted-list-item'
 
 /**
  * Base class for creatives.

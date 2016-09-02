@@ -1,5 +1,5 @@
-import {NonLinear} from '../../../src/core/non-linear'
-import {StaticResource} from '../../../src/resource/static'
+import { NonLinear } from '../../../src/core/non-linear'
+import { StaticResource } from '../../../src/resource/static'
 
 describe('NonLinear', () => {
   const createInstance = () => {

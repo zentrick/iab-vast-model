@@ -1,6 +1,6 @@
 import gulp from 'gulp'
 import loadPlugins from 'gulp-load-plugins'
-import {Instrumenter} from 'isparta'
+import { Instrumenter } from 'isparta'
 import del from 'del'
 import seq from 'run-sequence'
 import spawn from 'cross-spawn-promise'
@@ -12,7 +12,7 @@ const COVERAGE_THRESHOLDS = {
   functions: 100,
   branches: 95 // Babel introduces some condition that doesn't get hit
 }
-const {COVERALLS} = process.env
+const { COVERALLS } = process.env
 
 const $ = loadPlugins()
 const argv = yargs
@@ -20,7 +20,7 @@ const argv = yargs
   .boolean('bail')
   .argv
 
-const unitTest = () => gulp.src(['test/lib/setup.js', 'test/unit/**/*.js'], {read: false})
+const unitTest = () => gulp.src(['test/lib/setup.js', 'test/unit/**/*.js'], { read: false })
   .pipe($.mocha({
     reporter: 'spec',
     grep: argv.grep,
@@ -58,7 +58,7 @@ gulp.task('coverage:instrument', () => {
 gulp.task('coverage', ['coverage:instrument'], () => {
   return unitTest()
     .pipe($.istanbul.writeReports())
-    .pipe($.istanbul.enforceThresholds({thresholds: COVERAGE_THRESHOLDS}))
+    .pipe($.istanbul.enforceThresholds({ thresholds: COVERAGE_THRESHOLDS }))
 })
 
 gulp.task('coveralls', () => {
@@ -78,7 +78,7 @@ gulp.task('doc:clean', () => del('doc'))
 gulp.task('doc', ['doc:clean'], () => {
   const cmd = 'node_modules/.bin/jsdoc'
   const args = ['-c', 'jsdoc.json']
-  const options = {cwd: __dirname, stdio: 'inherit'}
+  const options = { cwd: __dirname, stdio: 'inherit' }
   return spawn(cmd, args, options)
 })
 

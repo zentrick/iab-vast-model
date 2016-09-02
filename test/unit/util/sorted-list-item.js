@@ -1,4 +1,4 @@
-import {SortedListItem} from '../../../src/util/sorted-list-item'
+import { SortedListItem } from '../../../src/util/sorted-list-item'
 
 describe('SortedListItem', () => {
   const createInstance = () => {

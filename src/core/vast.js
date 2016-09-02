@@ -1,4 +1,4 @@
-import {AdBuffet} from './ad-buffet'
+import { AdBuffet } from './ad-buffet'
 
 /**
  * Represents a VAST document.

@@ -1,4 +1,4 @@
-import {AbstractExtension} from './abstract'
+import { AbstractExtension } from './abstract'
 
 /**
  * Represents a VAST extension.
