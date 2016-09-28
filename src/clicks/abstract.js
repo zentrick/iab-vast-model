@@ -13,9 +13,9 @@ export class AbstractClicks {
   }
 
   /**
-   * The clickthrough URI.
+   * The click-through configuration.
    *
-   * @type {string}
+   * @type {Click}
    */
   get clickThrough () {
     return this._clickThrough
