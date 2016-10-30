@@ -1,6 +1,6 @@
 # iab-vast-model
 
-[![npm](https://img.shields.io/npm/v/iab-vast-model.svg)](https://www.npmjs.com/package/iab-vast-model) [![Dependencies](https://img.shields.io/david/zentrick/iab-vast-model.svg)](https://david-dm.org/zentrick/iab-vast-model) [![Build Status](https://img.shields.io/travis/zentrick/iab-vast-model/master.svg)](https://travis-ci.org/zentrick/iab-vast-model) [![Coverage Status](https://img.shields.io/coveralls/zentrick/iab-vast-model/master.svg)](https://coveralls.io/r/zentrick/iab-vast-model) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![npm](https://img.shields.io/npm/v/iab-vast-model.svg)](https://www.npmjs.com/package/iab-vast-model) [![Dependencies](https://img.shields.io/david/zentrick/iab-vast-model.svg)](https://david-dm.org/zentrick/iab-vast-model) [![Build Status](https://img.shields.io/circleci/project/github/zentrick/iab-vast-model/master.svg)](https://circleci.com/gh/zentrick/iab-vast-model) [![Coverage Status](https://img.shields.io/coveralls/zentrick/iab-vast-model/master.svg)](https://coveralls.io/r/zentrick/iab-vast-model) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Base classes for IAB VAST handling. Supports the full IAB VAST 3.0 specification.
 
