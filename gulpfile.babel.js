@@ -12,7 +12,7 @@ const COVERAGE_THRESHOLDS = {
   functions: 100,
   branches: 95 // Babel introduces some condition that doesn't get hit
 }
-const { COVERALLS } = process.env
+const { CIRCLECI, CIRCLE_TEST_REPORTS, COVERALLS } = process.env
 
 const $ = loadPlugins()
 const argv = yargs
@@ -22,7 +22,10 @@ const argv = yargs
 
 const unitTest = () => gulp.src(['test/lib/setup.js', 'test/unit/**/*.js'], { read: false })
   .pipe($.mocha({
-    reporter: 'spec',
+    reporter: CIRCLECI ? 'mocha-junit-reporter' : 'spec',
+    reporterOptions: CIRCLECI ? {
+      mochaFile: `${CIRCLE_TEST_REPORTS}/junit/test-results.xml`
+    } : {},
     grep: argv.grep,
     bail: argv.bail
   }))
