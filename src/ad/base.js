@@ -15,6 +15,7 @@ export class Ad extends SortedListItem {
     super()
     this._creatives = new SortedList()
     this._impressions = []
+    this._errors = []
     this._extensions = []
   }
 
@@ -65,16 +66,13 @@ export class Ad extends SortedListItem {
   }
 
   /**
-   * The error tracking URI for this ad.
+   * The error tracking URIs for this ad.
    *
-   * @type {string}
+   * @type {string[]}
+   * @readonly
    */
-  get error () {
-    return this._error
-  }
-
-  set error (value) {
-    this._error = value
+  get errors () {
+    return this._errors
   }
 
   /**
