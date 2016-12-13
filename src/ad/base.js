@@ -87,6 +87,7 @@ export class Ad extends SortedListItem {
   }
 
   set error (value) {
+    console.warn('Ad.error is deprecated. Please use ad.errors instead.')
     this._errors[0] = value
   }
 
