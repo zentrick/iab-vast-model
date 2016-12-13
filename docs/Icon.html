@@ -38,16 +38,18 @@
 			</li>
 			
 		</ul>
-		<div class="col-sm-3 col-md-3">
-            <form class="navbar-form" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
-                    <div class="input-group-btn">
-                        <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
+        
 	</div>
 
 </div>
@@ -190,7 +192,7 @@
             
 <hr>
 <dt class="name" id="program">
-    <h4><span class="type-signature"></span>program<span class="type-signature"> :string</span></h4>
+    <h4 id="program"><span class="type-signature"></span>program<span class="type-signature"> :string</span></h4>
 
     
 </dt>
@@ -261,7 +263,7 @@
             
 <hr>
 <dt class="name" id="width">
-    <h4><span class="type-signature"></span>width<span class="type-signature"> :number</span></h4>
+    <h4 id="width"><span class="type-signature"></span>width<span class="type-signature"> :number</span></h4>
 
     
 </dt>
@@ -332,7 +334,7 @@
             
 <hr>
 <dt class="name" id="height">
-    <h4><span class="type-signature"></span>height<span class="type-signature"> :number</span></h4>
+    <h4 id="height"><span class="type-signature"></span>height<span class="type-signature"> :number</span></h4>
 
     
 </dt>
@@ -403,7 +405,7 @@
             
 <hr>
 <dt class="name" id="xPosition">
-    <h4><span class="type-signature"></span>xPosition<span class="type-signature"> :number</span></h4>
+    <h4 id="xPosition"><span class="type-signature"></span>xPosition<span class="type-signature"> :number</span></h4>
 
     
 </dt>
@@ -474,7 +476,7 @@
             
 <hr>
 <dt class="name" id="yPosition">
-    <h4><span class="type-signature"></span>yPosition<span class="type-signature"> :number</span></h4>
+    <h4 id="yPosition"><span class="type-signature"></span>yPosition<span class="type-signature"> :number</span></h4>
 
     
 </dt>
@@ -545,7 +547,7 @@
             
 <hr>
 <dt class="name" id="duration">
-    <h4><span class="type-signature"></span>duration<span class="type-signature"> :number</span></h4>
+    <h4 id="duration"><span class="type-signature"></span>duration<span class="type-signature"> :number</span></h4>
 
     
 </dt>
@@ -616,7 +618,7 @@
             
 <hr>
 <dt class="name" id="offset">
-    <h4><span class="type-signature"></span>offset<span class="type-signature"> :number</span></h4>
+    <h4 id="offset"><span class="type-signature"></span>offset<span class="type-signature"> :number</span></h4>
 
     
 </dt>
@@ -687,7 +689,7 @@
             
 <hr>
 <dt class="name" id="apiFramework">
-    <h4><span class="type-signature"></span>apiFramework<span class="type-signature"> :string</span></h4>
+    <h4 id="apiFramework"><span class="type-signature"></span>apiFramework<span class="type-signature"> :string</span></h4>
 
     
 </dt>
@@ -758,7 +760,7 @@
             
 <hr>
 <dt class="name" id="resource">
-    <h4><span class="type-signature"></span>resource<span class="type-signature"> :<a href="Resource.html">Resource</a></span></h4>
+    <h4 id="resource"><span class="type-signature"></span>resource<span class="type-signature"> :<a href="Resource.html">Resource</a></span></h4>
 
     
 </dt>
@@ -829,7 +831,7 @@
             
 <hr>
 <dt class="name" id="clicks">
-    <h4><span class="type-signature">&lt;readonly> </span>clicks<span class="type-signature"> :<a href="IconClicks.html">IconClicks</a></span></h4>
+    <h4 id="clicks"><span class="type-signature">&lt;readonly> </span>clicks<span class="type-signature"> :<a href="IconClicks.html">IconClicks</a></span></h4>
 
     
 </dt>
@@ -900,7 +902,7 @@
             
 <hr>
 <dt class="name" id="viewTrackings">
-    <h4><span class="type-signature"></span>viewTrackings<span class="type-signature"> :Array.&lt;<a href="Click.html">Click</a>></span></h4>
+    <h4 id="viewTrackings"><span class="type-signature"></span>viewTrackings<span class="type-signature"> :Array.&lt;<a href="Click.html">Click</a>></span></h4>
 
     
 </dt>
@@ -996,20 +998,22 @@
 </div>
 </div>
 
-<div class="modal fade" id="searchResults">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Search results</h4>
-      </div>
-      <div class="modal-body"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div>
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
 
 <footer>
 
@@ -1019,9 +1023,9 @@
 	</span>
 
 <span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
 	
-		on 2016-10-30T08:22:41+01:00
+		on 2016-12-13T14:19:59+01:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
@@ -1029,7 +1033,9 @@
 
 <script src="scripts/docstrap.lib.js"></script>
 <script src="scripts/toc.js"></script>
-<script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
 
 <script>
 $( function () {
@@ -1039,7 +1045,7 @@ $( function () {
 		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
 	} );
 
-	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
 		var $this = $( this );
 
 		var example = $this.find( "code" );
@@ -1075,8 +1081,7 @@ $( function () {
 	} );
 	$( "#toc" ).toc( {
 		anchorName  : function ( i, heading, prefix ) {
-			var id = $( heading ).attr( "id" );
-			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
+			return $( heading ).attr( "id" ) || ( prefix + i );
 		},
 		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
 		showAndHide : false,
@@ -1102,11 +1107,13 @@ $( function () {
 <!--Google Analytics-->
 
 
-<script type="text/javascript">
-	$(document).ready(function() {
-		SearcherDisplay.init();
-	});
-</script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
 
 </body>
 </html>
