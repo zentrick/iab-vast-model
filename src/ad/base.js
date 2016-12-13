@@ -76,6 +76,21 @@ export class Ad extends SortedListItem {
   }
 
   /**
+   * The error tracking URI for this ad.
+   *
+   * @type {string}
+   * @deprecated superseded by .errors
+   */
+  get error () {
+    console.warn('Ad.error is deprecated. Please use ad.errors instead.')
+    return this._errors[0]
+  }
+
+  set error (value) {
+    this._errors[0] = value
+  }
+
+  /**
    * The extensions for this ad.
    *
    * @type {Extension[]}
