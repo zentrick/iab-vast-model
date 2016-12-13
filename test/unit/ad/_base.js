@@ -48,4 +48,28 @@ export default (createInstance) => {
       expect(inst.error).to.equal(value)
     })
   })
+
+  describe('#errors', () => {
+    it('sets multiple errors', () => {
+      const inst = createInstance()
+      const value1 = 'https://example.com/error'
+      const value2 = 'https://example.com/error2'
+      inst.errors.push(value1)
+      inst.errors.push(value2)
+      expect(inst.errors[0]).to.equal(value1)
+      expect(inst.errors[1]).to.equal(value2)
+    })
+    it('is backwards compatible with error getter', () => {
+      const inst = createInstance()
+      const value = 'https://example.com/error'
+      inst.errors.push(value)
+      expect(inst.error).to.equal(value)
+    })
+    it('is backwards compatible with error setter', () => {
+      const inst = createInstance()
+      const value = 'https://example.com/error'
+      inst.error = value
+      expect(inst.errors[0]).to.equal(value)
+    })
+  })
 }
