@@ -1,4 +1,7 @@
+// @flow
+
 import { SortedListItem } from '../util/sorted-list-item'
+import type { CreativeExtension } from '../extension/creative'
 
 /**
  * Base class for creatives.
@@ -10,6 +13,11 @@ import { SortedListItem } from '../util/sorted-list-item'
  * @copyright © 2016 Zentrick nv
  */
 export class Creative extends SortedListItem {
+  _id: string
+  _adID: string
+  _apiFramework: string
+  _extensions: CreativeExtension[]
+
   constructor () {
     super()
     this._extensions = []
@@ -20,11 +28,11 @@ export class Creative extends SortedListItem {
    *
    * @type {string}
    */
-  get id () {
+  get id (): string {
     return this._id
   }
 
-  set id (value) {
+  set id (value: string) {
     this._id = value
   }
 
@@ -33,11 +41,11 @@ export class Creative extends SortedListItem {
    *
    * @type {string}
    */
-  get adID () {
+  get adID (): string {
     return this._adID
   }
 
-  set adID (value) {
+  set adID (value: string) {
     this._adID = value
   }
 
@@ -46,11 +54,11 @@ export class Creative extends SortedListItem {
    *
    * @type {string}
    */
-  get apiFramework () {
+  get apiFramework (): string {
     return this._apiFramework
   }
 
-  set apiFramework (value) {
+  set apiFramework (value: string) {
     this._apiFramework = value
   }
 
@@ -60,7 +68,7 @@ export class Creative extends SortedListItem {
    * @type {CreativeExtension[]}
    * @readonly
    */
-  get extensions () {
+  get extensions (): CreativeExtension[] {
     return this._extensions
   }
 }

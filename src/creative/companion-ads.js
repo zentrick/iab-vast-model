@@ -1,4 +1,10 @@
+// @flow
+
 import { Creative } from './base'
+import type { Companion } from '../core/companion'
+import type { Type } from '../type'
+
+type Required = 'all' | 'any' | 'none'
 
 /**
  * Represents a creative with companion ads.
@@ -9,6 +15,9 @@ import { Creative } from './base'
  * @copyright © 2016 Zentrick nv
  */
 export class CompanionAds extends Creative {
+  _companions: Companion[]
+  _required: Required
+
   constructor () {
     super()
     this._companions = []
@@ -20,7 +29,7 @@ export class CompanionAds extends Creative {
    * @type {Companion[]}
    * @readonly
    */
-  get companions () {
+  get companions (): Companion[] {
     return this._companions
   }
 
@@ -31,15 +40,15 @@ export class CompanionAds extends Creative {
    *
    * @type {string}
    */
-  get required () {
+  get required (): Required {
     return this._required
   }
 
-  set required (value) {
+  set required (value: Required) {
     this._required = value
   }
 
-  get $type () {
+  get $type (): Type {
     return 'CompanionAds'
   }
 }

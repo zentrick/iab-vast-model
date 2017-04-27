@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Represents a media file used in a {@link Linear} creative.
  *
@@ -6,16 +8,30 @@
  * @copyright © 2016 Zentrick nv
  */
 export class MediaFile {
+  _id: string
+  _delivery: string
+  _type: string
+  _bitrate: number
+  _minBitrate: number
+  _maxBitrate: number
+  _width: number
+  _height: number
+  _scalable: boolean
+  _maintainAspectRatio: boolean
+  _codec: string
+  _apiFramework: string
+  _uri: string
+
   /**
    * The ID of this media file.
    *
    * @type {string}
    */
-  get id () {
+  get id (): string {
     return this._id
   }
 
-  set id (value) {
+  set id (value: string) {
     this._id = value
   }
 
@@ -24,11 +40,11 @@ export class MediaFile {
    *
    * @type {string}
    */
-  get delivery () {
+  get delivery (): string {
     return this._delivery
   }
 
-  set delivery (value) {
+  set delivery (value: string) {
     this._delivery = value
   }
 
@@ -37,11 +53,11 @@ export class MediaFile {
    *
    * @type {string}
    */
-  get type () {
+  get type (): string {
     return this._type
   }
 
-  set type (value) {
+  set type (value: string) {
     this._type = value
   }
 
@@ -50,11 +66,11 @@ export class MediaFile {
    *
    * @type {number}
    */
-  get bitrate () {
+  get bitrate (): number {
     return this._bitrate
   }
 
-  set bitrate (value) {
+  set bitrate (value: number) {
     this._bitrate = value
   }
 
@@ -63,11 +79,11 @@ export class MediaFile {
    *
    * @type {number}
    */
-  get minBitrate () {
+  get minBitrate (): number {
     return this._minBitrate
   }
 
-  set minBitrate (value) {
+  set minBitrate (value: number) {
     this._minBitrate = value
   }
 
@@ -76,11 +92,11 @@ export class MediaFile {
    *
    * @type {number}
    */
-  get maxBitrate () {
+  get maxBitrate (): number {
     return this._maxBitrate
   }
 
-  set maxBitrate (value) {
+  set maxBitrate (value: number) {
     this._maxBitrate = value
   }
 
@@ -89,11 +105,11 @@ export class MediaFile {
    *
    * @type {number}
    */
-  get width () {
+  get width (): number {
     return this._width
   }
 
-  set width (value) {
+  set width (value: number) {
     this._width = value
   }
 
@@ -102,11 +118,11 @@ export class MediaFile {
    *
    * @type {number}
    */
-  get height () {
+  get height (): number {
     return this._height
   }
 
-  set height (value) {
+  set height (value: number) {
     this._height = value
   }
 
@@ -115,11 +131,11 @@ export class MediaFile {
    *
    * @type {boolean}
    */
-  get scalable () {
+  get scalable (): boolean {
     return this._scalable
   }
 
-  set scalable (value) {
+  set scalable (value: boolean) {
     this._scalable = value
   }
 
@@ -128,11 +144,11 @@ export class MediaFile {
    *
    * @type {boolean}
    */
-  get maintainAspectRatio () {
+  get maintainAspectRatio (): boolean {
     return this._maintainAspectRatio
   }
 
-  set maintainAspectRatio (value) {
+  set maintainAspectRatio (value: boolean) {
     this._maintainAspectRatio = value
   }
 
@@ -141,11 +157,11 @@ export class MediaFile {
    *
    * @type {string}
    */
-  get codec () {
+  get codec (): string {
     return this._codec
   }
 
-  set codec (value) {
+  set codec (value: string) {
     this._codec = value
   }
 
@@ -154,11 +170,11 @@ export class MediaFile {
    *
    * @type {string}
    */
-  get apiFramework () {
+  get apiFramework (): string {
     return this._apiFramework
   }
 
-  set apiFramework (value) {
+  set apiFramework (value: string) {
     this._apiFramework = value
   }
 
@@ -167,15 +183,15 @@ export class MediaFile {
    *
    * @type {string}
    */
-  get uri () {
+  get uri (): string {
     return this._uri
   }
 
-  set uri (value) {
+  set uri (value: string) {
     this._uri = value
   }
 
-  get $type () {
+  get $type (): 'MediaFile' {
     return 'MediaFile'
   }
 }

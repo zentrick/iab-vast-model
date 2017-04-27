@@ -1,4 +1,8 @@
+// @flow
+
 import { TrackingEvents } from '../tracking/events'
+import type { Resource } from '../resource/base'
+import type { Click } from '../util/click'
 
 /**
  * Represents a single companion ad. Used in a {@link CompanionAds} creative.
@@ -8,6 +12,22 @@ import { TrackingEvents } from '../tracking/events'
  * @copyright © 2016 Zentrick nv
  */
 export class Companion {
+  _id: string
+  _width: number
+  _height: number
+  _assetWidth: number
+  _assetHeight: number
+  _expandedWidth: number
+  _expandedHeight: number
+  _apiFramework: string
+  _adSlotID: string
+  _resource: Resource
+  _adParameters: string
+  _altText: string
+  _clickThrough: Click
+  _clickTrackings: Click[]
+  _trackingEvents: TrackingEvents
+
   constructor () {
     this._clickTrackings = []
     this._trackingEvents = new TrackingEvents()
@@ -18,11 +38,11 @@ export class Companion {
    *
    * @type {string}
    */
-  get id () {
+  get id (): string {
     return this._id
   }
 
-  set id (value) {
+  set id (value: string) {
     this._id = value
   }
 
@@ -31,11 +51,11 @@ export class Companion {
    *
    * @type {number}
    */
-  get width () {
+  get width (): number {
     return this._width
   }
 
-  set width (value) {
+  set width (value: number) {
     this._width = value
   }
 
@@ -44,11 +64,11 @@ export class Companion {
    *
    * @type {number}
    */
-  get height () {
+  get height (): number {
     return this._height
   }
 
-  set height (value) {
+  set height (value: number) {
     this._height = value
   }
 
@@ -57,11 +77,11 @@ export class Companion {
    *
    * @type {number}
    */
-  get assetWidth () {
+  get assetWidth (): number {
     return this._assetWidth
   }
 
-  set assetWidth (value) {
+  set assetWidth (value: number) {
     this._assetWidth = value
   }
 
@@ -70,11 +90,11 @@ export class Companion {
    *
    * @type {number}
    */
-  get assetHeight () {
+  get assetHeight (): number {
     return this._assetHeight
   }
 
-  set assetHeight (value) {
+  set assetHeight (value: number) {
     this._assetHeight = value
   }
 
@@ -83,11 +103,11 @@ export class Companion {
    *
    * @type {number}
    */
-  get expandedWidth () {
+  get expandedWidth (): number {
     return this._expandedWidth
   }
 
-  set expandedWidth (value) {
+  set expandedWidth (value: number) {
     this._expandedWidth = value
   }
 
@@ -96,11 +116,11 @@ export class Companion {
    *
    * @type {number}
    */
-  get expandedHeight () {
+  get expandedHeight (): number {
     return this._expandedHeight
   }
 
-  set expandedHeight (value) {
+  set expandedHeight (value: number) {
     this._expandedHeight = value
   }
 
@@ -109,11 +129,11 @@ export class Companion {
    *
    * @type {string}
    */
-  get apiFramework () {
+  get apiFramework (): string {
     return this._apiFramework
   }
 
-  set apiFramework (value) {
+  set apiFramework (value: string) {
     this._apiFramework = value
   }
 
@@ -122,11 +142,11 @@ export class Companion {
    *
    * @type {string}
    */
-  get adSlotID () {
+  get adSlotID (): string {
     return this._adSlotID
   }
 
-  set adSlotID (value) {
+  set adSlotID (value: string) {
     this._adSlotID = value
   }
 
@@ -135,11 +155,11 @@ export class Companion {
    *
    * @type {Resource}
    */
-  get resource () {
+  get resource (): Resource {
     return this._resource
   }
 
-  set resource (value) {
+  set resource (value: Resource) {
     this._resource = value
   }
 
@@ -148,11 +168,11 @@ export class Companion {
    *
    * @type {string}
    */
-  get adParameters () {
+  get adParameters (): string {
     return this._adParameters
   }
 
-  set adParameters (value) {
+  set adParameters (value: string) {
     this._adParameters = value
   }
 
@@ -161,11 +181,11 @@ export class Companion {
    *
    * @type {string}
    */
-  get altText () {
+  get altText (): string {
     return this._altText
   }
 
-  set altText (value) {
+  set altText (value: string) {
     this._altText = value
   }
 
@@ -174,11 +194,11 @@ export class Companion {
    *
    * @type {Click}
    */
-  get clickThrough () {
+  get clickThrough (): Click {
     return this._clickThrough
   }
 
-  set clickThrough (value) {
+  set clickThrough (value: Click) {
     this._clickThrough = value
   }
 
@@ -188,7 +208,7 @@ export class Companion {
    * @type {Click[]}
    * @readonly
    */
-  get clickTrackings () {
+  get clickTrackings (): Click[] {
     return this._clickTrackings
   }
 
@@ -198,11 +218,11 @@ export class Companion {
    * @type {TrackingEvents}
    * @readonly
    */
-  get trackingEvents () {
+  get trackingEvents (): TrackingEvents {
     return this._trackingEvents
   }
 
-  get $type () {
+  get $type (): 'Companion' {
     return 'Companion'
   }
 }

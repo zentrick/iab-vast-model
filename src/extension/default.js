@@ -1,3 +1,5 @@
+// @flow
+
 import { AbstractExtension } from './abstract'
 
 /**
@@ -9,7 +11,7 @@ import { AbstractExtension } from './abstract'
  * @copyright © 2016 Zentrick nv
  */
 export class Extension extends AbstractExtension {
-  get $type () {
+  get $type (): 'Extension' {
     return 'Extension'
   }
 }

@@ -1,5 +1,11 @@
+// @flow
+
 import { SortedList } from '../util/sorted-list'
 import { SortedListItem } from '../util/sorted-list-item'
+import type { AdSystem } from '../core/ad-system'
+import type { Creative } from '../creative/base'
+import type { Impression } from '../core/impression'
+import type { Extension } from '../extension/default'
 
 /**
  * Base class for ads.
@@ -11,6 +17,14 @@ import { SortedListItem } from '../util/sorted-list-item'
  * @copyright © 2016 Zentrick nv
  */
 export class Ad extends SortedListItem {
+  _id: string
+  _adSystem: AdSystem
+
+  _creatives: SortedList<Creative>
+  _impressions: Impression[]
+  _errors: string[]
+  _extensions: Extension[]
+
   constructor () {
     super()
     this._creatives = new SortedList()
@@ -24,11 +38,11 @@ export class Ad extends SortedListItem {
    *
    * @type {string}
    */
-  get id () {
+  get id (): string {
     return this._id
   }
 
-  set id (value) {
+  set id (value: string) {
     this._id = value
   }
 
@@ -37,11 +51,11 @@ export class Ad extends SortedListItem {
    *
    * @type {AdSystem}
    */
-  get adSystem () {
+  get adSystem (): AdSystem {
     return this._adSystem
   }
 
-  set adSystem (value) {
+  set adSystem (value: AdSystem) {
     this._adSystem = value
   }
 
@@ -51,7 +65,7 @@ export class Ad extends SortedListItem {
    * @type {SortedList}
    * @readonly
    */
-  get creatives () {
+  get creatives (): SortedList<Creative> {
     return this._creatives
   }
 
@@ -61,7 +75,7 @@ export class Ad extends SortedListItem {
    * @type {Impression[]}
    * @readonly
    */
-  get impressions () {
+  get impressions (): Impression[] {
     return this._impressions
   }
 
@@ -71,7 +85,7 @@ export class Ad extends SortedListItem {
    * @type {string[]}
    * @readonly
    */
-  get errors () {
+  get errors (): string[] {
     return this._errors
   }
 
@@ -81,12 +95,12 @@ export class Ad extends SortedListItem {
    * @type {string}
    * @deprecated superseded by .errors
    */
-  get error () {
+  get error (): string {
     console.warn('Ad.error is deprecated. Please use ad.errors instead.')
     return this._errors[0]
   }
 
-  set error (value) {
+  set error (value: string) {
     console.warn('Ad.error is deprecated. Please use ad.errors instead.')
     this._errors[0] = value
   }
@@ -97,7 +111,7 @@ export class Ad extends SortedListItem {
    * @type {Extension[]}
    * @readonly
    */
-  get extensions () {
+  get extensions (): Extension[] {
     return this._extensions
   }
 }

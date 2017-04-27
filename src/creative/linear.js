@@ -1,6 +1,13 @@
+// @flow
+
 import { Creative } from './base'
 import { VideoClicks } from '../clicks/video'
 import { TrackingEvents } from '../tracking/events'
+
+import type { TimeOffset } from '../time-offset/base'
+import type { MediaFile } from '../core/media-file'
+import type { Icon } from '../core/icon'
+import type { Type } from '../type'
 
 /**
  * Represents a linear creative.
@@ -11,6 +18,14 @@ import { TrackingEvents } from '../tracking/events'
  * @copyright © 2016 Zentrick nv
  */
 export class Linear extends Creative {
+  _skipoffset: TimeOffset
+  _adParameters: string
+  _duration: number
+  _mediaFiles: MediaFile[]
+  _trackingEvents: TrackingEvents
+  _videoClicks: VideoClicks
+  _icons: Icon[]
+
   constructor () {
     super()
     this._mediaFiles = []
@@ -24,11 +39,11 @@ export class Linear extends Creative {
    *
    * @type {TimeOffset}
    */
-  get skipoffset () {
+  get skipoffset (): TimeOffset {
     return this._skipoffset
   }
 
-  set skipoffset (value) {
+  set skipoffset (value: TimeOffset) {
     this._skipoffset = value
   }
 
@@ -37,11 +52,11 @@ export class Linear extends Creative {
    *
    * @type {string}
    */
-  get adParameters () {
+  get adParameters (): string {
     return this._adParameters
   }
 
-  set adParameters (value) {
+  set adParameters (value: string) {
     this._adParameters = value
   }
 
@@ -50,11 +65,11 @@ export class Linear extends Creative {
    *
    * @type {number}
    */
-  get duration () {
+  get duration (): number {
     return this._duration
   }
 
-  set duration (value) {
+  set duration (value: number) {
     this._duration = value
   }
 
@@ -64,7 +79,7 @@ export class Linear extends Creative {
    * @type {MediaFile[]}
    * @readonly
    */
-  get mediaFiles () {
+  get mediaFiles (): MediaFile[] {
     return this._mediaFiles
   }
 
@@ -74,7 +89,7 @@ export class Linear extends Creative {
    * @type {TrackingEvents}
    * @readonly
    */
-  get trackingEvents () {
+  get trackingEvents (): TrackingEvents {
     return this._trackingEvents
   }
 
@@ -84,7 +99,7 @@ export class Linear extends Creative {
    * @type {VideoClicks}
    * @readonly
    */
-  get videoClicks () {
+  get videoClicks (): VideoClicks {
     return this._videoClicks
   }
 
@@ -94,11 +109,11 @@ export class Linear extends Creative {
    * @type {Icon[]}
    * @readonly
    */
-  get icons () {
+  get icons (): Icon[] {
     return this._icons
   }
 
-  get $type () {
+  get $type (): Type {
     return 'Linear'
   }
 }

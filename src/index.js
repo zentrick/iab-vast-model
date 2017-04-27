@@ -1,3 +1,5 @@
+// @flow
+
 export { VAST } from './core/vast'
 
 export { AdSystem } from './core/ad-system'

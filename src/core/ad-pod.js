@@ -1,4 +1,7 @@
+// @flow
+
 import { SortedList } from '../util/sorted-list'
+import { Ad } from '../ad/base'
 
 /**
  * Represents a VAST ad pod.
@@ -8,6 +11,8 @@ import { SortedList } from '../util/sorted-list'
  * @copyright © 2016 Zentrick nv
  */
 export class AdPod {
+  _ads: SortedList<Ad>
+
   constructor () {
     this._ads = new SortedList()
   }
@@ -18,11 +23,11 @@ export class AdPod {
    * @type {SortedList}
    * @readonly
    */
-  get ads () {
+  get ads (): SortedList<Ad> {
     return this._ads
   }
 
-  get $type () {
+  get $type (): 'AdPod' {
     return 'AdPod'
   }
 }

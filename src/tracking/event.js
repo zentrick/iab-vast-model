@@ -1,3 +1,7 @@
+// @flow
+
+import type { TimeOffset } from '../time-offset/base'
+
 /**
  * Represents a tracking event configuration.
  *
@@ -6,16 +10,19 @@
  * @copyright © 2016 Zentrick nv
  */
 export class TrackingEvent {
+  _uri: string[]
+  _offset: TimeOffset
+
   /**
    * The tracking URI for this event configuration.
    *
    * @type {string[]}
    */
-  get uri () {
+  get uri (): string[] {
     return this._uri
   }
 
-  set uri (value) {
+  set uri (value: string[]) {
     this._uri = value
   }
 
@@ -25,15 +32,15 @@ export class TrackingEvent {
    *
    * @type {TimeOffset}
    */
-  get offset () {
+  get offset (): TimeOffset {
     return this._offset
   }
 
-  set offset (value) {
+  set offset (value: TimeOffset) {
     this._offset = value
   }
 
-  get $type () {
+  get $type (): 'TrackingEvent' {
     return 'TrackingEvent'
   }
 }

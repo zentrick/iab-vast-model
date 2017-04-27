@@ -1,4 +1,8 @@
+// @flow
+
 import { IconClicks } from '../clicks/icon'
+import type { Resource } from '../resource/base'
+import type { Click } from '../util/click'
 
 /**
  * Represents an icon used in a {@link Linear} creative.
@@ -8,6 +12,18 @@ import { IconClicks } from '../clicks/icon'
  * @copyright © 2016 Zentrick nv
  */
 export class Icon {
+  _program: string
+  _width: number
+  _height: number
+  _xPosition: number
+  _yPosition: number
+  _duration: number
+  _offset: number
+  _apiFramework: string
+  _resource: Resource
+  _clicks: IconClicks
+  _viewTrackings: Click[]
+
   constructor () {
     this._clicks = new IconClicks()
     this._viewTrackings = []
@@ -18,11 +34,11 @@ export class Icon {
    *
    * @type {string}
    */
-  get program () {
+  get program (): string {
     return this._program
   }
 
-  set program (value) {
+  set program (value: string) {
     this._program = value
   }
 
@@ -31,11 +47,11 @@ export class Icon {
    *
    * @type {number}
    */
-  get width () {
+  get width (): number {
     return this._width
   }
 
-  set width (value) {
+  set width (value: number) {
     this._width = value
   }
 
@@ -44,11 +60,11 @@ export class Icon {
    *
    * @type {number}
    */
-  get height () {
+  get height (): number {
     return this._height
   }
 
-  set height (value) {
+  set height (value: number) {
     this._height = value
   }
 
@@ -57,11 +73,11 @@ export class Icon {
    *
    * @type {number}
    */
-  get xPosition () {
+  get xPosition (): number {
     return this._xPosition
   }
 
-  set xPosition (value) {
+  set xPosition (value: number) {
     this._xPosition = value
   }
 
@@ -70,11 +86,11 @@ export class Icon {
    *
    * @type {number}
    */
-  get yPosition () {
+  get yPosition (): number {
     return this._yPosition
   }
 
-  set yPosition (value) {
+  set yPosition (value: number) {
     this._yPosition = value
   }
 
@@ -83,11 +99,11 @@ export class Icon {
    *
    * @type {number}
    */
-  get duration () {
+  get duration (): number {
     return this._duration
   }
 
-  set duration (value) {
+  set duration (value: number) {
     this._duration = value
   }
 
@@ -96,11 +112,11 @@ export class Icon {
    *
    * @type {number}
    */
-  get offset () {
+  get offset (): number {
     return this._offset
   }
 
-  set offset (value) {
+  set offset (value: number) {
     this._offset = value
   }
 
@@ -109,11 +125,11 @@ export class Icon {
    *
    * @type {string}
    */
-  get apiFramework () {
+  get apiFramework (): string {
     return this._apiFramework
   }
 
-  set apiFramework (value) {
+  set apiFramework (value: string) {
     this._apiFramework = value
   }
 
@@ -122,11 +138,11 @@ export class Icon {
    *
    * @type {Resource}
    */
-  get resource () {
+  get resource (): Resource {
     return this._resource
   }
 
-  set resource (value) {
+  set resource (value: Resource) {
     this._resource = value
   }
 
@@ -136,7 +152,7 @@ export class Icon {
    * @type {IconClicks}
    * @readonly
    */
-  get clicks () {
+  get clicks (): IconClicks {
     return this._clicks
   }
 
@@ -145,11 +161,11 @@ export class Icon {
    *
    * @type {Click[]}
    */
-  get viewTrackings () {
+  get viewTrackings (): Click[] {
     return this._viewTrackings
   }
 
-  get $type () {
+  get $type (): 'Icon' {
     return 'Icon'
   }
 }

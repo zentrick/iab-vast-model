@@ -1,3 +1,8 @@
+// @flow
+
+import type { Resource } from '../resource/base'
+import type { Click } from '../util/click'
+
 /**
  * Represents a single non-linear ad. Used in a {@link NonLinearAds} creative.
  *
@@ -6,6 +11,20 @@
  * @copyright © 2016 Zentrick nv
  */
 export class NonLinear {
+  _id: string
+  _width: number
+  _height: number
+  _expandedWidth: number
+  _expandedHeight: number
+  _scalable: boolean
+  _maintainAspectRatio: boolean
+  _minSuggestedDuration: number
+  _apiFramework: string
+  _resource: Resource
+  _clickThrough: Click
+  _clickTrackings: Click[]
+  _adParameters: string
+
   constructor () {
     this._clickTrackings = []
   }
@@ -15,11 +34,11 @@ export class NonLinear {
    *
    * @type {string}
    */
-  get id () {
+  get id (): string {
     return this._id
   }
 
-  set id (value) {
+  set id (value: string) {
     this._id = value
   }
 
@@ -28,11 +47,11 @@ export class NonLinear {
    *
    * @type {number}
    */
-  get width () {
+  get width (): number {
     return this._width
   }
 
-  set width (value) {
+  set width (value: number) {
     this._width = value
   }
 
@@ -41,11 +60,11 @@ export class NonLinear {
    *
    * @type {number}
    */
-  get height () {
+  get height (): number {
     return this._height
   }
 
-  set height (value) {
+  set height (value: number) {
     this._height = value
   }
 
@@ -54,11 +73,11 @@ export class NonLinear {
    *
    * @type {number}
    */
-  get expandedWidth () {
+  get expandedWidth (): number {
     return this._expandedWidth
   }
 
-  set expandedWidth (value) {
+  set expandedWidth (value: number) {
     this._expandedWidth = value
   }
 
@@ -67,11 +86,11 @@ export class NonLinear {
    *
    * @type {number}
    */
-  get expandedHeight () {
+  get expandedHeight (): number {
     return this._expandedHeight
   }
 
-  set expandedHeight (value) {
+  set expandedHeight (value: number) {
     this._expandedHeight = value
   }
 
@@ -80,11 +99,11 @@ export class NonLinear {
    *
    * @type {boolean}
    */
-  get scalable () {
+  get scalable (): boolean {
     return this._scalable
   }
 
-  set scalable (value) {
+  set scalable (value: boolean) {
     this._scalable = value
   }
 
@@ -93,11 +112,11 @@ export class NonLinear {
    *
    * @type {boolean}
    */
-  get maintainAspectRatio () {
+  get maintainAspectRatio (): boolean {
     return this._maintainAspectRatio
   }
 
-  set maintainAspectRatio (value) {
+  set maintainAspectRatio (value: boolean) {
     this._maintainAspectRatio = value
   }
 
@@ -106,11 +125,11 @@ export class NonLinear {
    *
    * @type {number}
    */
-  get minSuggestedDuration () {
+  get minSuggestedDuration (): number {
     return this._minSuggestedDuration
   }
 
-  set minSuggestedDuration (value) {
+  set minSuggestedDuration (value: number) {
     this._minSuggestedDuration = value
   }
 
@@ -119,11 +138,11 @@ export class NonLinear {
    *
    * @type {string}
    */
-  get apiFramework () {
+  get apiFramework (): string {
     return this._apiFramework
   }
 
-  set apiFramework (value) {
+  set apiFramework (value: string) {
     this._apiFramework = value
   }
 
@@ -132,11 +151,11 @@ export class NonLinear {
    *
    * @type {Resource}
    */
-  get resource () {
+  get resource (): Resource {
     return this._resource
   }
 
-  set resource (value) {
+  set resource (value: Resource) {
     this._resource = value
   }
 
@@ -145,11 +164,11 @@ export class NonLinear {
    *
    * @type {Click}
    */
-  get clickThrough () {
+  get clickThrough (): Click {
     return this._clickThrough
   }
 
-  set clickThrough (value) {
+  set clickThrough (value: Click) {
     this._clickThrough = value
   }
 
@@ -159,7 +178,7 @@ export class NonLinear {
    * @type {Click[]}
    * @readonly
    */
-  get clickTrackings () {
+  get clickTrackings (): Click[] {
     return this._clickTrackings
   }
 
@@ -168,15 +187,15 @@ export class NonLinear {
    *
    * @type {string}
    */
-  get adParameters () {
+  get adParameters (): string {
     return this._adParameters
   }
 
-  set adParameters (value) {
+  set adParameters (value: string) {
     this._adParameters = value
   }
 
-  get $type () {
+  get $type (): 'NonLinear' {
     return 'NonLinear'
   }
 }

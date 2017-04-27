@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Pricing information for real-time bidding.
  *
@@ -6,16 +8,20 @@
  * @copyright © 2016 Zentrick nv
  */
 export class Pricing {
+  _model: string
+  _currency: string
+  _value: number
+
   /**
    * The pricing model. Either `"CPM"`, `"CPC"`, `"CPE"`, or `"CPV"`.
    *
    * @type {string}
    */
-  get model () {
+  get model (): string {
     return this._model
   }
 
-  set model (value) {
+  set model (value: string) {
     this._model = value
   }
 
@@ -24,11 +30,11 @@ export class Pricing {
    *
    * @type {string}
    */
-  get currency () {
+  get currency (): string {
     return this._currency
   }
 
-  set currency (value) {
+  set currency (value: string) {
     this._currency = value
   }
 
@@ -37,15 +43,15 @@ export class Pricing {
    *
    * @type {number}
    */
-  get value () {
+  get value (): number {
     return this._value
   }
 
-  set value (value) {
+  set value (value: number) {
     this._value = value
   }
 
-  get $type () {
+  get $type (): 'Pricing' {
     return 'Pricing'
   }
 }

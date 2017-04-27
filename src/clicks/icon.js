@@ -1,3 +1,5 @@
+// @flow
+
 import { AbstractClicks } from './abstract'
 
 /**
@@ -9,7 +11,7 @@ import { AbstractClicks } from './abstract'
  * @copyright © 2016 Zentrick nv
  */
 export class IconClicks extends AbstractClicks {
-  get $type () {
+  get $type (): 'IconClicks' {
     return 'IconClicks'
   }
 }

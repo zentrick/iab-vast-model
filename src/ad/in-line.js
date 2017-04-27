@@ -1,4 +1,7 @@
+// @flow
+
 import { Ad } from './base'
+import type { Pricing } from '../core/pricing'
 
 /**
  * Inline ad.
@@ -9,16 +12,22 @@ import { Ad } from './base'
  * @copyright © 2016 Zentrick nv
  */
 export class InLine extends Ad {
+  _adTitle: string
+  _description: string
+  _advertiser: string
+  _survey: string
+  _pricing: Pricing
+
   /**
    * The title for this ad.
    *
    * @type {string}
    */
-  get adTitle () {
+  get adTitle (): string {
     return this._adTitle
   }
 
-  set adTitle (value) {
+  set adTitle (value: string) {
     this._adTitle = value
   }
 
@@ -27,11 +36,11 @@ export class InLine extends Ad {
    *
    * @type {string}
    */
-  get description () {
+  get description (): string {
     return this._description
   }
 
-  set description (value) {
+  set description (value: string) {
     this._description = value
   }
 
@@ -40,11 +49,11 @@ export class InLine extends Ad {
    *
    * @type {string}
    */
-  get advertiser () {
+  get advertiser (): string {
     return this._advertiser
   }
 
-  set advertiser (value) {
+  set advertiser (value: string) {
     this._advertiser = value
   }
 
@@ -53,11 +62,11 @@ export class InLine extends Ad {
    *
    * @type {string}
    */
-  get survey () {
+  get survey (): string {
     return this._survey
   }
 
-  set survey (value) {
+  set survey (value: string) {
     this._survey = value
   }
 
@@ -66,15 +75,15 @@ export class InLine extends Ad {
    *
    * @type {Pricing}
    */
-  get pricing () {
+  get pricing (): Pricing {
     return this._pricing
   }
 
-  set pricing (value) {
+  set pricing (value: Pricing) {
     this._pricing = value
   }
 
-  get $type () {
+  get $type (): 'InLine' {
     return 'InLine'
   }
 }

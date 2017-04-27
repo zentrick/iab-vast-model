@@ -1,4 +1,8 @@
+// @flow
+
 import { Resource } from './base'
+
+import type { Type } from '../type'
 
 /**
  * Describes an HTML page for display within an iframe.
@@ -9,7 +13,7 @@ import { Resource } from './base'
  * @copyright © 2016 Zentrick nv
  */
 export class IFrameResource extends Resource {
-  get $type () {
+  get $type (): Type {
     return 'IFrameResource'
   }
 }

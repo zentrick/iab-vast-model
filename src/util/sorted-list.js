@@ -1,3 +1,9 @@
+// @flow
+
+type HasSequence = {
+  sequence?: number
+}
+
 /**
  * Represents a list of {@link SortedListItem}s, ordered by
  * {@link SortedListItem#sequence}.
@@ -6,7 +12,9 @@
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class SortedList {
+export class SortedList<T: HasSequence> {
+  _contents: T[]
+
   constructor () {
     this._contents = []
   }
@@ -17,7 +25,7 @@ export class SortedList {
    * @type {number}
    * @readonly
    */
-  get length () {
+  get length (): number {
     return this._contents.length
   }
 
@@ -26,7 +34,7 @@ export class SortedList {
    *
    * @param {SortedListItem} item - the item.
    */
-  add (item) {
+  add (item: T): void {
     this._contents.push(item)
     this._contents.sort((a, b) => (a.sequence || 0) - (b.sequence || 0))
   }
@@ -36,7 +44,7 @@ export class SortedList {
    *
    * @param {SortedListItem} item - the item.
    */
-  remove (item) {
+  remove (item: T) {
     let index = this._contents.indexOf(item)
     while (index >= 0) {
       this._contents.splice(index, 1)
@@ -50,7 +58,7 @@ export class SortedList {
    * @param {number} index - the index.
    * @return {SortedListItem} the item.
    */
-  get (index) {
+  get (index: number) {
     return this._contents[index]
   }
 
@@ -61,16 +69,16 @@ export class SortedList {
     this._contents.length = 0
   }
 
-  [Symbol.iterator] () {
-    const that = this
-    let i = 0
-    return {
-      next () {
-        return (i < that.length) ? { value: that.get(i++), done: false }
-          : { value: undefined, done: true }
-      }
-    }
-  }
+  // [Symbol.iterator] () {
+  //   const that = this
+  //   let i = 0
+  //   return {
+  //     next () {
+  //       return (i < that.length) ? { value: that.get(i++), done: false }
+  //         : { value: undefined, done: true }
+  //     }
+  //   }
+  // }
 
   /**
    * Creates an array representation of this list.
@@ -81,7 +89,7 @@ export class SortedList {
     return this._contents.slice()
   }
 
-  get $type () {
+  get $type (): 'SortedList' {
     return 'SortedList'
   }
 }

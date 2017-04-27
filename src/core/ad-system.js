@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Stores information about the ad system.
  *
@@ -6,16 +8,19 @@
  * @copyright © 2016 Zentrick nv
  */
 export class AdSystem {
+  _name: string
+  _version: string
+
   /**
    * The name of the ad system.
    *
    * @type {string}
    */
-  get name () {
+  get name (): string {
     return this._name
   }
 
-  set name (value) {
+  set name (value: string) {
     this._name = value
   }
 
@@ -24,15 +29,15 @@ export class AdSystem {
    *
    * @type {string}
    */
-  get version () {
+  get version (): string {
     return this._version
   }
 
-  set version (value) {
+  set version (value: string) {
     this._version = value
   }
 
-  get $type () {
+  get $type (): 'AdSystem' {
     return 'AdSystem'
   }
 }

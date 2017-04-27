@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Describes a click configuration.
  *
@@ -6,16 +8,19 @@
  * @copyright © 2016 Zentrick nv
  */
 export class Click {
+  _id: string
+  _uri: string
+
   /**
    * The ID of this click.
    *
    * @type {string}
    */
-  get id () {
+  get id (): string {
     return this._id
   }
 
-  set id (value) {
+  set id (value: string) {
     this._id = value
   }
 
@@ -24,15 +29,15 @@ export class Click {
    *
    * @type {string}
    */
-  get uri () {
+  get uri (): string {
     return this._uri
   }
 
-  set uri (value) {
+  set uri (value: string) {
     this._uri = value
   }
 
-  get $type () {
+  get $type (): 'Click' {
     return 'Click'
   }
 }

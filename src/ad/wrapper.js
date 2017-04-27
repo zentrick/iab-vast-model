@@ -1,3 +1,5 @@
+// @flow
+
 import { Ad } from './base'
 
 /**
@@ -9,16 +11,21 @@ import { Ad } from './base'
  * @copyright © 2016 Zentrick nv
  */
 export class Wrapper extends Ad {
+  _vastAdTagURI: string
+  _followAdditionalWrappers: boolean
+  _allowMultipleAds: boolean
+  _fallbackOnNoAd: boolean
+
   /**
    * The URI of the tag that this ad wraps.
    *
    * @type {string}
    */
-  get vastAdTagURI () {
+  get vastAdTagURI (): string {
     return this._vastAdTagURI
   }
 
-  set vastAdTagURI (value) {
+  set vastAdTagURI (value: string) {
     this._vastAdTagURI = value
   }
 
@@ -27,11 +34,11 @@ export class Wrapper extends Ad {
    *
    * @type {boolean}
    */
-  get followAdditionalWrappers () {
+  get followAdditionalWrappers (): boolean {
     return this._followAdditionalWrappers
   }
 
-  set followAdditionalWrappers (value) {
+  set followAdditionalWrappers (value: boolean) {
     this._followAdditionalWrappers = value
   }
 
@@ -40,11 +47,11 @@ export class Wrapper extends Ad {
    *
    * @type {boolean}
    */
-  get allowMultipleAds () {
+  get allowMultipleAds (): boolean {
     return this._allowMultipleAds
   }
 
-  set allowMultipleAds (value) {
+  set allowMultipleAds (value: boolean) {
     this._allowMultipleAds = value
   }
 
@@ -54,15 +61,15 @@ export class Wrapper extends Ad {
    *
    * @type {boolean}
    */
-  get fallbackOnNoAd () {
+  get fallbackOnNoAd (): boolean {
     return this._fallbackOnNoAd
   }
 
-  set fallbackOnNoAd (value) {
+  set fallbackOnNoAd (value: boolean) {
     this._fallbackOnNoAd = value
   }
 
-  get $type () {
+  get $type (): 'Wrapper' {
     return 'Wrapper'
   }
 }

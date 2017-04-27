@@ -1,4 +1,7 @@
+// @flow
+
 import { AdBuffet } from './ad-buffet'
+import type { Type } from '../type'
 
 /**
  * Represents a VAST document.
@@ -9,6 +12,9 @@ import { AdBuffet } from './ad-buffet'
  * @copyright © 2016 Zentrick nv
  */
 export class VAST extends AdBuffet {
+  _version: string
+  _errors: string[]
+
   constructor () {
     super()
     this._errors = []
@@ -19,11 +25,11 @@ export class VAST extends AdBuffet {
    *
    * @type {string}
    */
-  get version () {
+  get version (): string {
     return this._version
   }
 
-  set version (value) {
+  set version (value: string) {
     this._version = value
   }
 
@@ -33,11 +39,11 @@ export class VAST extends AdBuffet {
    * @type {string[]}
    * @readonly
    */
-  get errors () {
+  get errors (): string[] {
     return this._errors
   }
 
-  get $type () {
+  get $type (): Type {
     return 'VAST'
   }
 }

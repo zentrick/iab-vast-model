@@ -1,5 +1,10 @@
+// @flow
+
 import { Creative } from './base'
 import { TrackingEvents } from '../tracking/events'
+
+import type { NonLinear } from '../core/non-linear'
+import type { Type } from '../type'
 
 /**
  * Represents a creative with non-linear ads.
@@ -10,6 +15,9 @@ import { TrackingEvents } from '../tracking/events'
  * @copyright © 2016 Zentrick nv
  */
 export class NonLinearAds extends Creative {
+  _nonLinears: NonLinear[]
+  _trackingEvents: TrackingEvents
+
   constructor () {
     super()
     this._nonLinears = []
@@ -22,7 +30,7 @@ export class NonLinearAds extends Creative {
    * @type {NonLinear[]}
    * @readonly
    */
-  get nonLinears () {
+  get nonLinears (): NonLinear[] {
     return this._nonLinears
   }
 
@@ -32,11 +40,11 @@ export class NonLinearAds extends Creative {
    * @type {TrackingEvents}
    * @readonly
    */
-  get trackingEvents () {
+  get trackingEvents (): TrackingEvents {
     return this._trackingEvents
   }
 
-  get $type () {
+  get $type (): Type {
     return 'NonLinearAds'
   }
 }

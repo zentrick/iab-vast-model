@@ -1,3 +1,5 @@
+// @flow
+
 /**
  * Represents a time offset.
  *
@@ -7,16 +9,18 @@
  * @copyright © 2016 Zentrick nv
  */
 export class TimeOffset {
+  _value: number
+
   /**
    * The value for this offset.
    *
    * @type {number}
    */
-  get value () {
+  get value (): number {
     return this._value
   }
 
-  set value (value) {
+  set value (value: number) {
     this._value = value
   }
 }
