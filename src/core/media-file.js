@@ -5,7 +5,6 @@ import type { Type } from '../type'
 /**
  * Represents a media file used in a {@link Linear} creative.
  *
- * @class MediaFile
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -26,8 +25,6 @@ export class MediaFile {
 
   /**
    * The ID of this media file.
-   *
-   * @type {string}
    */
   get id (): string {
     return this._id
@@ -39,8 +36,6 @@ export class MediaFile {
 
   /**
    * The delivery method for this media file.
-   *
-   * @type {string}
    */
   get delivery (): string {
     return this._delivery
@@ -52,8 +47,6 @@ export class MediaFile {
 
   /**
    * The MIME type of this media file.
-   *
-   * @type {string}
    */
   get type (): string {
     return this._type
@@ -65,8 +58,6 @@ export class MediaFile {
 
   /**
    * The bitrate of this media file in kbps.
-   *
-   * @type {number}
    */
   get bitrate (): number {
     return this._bitrate
@@ -78,8 +69,6 @@ export class MediaFile {
 
   /**
    * The minimum bitrate of this media file in kbps.
-   *
-   * @type {number}
    */
   get minBitrate (): number {
     return this._minBitrate
@@ -91,8 +80,6 @@ export class MediaFile {
 
   /**
    * The maximum bitrate of this media file in kbps.
-   *
-   * @type {number}
    */
   get maxBitrate (): number {
     return this._maxBitrate
@@ -104,8 +91,6 @@ export class MediaFile {
 
   /**
    * The width of this media file in pixels.
-   *
-   * @type {number}
    */
   get width (): number {
     return this._width
@@ -117,8 +102,6 @@ export class MediaFile {
 
   /**
    * The height of this media file in pixels.
-   *
-   * @type {number}
    */
   get height (): number {
     return this._height
@@ -130,8 +113,6 @@ export class MediaFile {
 
   /**
    * Whether this media file is meant to scale to larger dimensions.
-   *
-   * @type {boolean}
    */
   get scalable (): boolean {
     return this._scalable
@@ -143,8 +124,6 @@ export class MediaFile {
 
   /**
    * Whether this media file's aspect ratio should be maintained when scaled.
-   *
-   * @type {boolean}
    */
   get maintainAspectRatio (): boolean {
     return this._maintainAspectRatio
@@ -156,8 +135,6 @@ export class MediaFile {
 
   /**
    * The codec of this media file in RFC 4281 format.
-   *
-   * @type {string}
    */
   get codec (): string {
     return this._codec
@@ -169,8 +146,6 @@ export class MediaFile {
 
   /**
    * The API framework used by this media file.
-   *
-   * @type {string}
    */
   get apiFramework (): string {
     return this._apiFramework
@@ -182,8 +157,6 @@ export class MediaFile {
 
   /**
    * The URI to this media file.
-   *
-   * @type {string}
    */
   get uri (): string {
     return this._uri

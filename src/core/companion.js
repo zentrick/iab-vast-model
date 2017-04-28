@@ -8,7 +8,6 @@ import type { Type } from '../type'
 /**
  * Represents a single companion ad. Used in a {@link CompanionAds} creative.
  *
- * @class Companion
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -36,8 +35,6 @@ export class Companion {
 
   /**
    * The ID for this companion ad.
-   *
-   * @type {string}
    */
   get id (): string {
     return this._id
@@ -49,8 +46,6 @@ export class Companion {
 
   /**
    * The width of this companion ad in pixels.
-   *
-   * @type {number}
    */
   get width (): number {
     return this._width
@@ -62,8 +57,6 @@ export class Companion {
 
   /**
    * The height of this companion ad in pixels.
-   *
-   * @type {number}
    */
   get height (): number {
     return this._height
@@ -75,8 +68,6 @@ export class Companion {
 
   /**
    * The width of this companion ad's asset in pixels.
-   *
-   * @type {number}
    */
   get assetWidth (): number {
     return this._assetWidth
@@ -88,8 +79,6 @@ export class Companion {
 
   /**
    * The height of this companion ad's asset in pixels.
-   *
-   * @type {number}
    */
   get assetHeight (): number {
     return this._assetHeight
@@ -101,8 +90,6 @@ export class Companion {
 
   /**
    * The expanded width of this companion ad in pixels.
-   *
-   * @type {number}
    */
   get expandedWidth (): number {
     return this._expandedWidth
@@ -114,8 +101,6 @@ export class Companion {
 
   /**
    * The expanded height of this companion ad in pixels.
-   *
-   * @type {number}
    */
   get expandedHeight (): number {
     return this._expandedHeight
@@ -127,8 +112,6 @@ export class Companion {
 
   /**
    * The API framework used by this companion ad.
-   *
-   * @type {string}
    */
   get apiFramework (): string {
     return this._apiFramework
@@ -140,8 +123,6 @@ export class Companion {
 
   /**
    * The ad slot ID of this companion ad.
-   *
-   * @type {string}
    */
   get adSlotID (): string {
     return this._adSlotID
@@ -153,8 +134,6 @@ export class Companion {
 
   /**
    * The resource associated with this companion ad.
-   *
-   * @type {Resource}
    */
   get resource (): Resource {
     return this._resource
@@ -166,8 +145,6 @@ export class Companion {
 
   /**
    * The ad parameters for this companion ad.
-   *
-   * @type {string}
    */
   get adParameters (): string {
     return this._adParameters
@@ -179,8 +156,6 @@ export class Companion {
 
   /**
    * The alt text of this companion ad.
-   *
-   * @type {string}
    */
   get altText (): string {
     return this._altText
@@ -192,8 +167,6 @@ export class Companion {
 
   /**
    * The clickthrough configuration for this companion ad.
-   *
-   * @type {Click}
    */
   get clickThrough (): Click {
     return this._clickThrough
@@ -205,9 +178,6 @@ export class Companion {
 
   /**
    * The click tracking configurations for this companion ad.
-   *
-   * @type {Click[]}
-   * @readonly
    */
   get clickTrackings (): Click[] {
     return this._clickTrackings
@@ -215,9 +185,6 @@ export class Companion {
 
   /**
    * The tracking event configuration for this companion ad.
-   *
-   * @type {TrackingEvents}
-   * @readonly
    */
   get trackingEvents (): TrackingEvents {
     return this._trackingEvents

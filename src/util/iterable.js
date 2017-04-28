@@ -9,7 +9,8 @@ export class Iterable {
     let i = 0
     return {
       next: () => {
-        return (i < this.length) ? { value: this._contents[i++], done: false }
+        return (i < this.length)
+          ? { value: this._contents[i++], done: false }
           : { value: undefined, done: true }
       }
     }

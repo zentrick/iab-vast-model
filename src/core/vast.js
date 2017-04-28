@@ -6,8 +6,6 @@ import type { Type } from '../type'
 /**
  * Represents a VAST document.
  *
- * @class VAST
- * @extends AdBuffet
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -22,8 +20,6 @@ export class VAST extends AdBuffet {
 
   /**
    * The VAST version used by this document.
-   *
-   * @type {string}
    */
   get version (): string {
     return this._version
@@ -35,9 +31,6 @@ export class VAST extends AdBuffet {
 
   /**
    * The error tracking URIs for this document.
-   *
-   * @type {string[]}
-   * @readonly
    */
   get errors (): string[] {
     return this._errors

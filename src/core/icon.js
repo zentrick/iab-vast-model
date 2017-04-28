@@ -8,7 +8,6 @@ import type { Type } from '../type'
 /**
  * Represents an icon used in a {@link Linear} creative.
  *
- * @class Icon
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -32,8 +31,6 @@ export class Icon {
 
   /**
    * The industry initiative that this icon supports.
-   *
-   * @type {string}
    */
   get program (): string {
     return this._program
@@ -45,8 +42,6 @@ export class Icon {
 
   /**
    * The width of this icon in pixels.
-   *
-   * @type {number}
    */
   get width (): number {
     return this._width
@@ -58,8 +53,6 @@ export class Icon {
 
   /**
    * The height of this icon in pixels.
-   *
-   * @type {number}
    */
   get height (): number {
     return this._height
@@ -71,8 +64,6 @@ export class Icon {
 
   /**
    * The horizontal position of this icon in pixels.
-   *
-   * @type {number}
    */
   get xPosition (): number {
     return this._xPosition
@@ -84,8 +75,6 @@ export class Icon {
 
   /**
    * The vertical position of this icon in pixels.
-   *
-   * @type {number}
    */
   get yPosition (): number {
     return this._yPosition
@@ -97,8 +86,6 @@ export class Icon {
 
   /**
    * The duration of this icon in seconds.
-   *
-   * @type {number}
    */
   get duration (): number {
     return this._duration
@@ -110,8 +97,6 @@ export class Icon {
 
   /**
    * The time offset of this icon in seconds.
-   *
-   * @type {number}
    */
   get offset (): number {
     return this._offset
@@ -123,8 +108,6 @@ export class Icon {
 
   /**
    * The API framework used by this icon.
-   *
-   * @type {string}
    */
   get apiFramework (): string {
     return this._apiFramework
@@ -136,8 +119,6 @@ export class Icon {
 
   /**
    * The resource associated with this icon.
-   *
-   * @type {Resource}
    */
   get resource (): Resource {
     return this._resource
@@ -149,9 +130,6 @@ export class Icon {
 
   /**
    * The click tracking configuration for this icon.
-   *
-   * @type {IconClicks}
-   * @readonly
    */
   get clicks (): IconClicks {
     return this._clicks
@@ -159,8 +137,6 @@ export class Icon {
 
   /**
    * The view tracking configuration.
-   *
-   * @type {Click[]}
    */
   get viewTrackings (): Click[] {
     return this._viewTrackings

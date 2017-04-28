@@ -5,7 +5,6 @@ import type { Type } from '../type'
 /**
  * Represents a tracking pixel configuration for an impression.
  *
- * @class Impression
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -15,8 +14,6 @@ export class Impression {
 
   /**
    * The ID of this impression pixel.
-   *
-   * @type {string}
    */
   get id (): string {
     return this._id
@@ -28,8 +25,6 @@ export class Impression {
 
   /**
    * The URI of this impression pixel.
-   *
-   * @type {string}
    */
   get uri (): string {
     return this._uri

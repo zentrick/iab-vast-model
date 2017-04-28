@@ -7,7 +7,6 @@ import type { Type } from '../type'
  * Configures tracking events. Binds VAST event types to arrays of
  * {@link TrackingEvent} instances.
  *
- * @class TrackingEvents
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */

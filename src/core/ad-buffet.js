@@ -8,7 +8,6 @@ import type { Type } from '../type'
 /**
  * Represents a VAST ad buffet.
  *
- * @class AdBuffet
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -22,9 +21,6 @@ export class AdBuffet {
 
   /**
    * The ads in this ad buffet.
-   *
-   * @type {SortedList}
-   * @readonly
    */
   get ads (): SortedList<Ad> {
     return this._ads
@@ -32,8 +28,6 @@ export class AdBuffet {
 
   /**
    * The ad pod for this ad buffet.
-   *
-   * @type {AdPod}
    */
   get adPod (): AdPod {
     return this._adPod

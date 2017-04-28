@@ -3,7 +3,6 @@
 import { Creative } from './base'
 import { VideoClicks } from '../clicks/video'
 import { TrackingEvents } from '../tracking/events'
-
 import type { TimeOffset } from '../time-offset/base'
 import type { MediaFile } from '../core/media-file'
 import type { Icon } from '../core/icon'
@@ -12,8 +11,6 @@ import type { Type } from '../type'
 /**
  * Represents a linear creative.
  *
- * @class Linear
- * @extends Creative
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -36,8 +33,6 @@ export class Linear extends Creative {
 
   /**
    * The time interval after which this linear creative can be skipped.
-   *
-   * @type {TimeOffset}
    */
   get skipoffset (): TimeOffset {
     return this._skipoffset
@@ -49,8 +44,6 @@ export class Linear extends Creative {
 
   /**
    * The ad parameters for this linear creative.
-   *
-   * @type {string}
    */
   get adParameters (): string {
     return this._adParameters
@@ -62,8 +55,6 @@ export class Linear extends Creative {
 
   /**
    * The duration of this linear creative in seconds.
-   *
-   * @type {number}
    */
   get duration (): number {
     return this._duration
@@ -75,9 +66,6 @@ export class Linear extends Creative {
 
   /**
    * The media files within this linear creative.
-   *
-   * @type {MediaFile[]}
-   * @readonly
    */
   get mediaFiles (): MediaFile[] {
     return this._mediaFiles
@@ -85,9 +73,6 @@ export class Linear extends Creative {
 
   /**
    * The event tracking configuration for this linear creative.
-   *
-   * @type {TrackingEvents}
-   * @readonly
    */
   get trackingEvents (): TrackingEvents {
     return this._trackingEvents
@@ -95,9 +80,6 @@ export class Linear extends Creative {
 
   /**
    * The video click tracking configuration for this linear creative.
-   *
-   * @type {VideoClicks}
-   * @readonly
    */
   get videoClicks (): VideoClicks {
     return this._videoClicks
@@ -105,9 +87,6 @@ export class Linear extends Creative {
 
   /**
    * The icons for this linear creative.
-   *
-   * @type {Icon[]}
-   * @readonly
    */
   get icons (): Icon[] {
     return this._icons

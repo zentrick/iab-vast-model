@@ -10,9 +10,6 @@ import type { Extension } from '../extension/default'
 /**
  * Base class for ads.
  *
- * @class Ad
- * @abstract
- * @extends SortedListItem
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -35,8 +32,6 @@ export class Ad extends SortedListItem {
 
   /**
    * The ID of this ad.
-   *
-   * @type {string}
    */
   get id (): string {
     return this._id
@@ -48,8 +43,6 @@ export class Ad extends SortedListItem {
 
   /**
    * The ad system for this ad.
-   *
-   * @type {AdSystem}
    */
   get adSystem (): AdSystem {
     return this._adSystem
@@ -61,9 +54,6 @@ export class Ad extends SortedListItem {
 
   /**
    * The creatives for this ad.
-   *
-   * @type {SortedList}
-   * @readonly
    */
   get creatives (): SortedList<Creative> {
     return this._creatives
@@ -71,9 +61,6 @@ export class Ad extends SortedListItem {
 
   /**
    * The impression tracking configurations for this ad.
-   *
-   * @type {Impression[]}
-   * @readonly
    */
   get impressions (): Impression[] {
     return this._impressions
@@ -81,9 +68,6 @@ export class Ad extends SortedListItem {
 
   /**
    * The error tracking URIs for this ad.
-   *
-   * @type {string[]}
-   * @readonly
    */
   get errors (): string[] {
     return this._errors
@@ -91,8 +75,6 @@ export class Ad extends SortedListItem {
 
   /**
    * The error tracking URI for this ad.
-   *
-   * @type {string}
    * @deprecated superseded by .errors
    */
   get error (): string {
@@ -107,9 +89,6 @@ export class Ad extends SortedListItem {
 
   /**
    * The extensions for this ad.
-   *
-   * @type {Extension[]}
-   * @readonly
    */
   get extensions (): Extension[] {
     return this._extensions

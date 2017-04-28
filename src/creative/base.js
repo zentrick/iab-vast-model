@@ -6,9 +6,6 @@ import type { CreativeExtension } from '../extension/creative'
 /**
  * Base class for creatives.
  *
- * @class Creative
- * @abstract
- * @extends SortedListItem
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -25,8 +22,6 @@ export class Creative extends SortedListItem {
 
   /**
    * The ID of this creative.
-   *
-   * @type {string}
    */
   get id (): string {
     return this._id
@@ -38,8 +33,6 @@ export class Creative extends SortedListItem {
 
   /**
    * The ID of the {@link Ad} with which this creative is served.
-   *
-   * @type {string}
    */
   get adID (): string {
     return this._adID
@@ -51,8 +44,6 @@ export class Creative extends SortedListItem {
 
   /**
    * The API framework used by this creative.
-   *
-   * @type {string}
    */
   get apiFramework (): string {
     return this._apiFramework
@@ -64,9 +55,6 @@ export class Creative extends SortedListItem {
 
   /**
    * The creative extensions for this creative.
-   *
-   * @type {CreativeExtension[]}
-   * @readonly
    */
   get extensions (): CreativeExtension[] {
     return this._extensions

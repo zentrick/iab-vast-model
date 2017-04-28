@@ -1,14 +1,11 @@
 // @flow
 
 import { Ad } from './base'
-
 import type { Type } from '../type'
 
 /**
  * Wrapper ad.
  *
- * @class Wrapper
- * @extends Ad
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -20,8 +17,6 @@ export class Wrapper extends Ad {
 
   /**
    * The URI of the tag that this ad wraps.
-   *
-   * @type {string}
    */
   get vastAdTagURI (): string {
     return this._vastAdTagURI
@@ -33,8 +28,6 @@ export class Wrapper extends Ad {
 
   /**
    * Whether subsequent wrappers after a requested VAST response is allowed.
-   *
-   * @type {boolean}
    */
   get followAdditionalWrappers (): boolean {
     return this._followAdditionalWrappers
@@ -46,8 +39,6 @@ export class Wrapper extends Ad {
 
   /**
    * Whether multiple ads are allowed in the requested VAST response.
-   *
-   * @type {boolean}
    */
   get allowMultipleAds (): boolean {
     return this._allowMultipleAds
@@ -60,8 +51,6 @@ export class Wrapper extends Ad {
   /**
    * Whether to use an available Ad when the requested VAST response returns no
    * ads.
-   *
-   * @type {boolean}
    */
   get fallbackOnNoAd (): boolean {
     return this._fallbackOnNoAd

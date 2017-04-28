@@ -5,7 +5,6 @@ import type { Type } from '../type'
 /**
  * Describes a click configuration.
  *
- * @class Click
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */

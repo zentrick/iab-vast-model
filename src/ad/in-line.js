@@ -7,8 +7,6 @@ import type { Type } from '../type'
 /**
  * Inline ad.
  *
- * @class InLine
- * @extends Ad
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -21,8 +19,6 @@ export class InLine extends Ad {
 
   /**
    * The title for this ad.
-   *
-   * @type {string}
    */
   get adTitle (): string {
     return this._adTitle
@@ -34,8 +30,6 @@ export class InLine extends Ad {
 
   /**
    * The description for this ad.
-   *
-   * @type {string}
    */
   get description (): string {
     return this._description
@@ -47,8 +41,6 @@ export class InLine extends Ad {
 
   /**
    * The advertiser name for this ad.
-   *
-   * @type {string}
    */
   get advertiser (): string {
     return this._advertiser
@@ -60,8 +52,6 @@ export class InLine extends Ad {
 
   /**
    * The survey URI for this ad.
-   *
-   * @type {string}
    */
   get survey (): string {
     return this._survey
@@ -73,8 +63,6 @@ export class InLine extends Ad {
 
   /**
    * The pricing configuration for this ad.
-   *
-   * @type {Pricing}
    */
   get pricing (): Pricing {
     return this._pricing

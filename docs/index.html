@@ -1,257 +1,9443 @@
-<!DOCTYPE html>
-
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>iab-vast-model Index</title>
-
-	<!--[if lt IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
-
-	<link type="text/css" rel="stylesheet" href="styles/site.simplex.css">
-
+  <meta charset='utf-8' />
+  <title>iab-vast-model 0.4.0 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
 </head>
-
-<body>
-
-<div class="navbar navbar-default navbar-fixed-top ">
-<div class="container">
-	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">iab-vast-model</a>
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-        </button>
-	</div>
-	<div class="navbar-collapse collapse" id="topNavigation">
-		<ul class="nav navbar-nav">
-			
-			<li class="dropdown">
-				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
-				<ul class="dropdown-menu ">
-					<li><a href="Ad.html">Ad</a></li><li><a href="InLine.html">InLine</a></li><li><a href="Wrapper.html">Wrapper</a></li><li><a href="AbstractClicks.html">AbstractClicks</a></li><li><a href="IconClicks.html">IconClicks</a></li><li><a href="VideoClicks.html">VideoClicks</a></li><li><a href="AdBuffet.html">AdBuffet</a></li><li><a href="AdPod.html">AdPod</a></li><li><a href="AdSystem.html">AdSystem</a></li><li><a href="Companion.html">Companion</a></li><li><a href="Icon.html">Icon</a></li><li><a href="Impression.html">Impression</a></li><li><a href="MediaFile.html">MediaFile</a></li><li><a href="NonLinear.html">NonLinear</a></li><li><a href="Pricing.html">Pricing</a></li><li><a href="VAST.html">VAST</a></li><li><a href="Creative.html">Creative</a></li><li><a href="CompanionAds.html">CompanionAds</a></li><li><a href="Linear.html">Linear</a></li><li><a href="NonLinearAds.html">NonLinearAds</a></li><li><a href="AbstractExtension.html">AbstractExtension</a></li><li><a href="CreativeExtension.html">CreativeExtension</a></li><li><a href="Extension.html">Extension</a></li><li><a href="Resource.html">Resource</a></li><li><a href="HTMLResource.html">HTMLResource</a></li><li><a href="IFrameResource.html">IFrameResource</a></li><li><a href="StaticResource.html">StaticResource</a></li><li><a href="AbsoluteTimeOffset.html">AbsoluteTimeOffset</a></li><li><a href="TimeOffset.html">TimeOffset</a></li><li><a href="RelativeTimeOffset.html">RelativeTimeOffset</a></li><li><a href="TrackingEvent.html">TrackingEvent</a></li><li><a href="TrackingEvents.html">TrackingEvents</a></li><li><a href="Click.html">Click</a></li><li><a href="SortedListItem.html">SortedListItem</a></li><li><a href="SortedList.html">SortedList</a></li>
-				</ul>
-			</li>
-			
-		</ul>
-        
-            <div class="col-sm-3 col-md-3">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        
-	</div>
-
-</div>
-</div>
-
-
-<div class="container" id="toc-content">
-<div class="row">
-
-	
-	<div class="col-md-8">
-	
-		<div id="main">
-			
-
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-
-
-
-
-
-    <section class="readme-section">
-        <article><h1>iab-vast-model</h1><p><a href="https://www.npmjs.com/package/iab-vast-model"><img src="https://img.shields.io/npm/v/iab-vast-model.svg" alt="npm"></a> <a href="https://david-dm.org/zentrick/iab-vast-model"><img src="https://img.shields.io/david/zentrick/iab-vast-model.svg" alt="Dependencies"></a> <a href="https://circleci.com/gh/zentrick/iab-vast-model"><img src="https://img.shields.io/circleci/project/github/zentrick/iab-vast-model/master.svg" alt="Build Status"></a> <a href="https://coveralls.io/r/zentrick/iab-vast-model"><img src="https://img.shields.io/coveralls/zentrick/iab-vast-model/master.svg" alt="Coverage Status"></a> <a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="JavaScript Standard Style"></a></p>
-<p>Base classes for IAB VAST handling. Supports the full IAB VAST 3.0 specification.</p>
-<p>To parse a tag into model objects, use
-<a href="https://www.npmjs.com/package/iab-vast-parser">iab-vast-parser</a>.
-To load and parse a chain of VAST files, use
-<a href="https://www.npmjs.com/package/iab-vast-loader">iab-vast-loader</a>.</p>
-<h2>Usage</h2><pre class="prettyprint source lang-javascript"><code>import { VAST } from 'iab-vast-model'
-
-const vast = new VAST()
-// ... Do your thing ...</code></pre><h2>API</h2><p>Automatically generated API documentation can be found on
-<a href="https://zentrick.github.io/iab-vast-model/">GitHub Pages</a>. You can also
-open <code>docs/index.html</code> in a Web browser. Running <code>gulp doc</code> will (re)build the
-<code>docs</code> directory.</p>
-<p>Additionally, feel free to look at the source code. We recommend starting with
-<code>src/index.js</code>, which should export all the classes you need.</p>
-<h2>TODO</h2><p>The main thing that's missing is <strong>validation</strong>. There are a few steps to this:</p>
-<ul>
-<li>Use <a href="https://www.npmjs.com/package/validator">validator</a> to check all values
-passed to setters.</li>
-<li>Verify that every required property is set.</li>
-<li>Write tests for the validation code.</li>
-<li>Enclose all validation code in marker comments (e.g., <code>// &lt;strict&gt;</code>). This
-will allow us to strip it out and produce a lightweight &quot;loose&quot; build without
-any validation, making tags load faster.</li>
-</ul>
-<p>PRs welcome!</p>
-<h2>Maintainer</h2><p><a href="https://github.com/timdp">Tim De Pauw</a></p>
-<h2>License</h2><p>MIT</p></article>
-    </section>
-
-
-
-
-
-
-
-		</div>
-	</div>
-
-	<div class="clearfix"></div>
-
-	
-		<div class="col-md-3">
-			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
-		</div>
-	
-
-</div>
-</div>
-
-
-    <div class="modal fade" id="searchResults">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Search results</h4>
+<body class='documentation'>
+  <div class='max-width-4 mx-auto'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed xs-hide fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>iab-vast-model</h3>
+          <div class='mb1'><code>0.4.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#ad'
+                  class=" toggle-sibling">
+                  Ad
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Ad#id'
+                        class='regular pre-open'>
+                        #id
+                      </a></li>
+                      
+                      <li><a
+                        href='#Ad#adSystem'
+                        class='regular pre-open'>
+                        #adSystem
+                      </a></li>
+                      
+                      <li><a
+                        href='#Ad#creatives'
+                        class='regular pre-open'>
+                        #creatives
+                      </a></li>
+                      
+                      <li><a
+                        href='#Ad#impressions'
+                        class='regular pre-open'>
+                        #impressions
+                      </a></li>
+                      
+                      <li><a
+                        href='#Ad#errors'
+                        class='regular pre-open'>
+                        #errors
+                      </a></li>
+                      
+                      <li><a
+                        href='#Ad#error'
+                        class='regular pre-open'>
+                        #error
+                      </a></li>
+                      
+                      <li><a
+                        href='#Ad#extensions'
+                        class='regular pre-open'>
+                        #extensions
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#inline'
+                  class=" toggle-sibling">
+                  InLine
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#InLine#adTitle'
+                        class='regular pre-open'>
+                        #adTitle
+                      </a></li>
+                      
+                      <li><a
+                        href='#InLine#description'
+                        class='regular pre-open'>
+                        #description
+                      </a></li>
+                      
+                      <li><a
+                        href='#InLine#advertiser'
+                        class='regular pre-open'>
+                        #advertiser
+                      </a></li>
+                      
+                      <li><a
+                        href='#InLine#survey'
+                        class='regular pre-open'>
+                        #survey
+                      </a></li>
+                      
+                      <li><a
+                        href='#InLine#pricing'
+                        class='regular pre-open'>
+                        #pricing
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#wrapper'
+                  class=" toggle-sibling">
+                  Wrapper
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Wrapper#vastAdTagURI'
+                        class='regular pre-open'>
+                        #vastAdTagURI
+                      </a></li>
+                      
+                      <li><a
+                        href='#Wrapper#followAdditionalWrappers'
+                        class='regular pre-open'>
+                        #followAdditionalWrappers
+                      </a></li>
+                      
+                      <li><a
+                        href='#Wrapper#allowMultipleAds'
+                        class='regular pre-open'>
+                        #allowMultipleAds
+                      </a></li>
+                      
+                      <li><a
+                        href='#Wrapper#fallbackOnNoAd'
+                        class='regular pre-open'>
+                        #fallbackOnNoAd
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#abstractclicks'
+                  class=" toggle-sibling">
+                  AbstractClicks
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#AbstractClicks#clickThrough'
+                        class='regular pre-open'>
+                        #clickThrough
+                      </a></li>
+                      
+                      <li><a
+                        href='#AbstractClicks#clickTrackings'
+                        class='regular pre-open'>
+                        #clickTrackings
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iconclicks'
+                  class="">
+                  IconClicks
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#videoclicks'
+                  class=" toggle-sibling">
+                  VideoClicks
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#VideoClicks#customClicks'
+                        class='regular pre-open'>
+                        #customClicks
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#adbuffet'
+                  class=" toggle-sibling">
+                  AdBuffet
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#AdBuffet#ads'
+                        class='regular pre-open'>
+                        #ads
+                      </a></li>
+                      
+                      <li><a
+                        href='#AdBuffet#adPod'
+                        class='regular pre-open'>
+                        #adPod
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#adpod'
+                  class=" toggle-sibling">
+                  AdPod
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#AdPod#ads'
+                        class='regular pre-open'>
+                        #ads
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#adsystem'
+                  class=" toggle-sibling">
+                  AdSystem
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#AdSystem#name'
+                        class='regular pre-open'>
+                        #name
+                      </a></li>
+                      
+                      <li><a
+                        href='#AdSystem#version'
+                        class='regular pre-open'>
+                        #version
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#companion'
+                  class=" toggle-sibling">
+                  Companion
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Companion#id'
+                        class='regular pre-open'>
+                        #id
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#width'
+                        class='regular pre-open'>
+                        #width
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#height'
+                        class='regular pre-open'>
+                        #height
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#assetWidth'
+                        class='regular pre-open'>
+                        #assetWidth
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#assetHeight'
+                        class='regular pre-open'>
+                        #assetHeight
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#expandedWidth'
+                        class='regular pre-open'>
+                        #expandedWidth
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#expandedHeight'
+                        class='regular pre-open'>
+                        #expandedHeight
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#apiFramework'
+                        class='regular pre-open'>
+                        #apiFramework
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#adSlotID'
+                        class='regular pre-open'>
+                        #adSlotID
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#resource'
+                        class='regular pre-open'>
+                        #resource
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#adParameters'
+                        class='regular pre-open'>
+                        #adParameters
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#altText'
+                        class='regular pre-open'>
+                        #altText
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#clickThrough'
+                        class='regular pre-open'>
+                        #clickThrough
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#clickTrackings'
+                        class='regular pre-open'>
+                        #clickTrackings
+                      </a></li>
+                      
+                      <li><a
+                        href='#Companion#trackingEvents'
+                        class='regular pre-open'>
+                        #trackingEvents
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#icon'
+                  class=" toggle-sibling">
+                  Icon
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Icon#program'
+                        class='regular pre-open'>
+                        #program
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#width'
+                        class='regular pre-open'>
+                        #width
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#height'
+                        class='regular pre-open'>
+                        #height
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#xPosition'
+                        class='regular pre-open'>
+                        #xPosition
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#yPosition'
+                        class='regular pre-open'>
+                        #yPosition
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#duration'
+                        class='regular pre-open'>
+                        #duration
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#offset'
+                        class='regular pre-open'>
+                        #offset
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#apiFramework'
+                        class='regular pre-open'>
+                        #apiFramework
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#resource'
+                        class='regular pre-open'>
+                        #resource
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#clicks'
+                        class='regular pre-open'>
+                        #clicks
+                      </a></li>
+                      
+                      <li><a
+                        href='#Icon#viewTrackings'
+                        class='regular pre-open'>
+                        #viewTrackings
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#impression'
+                  class=" toggle-sibling">
+                  Impression
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Impression#id'
+                        class='regular pre-open'>
+                        #id
+                      </a></li>
+                      
+                      <li><a
+                        href='#Impression#uri'
+                        class='regular pre-open'>
+                        #uri
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mediafile'
+                  class=" toggle-sibling">
+                  MediaFile
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#MediaFile#id'
+                        class='regular pre-open'>
+                        #id
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#delivery'
+                        class='regular pre-open'>
+                        #delivery
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#type'
+                        class='regular pre-open'>
+                        #type
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#bitrate'
+                        class='regular pre-open'>
+                        #bitrate
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#minBitrate'
+                        class='regular pre-open'>
+                        #minBitrate
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#maxBitrate'
+                        class='regular pre-open'>
+                        #maxBitrate
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#width'
+                        class='regular pre-open'>
+                        #width
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#height'
+                        class='regular pre-open'>
+                        #height
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#scalable'
+                        class='regular pre-open'>
+                        #scalable
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#maintainAspectRatio'
+                        class='regular pre-open'>
+                        #maintainAspectRatio
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#codec'
+                        class='regular pre-open'>
+                        #codec
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#apiFramework'
+                        class='regular pre-open'>
+                        #apiFramework
+                      </a></li>
+                      
+                      <li><a
+                        href='#MediaFile#uri'
+                        class='regular pre-open'>
+                        #uri
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#nonlinear'
+                  class=" toggle-sibling">
+                  NonLinear
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#NonLinear#id'
+                        class='regular pre-open'>
+                        #id
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#width'
+                        class='regular pre-open'>
+                        #width
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#height'
+                        class='regular pre-open'>
+                        #height
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#expandedWidth'
+                        class='regular pre-open'>
+                        #expandedWidth
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#expandedHeight'
+                        class='regular pre-open'>
+                        #expandedHeight
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#scalable'
+                        class='regular pre-open'>
+                        #scalable
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#maintainAspectRatio'
+                        class='regular pre-open'>
+                        #maintainAspectRatio
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#minSuggestedDuration'
+                        class='regular pre-open'>
+                        #minSuggestedDuration
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#apiFramework'
+                        class='regular pre-open'>
+                        #apiFramework
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#resource'
+                        class='regular pre-open'>
+                        #resource
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#clickThrough'
+                        class='regular pre-open'>
+                        #clickThrough
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#clickTrackings'
+                        class='regular pre-open'>
+                        #clickTrackings
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinear#adParameters'
+                        class='regular pre-open'>
+                        #adParameters
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#pricing'
+                  class=" toggle-sibling">
+                  Pricing
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Pricing#model'
+                        class='regular pre-open'>
+                        #model
+                      </a></li>
+                      
+                      <li><a
+                        href='#Pricing#currency'
+                        class='regular pre-open'>
+                        #currency
+                      </a></li>
+                      
+                      <li><a
+                        href='#Pricing#value'
+                        class='regular pre-open'>
+                        #value
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#vast'
+                  class=" toggle-sibling">
+                  VAST
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#VAST#version'
+                        class='regular pre-open'>
+                        #version
+                      </a></li>
+                      
+                      <li><a
+                        href='#VAST#errors'
+                        class='regular pre-open'>
+                        #errors
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#creative'
+                  class=" toggle-sibling">
+                  Creative
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Creative#id'
+                        class='regular pre-open'>
+                        #id
+                      </a></li>
+                      
+                      <li><a
+                        href='#Creative#adID'
+                        class='regular pre-open'>
+                        #adID
+                      </a></li>
+                      
+                      <li><a
+                        href='#Creative#apiFramework'
+                        class='regular pre-open'>
+                        #apiFramework
+                      </a></li>
+                      
+                      <li><a
+                        href='#Creative#extensions'
+                        class='regular pre-open'>
+                        #extensions
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#companionads'
+                  class=" toggle-sibling">
+                  CompanionAds
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#CompanionAds#companions'
+                        class='regular pre-open'>
+                        #companions
+                      </a></li>
+                      
+                      <li><a
+                        href='#CompanionAds#required'
+                        class='regular pre-open'>
+                        #required
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#linear'
+                  class=" toggle-sibling">
+                  Linear
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Linear#skipoffset'
+                        class='regular pre-open'>
+                        #skipoffset
+                      </a></li>
+                      
+                      <li><a
+                        href='#Linear#adParameters'
+                        class='regular pre-open'>
+                        #adParameters
+                      </a></li>
+                      
+                      <li><a
+                        href='#Linear#duration'
+                        class='regular pre-open'>
+                        #duration
+                      </a></li>
+                      
+                      <li><a
+                        href='#Linear#mediaFiles'
+                        class='regular pre-open'>
+                        #mediaFiles
+                      </a></li>
+                      
+                      <li><a
+                        href='#Linear#trackingEvents'
+                        class='regular pre-open'>
+                        #trackingEvents
+                      </a></li>
+                      
+                      <li><a
+                        href='#Linear#videoClicks'
+                        class='regular pre-open'>
+                        #videoClicks
+                      </a></li>
+                      
+                      <li><a
+                        href='#Linear#icons'
+                        class='regular pre-open'>
+                        #icons
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#nonlinearads'
+                  class=" toggle-sibling">
+                  NonLinearAds
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#NonLinearAds#nonLinears'
+                        class='regular pre-open'>
+                        #nonLinears
+                      </a></li>
+                      
+                      <li><a
+                        href='#NonLinearAds#trackingEvents'
+                        class='regular pre-open'>
+                        #trackingEvents
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#abstractextension'
+                  class=" toggle-sibling">
+                  AbstractExtension
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#AbstractExtension#type'
+                        class='regular pre-open'>
+                        #type
+                      </a></li>
+                      
+                      <li><a
+                        href='#AbstractExtension#content'
+                        class='regular pre-open'>
+                        #content
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#creativeextension'
+                  class="">
+                  CreativeExtension
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#extension'
+                  class="">
+                  Extension
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#resource'
+                  class=" toggle-sibling">
+                  Resource
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Resource#content'
+                        class='regular pre-open'>
+                        #content
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#htmlresource'
+                  class="">
+                  HTMLResource
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#iframeresource'
+                  class="">
+                  IFrameResource
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#staticresource'
+                  class=" toggle-sibling">
+                  StaticResource
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#StaticResource#creativeType'
+                        class='regular pre-open'>
+                        #creativeType
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#absolutetimeoffset'
+                  class="">
+                  AbsoluteTimeOffset
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#timeoffset'
+                  class=" toggle-sibling">
+                  TimeOffset
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#TimeOffset#value'
+                        class='regular pre-open'>
+                        #value
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#relativetimeoffset'
+                  class="">
+                  RelativeTimeOffset
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#trackingevent'
+                  class=" toggle-sibling">
+                  TrackingEvent
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#TrackingEvent#uri'
+                        class='regular pre-open'>
+                        #uri
+                      </a></li>
+                      
+                      <li><a
+                        href='#TrackingEvent#offset'
+                        class='regular pre-open'>
+                        #offset
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#trackingevents'
+                  class=" toggle-sibling">
+                  TrackingEvents
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#TrackingEvents#types'
+                        class='regular pre-open'>
+                        #types
+                      </a></li>
+                      
+                      <li><a
+                        href='#TrackingEvents#get'
+                        class='regular pre-open'>
+                        #get
+                      </a></li>
+                      
+                      <li><a
+                        href='#TrackingEvents#add'
+                        class='regular pre-open'>
+                        #add
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#click'
+                  class=" toggle-sibling">
+                  Click
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#Click#id'
+                        class='regular pre-open'>
+                        #id
+                      </a></li>
+                      
+                      <li><a
+                        href='#Click#uri'
+                        class='regular pre-open'>
+                        #uri
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sortedlistitem'
+                  class=" toggle-sibling">
+                  SortedListItem
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#SortedListItem#sequence'
+                        class='regular pre-open'>
+                        #sequence
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sortedlist'
+                  class=" toggle-sibling">
+                  SortedList
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#SortedList#length'
+                        class='regular pre-open'>
+                        #length
+                      </a></li>
+                      
+                      <li><a
+                        href='#SortedList#add'
+                        class='regular pre-open'>
+                        #add
+                      </a></li>
+                      
+                      <li><a
+                        href='#SortedList#remove'
+                        class='regular pre-open'>
+                        #remove
+                      </a></li>
+                      
+                      <li><a
+                        href='#SortedList#get'
+                        class='regular pre-open'>
+                        #get
+                      </a></li>
+                      
+                      <li><a
+                        href='#SortedList#clear'
+                        class='regular pre-open'>
+                        #clear
+                      </a></li>
+                      
+                      <li><a
+                        href='#SortedList#toArray'
+                        class='regular pre-open'>
+                        #toArray
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+            </ul>
           </div>
-          <div class="modal-body"></div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
           </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='ad'>
+      Ad
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Base class for ads.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Ad()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#sortedlistitem">SortedListItem</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Ad#id'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>id</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ID of this ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>id</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
     </div>
+  
+    <div class='border-bottom' id='Ad#adSystem'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>adSystem</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ad system for this ad.</p>
 
 
-<footer>
+  <div class='pre p1 fill-light mt0'>adSystem</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#adsystem">AdSystem</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Ad#creatives'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>creatives</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The creatives for this ad.</p>
 
 
-	<span class="copyright">
-	Copyright &copy; 2016 Zentrick nv
-	</span>
+  <div class='pre p1 fill-light mt0'>creatives</div>
+  
+  
 
-<span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
-	
-		on 2016-12-13T14:19:58+01:00
-	
-	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
-</span>
-</footer>
+  
+  
+  
+  
+  
+  
 
-<script src="scripts/docstrap.lib.js"></script>
-<script src="scripts/toc.js"></script>
+  
 
-    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+  
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#sortedlist">SortedList</a>&#x3C;<a href="#creative">Creative</a>></code>
+    
+  
 
-<script>
-$( function () {
-	$( "[id*='$']" ).each( function () {
-		var $this = $( this );
+  
 
-		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
-	} );
+  
 
-	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
-		var $this = $( this );
+  
 
-		var example = $this.find( "code" );
-		exampleText = example.html();
-		var lang = /{@lang (.*?)}/.exec( exampleText );
-		if ( lang && lang[1] ) {
-			exampleText = exampleText.replace( lang[0], "" );
-			example.html( exampleText );
-			lang = lang[1];
-		} else {
-			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
-			lang = langClassMatch ? langClassMatch[1] : "javascript";
-		}
+  
 
-		if ( lang ) {
+  
+</section>
 
-			$this
-			.addClass( "sunlight-highlight-" + lang )
-			.addClass( "linenums" )
-			.html( example.html() );
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Ad#impressions'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>impressions</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
 
-		}
-	} );
+  
 
-	Sunlight.highlightAll( {
-		lineNumbers : false,
-		showMenu : true,
-		enableDoclinks : true
-	} );
-
-	$.catchAnchorLinks( {
-        navbarOffset: 10
-	} );
-	$( "#toc" ).toc( {
-		anchorName  : function ( i, heading, prefix ) {
-			return $( heading ).attr( "id" ) || ( prefix + i );
-		},
-		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
-		showAndHide : false,
-		smoothScrolling: true
-	} );
-
-	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
-	$( '.dropdown-toggle' ).dropdown();
-
-    $( "table" ).each( function () {
-      var $this = $( this );
-      $this.addClass('table');
-    } );
-
-} );
-</script>
+  <p>The impression tracking configurations for this ad.</p>
 
 
+  <div class='pre p1 fill-light mt0'>impressions</div>
+  
+  
 
-<!--Navigation and Symbol Display-->
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#impression">Impression</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Ad#errors'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>errors</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The error tracking URIs for this ad.</p>
 
 
-<!--Google Analytics-->
+  <div class='pre p1 fill-light mt0'>errors</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Ad#error'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>error</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The error tracking URI for this ad.</p>
 
 
+  <div class='pre p1 fill-light mt0'>error</div>
+  
+  
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            SearcherDisplay.init();
-        });
-    </script>
+  <div>Deprecated: superseded by .errors
+</div>
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Ad#extensions'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>extensions</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The extensions for this ad.</p>
 
 
+  <div class='pre p1 fill-light mt0'>extensions</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#extension">Extension</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='inline'>
+      InLine
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Inline ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new InLine()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#ad">Ad</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='InLine#adTitle'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>adTitle</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The title for this ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>adTitle</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='InLine#description'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>description</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The description for this ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>description</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='InLine#advertiser'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>advertiser</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The advertiser name for this ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>advertiser</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='InLine#survey'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>survey</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The survey URI for this ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>survey</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='InLine#pricing'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>pricing</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The pricing configuration for this ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>pricing</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#pricing">Pricing</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='wrapper'>
+      Wrapper
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Wrapper ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Wrapper()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#ad">Ad</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Wrapper#vastAdTagURI'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>vastAdTagURI</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The URI of the tag that this ad wraps.</p>
+
+
+  <div class='pre p1 fill-light mt0'>vastAdTagURI</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Wrapper#followAdditionalWrappers'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>followAdditionalWrappers</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Whether subsequent wrappers after a requested VAST response is allowed.</p>
+
+
+  <div class='pre p1 fill-light mt0'>followAdditionalWrappers</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Wrapper#allowMultipleAds'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>allowMultipleAds</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Whether multiple ads are allowed in the requested VAST response.</p>
+
+
+  <div class='pre p1 fill-light mt0'>allowMultipleAds</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Wrapper#fallbackOnNoAd'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>fallbackOnNoAd</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Whether to use an available Ad when the requested VAST response returns no
+ads.</p>
+
+
+  <div class='pre p1 fill-light mt0'>fallbackOnNoAd</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='abstractclicks'>
+      AbstractClicks
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Stores the clickthrough URI and a set of click tracking pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AbstractClicks()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='AbstractClicks#clickThrough'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>clickThrough</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The click-through configuration.</p>
+
+
+  <div class='pre p1 fill-light mt0'>clickThrough</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#click">Click</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='AbstractClicks#clickTrackings'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>clickTrackings</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The click tracking configurations.</p>
+
+
+  <div class='pre p1 fill-light mt0'>clickTrackings</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#click">Click</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iconclicks'>
+      IconClicks
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents the click tracking configuration for an <a href="#icon">Icon</a>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new IconClicks()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#abstractclicks">AbstractClicks</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='videoclicks'>
+      VideoClicks
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents the click tracking configuration for a <a href="#linear">Linear</a> creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new VideoClicks()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#abstractclicks">AbstractClicks</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='VideoClicks#customClicks'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>customClicks</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The custom-click configurations.</p>
+
+
+  <div class='pre p1 fill-light mt0'>customClicks</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#click">Click</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='adbuffet'>
+      AdBuffet
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a VAST ad buffet.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AdBuffet()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='AdBuffet#ads'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>ads</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ads in this ad buffet.</p>
+
+
+  <div class='pre p1 fill-light mt0'>ads</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#sortedlist">SortedList</a>&#x3C;<a href="#ad">Ad</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='AdBuffet#adPod'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>adPod</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ad pod for this ad buffet.</p>
+
+
+  <div class='pre p1 fill-light mt0'>adPod</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#adpod">AdPod</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='adpod'>
+      AdPod
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a VAST ad pod.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AdPod()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='AdPod#ads'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>ads</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ads in this ad pod.</p>
+
+
+  <div class='pre p1 fill-light mt0'>ads</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#sortedlist">SortedList</a>&#x3C;<a href="#ad">Ad</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='adsystem'>
+      AdSystem
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Stores information about the ad system.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AdSystem()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='AdSystem#name'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>name</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The name of the ad system.</p>
+
+
+  <div class='pre p1 fill-light mt0'>name</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='AdSystem#version'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>version</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The version of the ad system.</p>
+
+
+  <div class='pre p1 fill-light mt0'>version</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='companion'>
+      Companion
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a single companion ad. Used in a <a href="#companionads">CompanionAds</a> creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Companion()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Companion#id'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>id</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ID for this companion ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>id</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#width'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>width</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The width of this companion ad in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>width</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#height'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>height</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The height of this companion ad in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>height</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#assetWidth'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>assetWidth</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The width of this companion ad's asset in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>assetWidth</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#assetHeight'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>assetHeight</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The height of this companion ad's asset in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>assetHeight</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#expandedWidth'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>expandedWidth</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The expanded width of this companion ad in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>expandedWidth</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#expandedHeight'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>expandedHeight</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The expanded height of this companion ad in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>expandedHeight</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#apiFramework'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>apiFramework</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The API framework used by this companion ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>apiFramework</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#adSlotID'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>adSlotID</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ad slot ID of this companion ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>adSlotID</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#resource'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>resource</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The resource associated with this companion ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>resource</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#resource">Resource</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#adParameters'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>adParameters</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ad parameters for this companion ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>adParameters</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#altText'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>altText</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The alt text of this companion ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>altText</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#clickThrough'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>clickThrough</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The clickthrough configuration for this companion ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>clickThrough</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#click">Click</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#clickTrackings'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>clickTrackings</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The click tracking configurations for this companion ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>clickTrackings</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#click">Click</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Companion#trackingEvents'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>trackingEvents</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The tracking event configuration for this companion ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>trackingEvents</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#trackingevents">TrackingEvents</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='icon'>
+      Icon
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents an icon used in a <a href="#linear">Linear</a> creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Icon()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Icon#program'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>program</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The industry initiative that this icon supports.</p>
+
+
+  <div class='pre p1 fill-light mt0'>program</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#width'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>width</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The width of this icon in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>width</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#height'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>height</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The height of this icon in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>height</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#xPosition'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>xPosition</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The horizontal position of this icon in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>xPosition</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#yPosition'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>yPosition</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The vertical position of this icon in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>yPosition</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#duration'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>duration</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The duration of this icon in seconds.</p>
+
+
+  <div class='pre p1 fill-light mt0'>duration</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#offset'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>offset</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The time offset of this icon in seconds.</p>
+
+
+  <div class='pre p1 fill-light mt0'>offset</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#apiFramework'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>apiFramework</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The API framework used by this icon.</p>
+
+
+  <div class='pre p1 fill-light mt0'>apiFramework</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#resource'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>resource</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The resource associated with this icon.</p>
+
+
+  <div class='pre p1 fill-light mt0'>resource</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#resource">Resource</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#clicks'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>clicks</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The click tracking configuration for this icon.</p>
+
+
+  <div class='pre p1 fill-light mt0'>clicks</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#iconclicks">IconClicks</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Icon#viewTrackings'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>viewTrackings</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The view tracking configuration.</p>
+
+
+  <div class='pre p1 fill-light mt0'>viewTrackings</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#click">Click</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='impression'>
+      Impression
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a tracking pixel configuration for an impression.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Impression()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Impression#id'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>id</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ID of this impression pixel.</p>
+
+
+  <div class='pre p1 fill-light mt0'>id</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Impression#uri'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>uri</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The URI of this impression pixel.</p>
+
+
+  <div class='pre p1 fill-light mt0'>uri</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mediafile'>
+      MediaFile
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a media file used in a <a href="#linear">Linear</a> creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new MediaFile()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='MediaFile#id'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>id</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ID of this media file.</p>
+
+
+  <div class='pre p1 fill-light mt0'>id</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#delivery'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>delivery</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The delivery method for this media file.</p>
+
+
+  <div class='pre p1 fill-light mt0'>delivery</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#type'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>type</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The MIME type of this media file.</p>
+
+
+  <div class='pre p1 fill-light mt0'>type</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#bitrate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>bitrate</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The bitrate of this media file in kbps.</p>
+
+
+  <div class='pre p1 fill-light mt0'>bitrate</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#minBitrate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>minBitrate</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The minimum bitrate of this media file in kbps.</p>
+
+
+  <div class='pre p1 fill-light mt0'>minBitrate</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#maxBitrate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>maxBitrate</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The maximum bitrate of this media file in kbps.</p>
+
+
+  <div class='pre p1 fill-light mt0'>maxBitrate</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#width'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>width</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The width of this media file in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>width</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#height'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>height</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The height of this media file in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>height</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#scalable'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>scalable</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Whether this media file is meant to scale to larger dimensions.</p>
+
+
+  <div class='pre p1 fill-light mt0'>scalable</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#maintainAspectRatio'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>maintainAspectRatio</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Whether this media file's aspect ratio should be maintained when scaled.</p>
+
+
+  <div class='pre p1 fill-light mt0'>maintainAspectRatio</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#codec'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>codec</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The codec of this media file in RFC 4281 format.</p>
+
+
+  <div class='pre p1 fill-light mt0'>codec</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#apiFramework'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>apiFramework</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The API framework used by this media file.</p>
+
+
+  <div class='pre p1 fill-light mt0'>apiFramework</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='MediaFile#uri'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>uri</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The URI to this media file.</p>
+
+
+  <div class='pre p1 fill-light mt0'>uri</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nonlinear'>
+      NonLinear
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a single non-linear ad. Used in a <a href="#nonlinearads">NonLinearAds</a> creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new NonLinear()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='NonLinear#id'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>id</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ID of this non-linear ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>id</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#width'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>width</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The width of this non-linear ad in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>width</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#height'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>height</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The height of this non-linear ad in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>height</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#expandedWidth'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>expandedWidth</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The expanded width of this non-linear ad in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>expandedWidth</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#expandedHeight'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>expandedHeight</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The expanded height of this non-linear ad in pixels.</p>
+
+
+  <div class='pre p1 fill-light mt0'>expandedHeight</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#scalable'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>scalable</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Whether this non-linear ad is meant to scale to larger dimensions.</p>
+
+
+  <div class='pre p1 fill-light mt0'>scalable</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#maintainAspectRatio'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>maintainAspectRatio</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Whether this non-linear ad's aspect ratio should be maintained when scaled.</p>
+
+
+  <div class='pre p1 fill-light mt0'>maintainAspectRatio</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#minSuggestedDuration'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>minSuggestedDuration</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The minimum suggested duration of this non-linear ad in seconds.</p>
+
+
+  <div class='pre p1 fill-light mt0'>minSuggestedDuration</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#apiFramework'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>apiFramework</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The API framework used by this non-linear ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>apiFramework</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#resource'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>resource</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The resource associated with this non-linear ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>resource</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#resource">Resource</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#clickThrough'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>clickThrough</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The clickthrough configuration for this non-linear ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>clickThrough</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#click">Click</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#clickTrackings'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>clickTrackings</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The click tracking configurations for this non-linear ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>clickTrackings</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#click">Click</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinear#adParameters'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>adParameters</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ad parameters for this non-linear ad.</p>
+
+
+  <div class='pre p1 fill-light mt0'>adParameters</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='pricing'>
+      Pricing
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Pricing information for real-time bidding.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Pricing()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Pricing#model'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>model</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The pricing model. Either <code>"CPM"</code>, <code>"CPC"</code>, <code>"CPE"</code>, or <code>"CPV"</code>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>model</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>PricingModel</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Pricing#currency'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>currency</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The pricing currency.</p>
+
+
+  <div class='pre p1 fill-light mt0'>currency</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Pricing#value'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>value</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The price.</p>
+
+
+  <div class='pre p1 fill-light mt0'>value</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='vast'>
+      VAST
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a VAST document.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new VAST()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#adbuffet">AdBuffet</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='VAST#version'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>version</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The VAST version used by this document.</p>
+
+
+  <div class='pre p1 fill-light mt0'>version</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='VAST#errors'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>errors</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The error tracking URIs for this document.</p>
+
+
+  <div class='pre p1 fill-light mt0'>errors</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='creative'>
+      Creative
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Base class for creatives.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Creative()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#sortedlistitem">SortedListItem</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Creative#id'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>id</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ID of this creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>id</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Creative#adID'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>adID</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ID of the <a href="#ad">Ad</a> with which this creative is served.</p>
+
+
+  <div class='pre p1 fill-light mt0'>adID</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Creative#apiFramework'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>apiFramework</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The API framework used by this creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>apiFramework</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Creative#extensions'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>extensions</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The creative extensions for this creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>extensions</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#creativeextension">CreativeExtension</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='companionads'>
+      CompanionAds
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a creative with companion ads.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new CompanionAds()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#creative">Creative</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='CompanionAds#companions'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>companions</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The companion ads within this creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>companions</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#companion">Companion</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='CompanionAds#required'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>required</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Determines which companion creative to display when multiple companions
+are supplied and whether the ad can be displayed without its companion
+creative. Either <code>"all"</code>, <code>"any"</code>, or <code>"none"</code>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>required</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Required</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='linear'>
+      Linear
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a linear creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Linear()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#creative">Creative</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Linear#skipoffset'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>skipoffset</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The time interval after which this linear creative can be skipped.</p>
+
+
+  <div class='pre p1 fill-light mt0'>skipoffset</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#timeoffset">TimeOffset</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Linear#adParameters'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>adParameters</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ad parameters for this linear creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>adParameters</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Linear#duration'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>duration</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The duration of this linear creative in seconds.</p>
+
+
+  <div class='pre p1 fill-light mt0'>duration</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Linear#mediaFiles'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>mediaFiles</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The media files within this linear creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>mediaFiles</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#mediafile">MediaFile</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Linear#trackingEvents'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>trackingEvents</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The event tracking configuration for this linear creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>trackingEvents</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#trackingevents">TrackingEvents</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Linear#videoClicks'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>videoClicks</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The video click tracking configuration for this linear creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>videoClicks</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#videoclicks">VideoClicks</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Linear#icons'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>icons</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The icons for this linear creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>icons</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#icon">Icon</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nonlinearads'>
+      NonLinearAds
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a creative with non-linear ads.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new NonLinearAds()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#creative">Creative</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='NonLinearAds#nonLinears'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>nonLinears</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The non-linear ads within this creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>nonLinears</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#nonlinear">NonLinear</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='NonLinearAds#trackingEvents'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>trackingEvents</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The event tracking configuration for this non-linear creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>trackingEvents</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#trackingevents">TrackingEvents</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='abstractextension'>
+      AbstractExtension
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Base class for VAST <a href="#extension">Extension</a> as well as <a href="#creativeextension">CreativeExtension</a>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AbstractExtension()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='AbstractExtension#type'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>type</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The type of this extension.</p>
+
+
+  <div class='pre p1 fill-light mt0'>type</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='AbstractExtension#content'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>content</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The content of this extension.</p>
+
+
+  <div class='pre p1 fill-light mt0'>content</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='creativeextension'>
+      CreativeExtension
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a creative extension.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new CreativeExtension()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#abstractextension">AbstractExtension</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='extension'>
+      Extension
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a VAST extension.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Extension()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#abstractextension">AbstractExtension</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='resource'>
+      Resource
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Base class for a resource used by an <a href="#icon">Icon</a>, a <a href="#companion">Companion</a>, or
+a <a href="#nonlinear">NonLinear</a>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Resource()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Resource#content'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>content</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The content of this resource.</p>
+
+
+  <div class='pre p1 fill-light mt0'>content</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='htmlresource'>
+      HTMLResource
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Describes an HTML snippet.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new HTMLResource()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#resource">Resource</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='iframeresource'>
+      IFrameResource
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Describes an HTML page for display within an iframe.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new IFrameResource()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#resource">Resource</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='staticresource'>
+      StaticResource
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Describes non-HTML creative.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new StaticResource()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#resource">Resource</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='StaticResource#creativeType'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>creativeType</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The MIME type of this resource.</p>
+
+
+  <div class='pre p1 fill-light mt0'>creativeType</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='absolutetimeoffset'>
+      AbsoluteTimeOffset
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a time offset expressed as an absolute duration in seconds.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new AbsoluteTimeOffset()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#timeoffset">TimeOffset</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='timeoffset'>
+      TimeOffset
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a time offset.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new TimeOffset()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='TimeOffset#value'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>value</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The value for this offset.</p>
+
+
+  <div class='pre p1 fill-light mt0'>value</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='relativetimeoffset'>
+      RelativeTimeOffset
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a time offset expressed as a percentage (between 0 and 100).</p>
+
+
+  <div class='pre p1 fill-light mt0'>new RelativeTimeOffset()</div>
+  
+  
+    <p>
+      Extends
+      
+        <a href="#timeoffset">TimeOffset</a>
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='trackingevent'>
+      TrackingEvent
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a tracking event configuration.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new TrackingEvent()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='TrackingEvent#uri'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>uri</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The tracking URI for this event configuration.</p>
+
+
+  <div class='pre p1 fill-light mt0'>uri</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='TrackingEvent#offset'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>offset</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The time offset for this event configuration. Only applies to <code>progress</code>
+events.</p>
+
+
+  <div class='pre p1 fill-light mt0'>offset</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#timeoffset">TimeOffset</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='trackingevents'>
+      TrackingEvents
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Configures tracking events. Binds VAST event types to arrays of
+<a href="#trackingevent">TrackingEvent</a> instances.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new TrackingEvents()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='TrackingEvents#types'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>types</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The event types tracked by this configuration.</p>
+
+
+  <div class='pre p1 fill-light mt0'>types</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='TrackingEvents#get'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>get(event)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Gets the tracking event configurations for the given event type.</p>
+
+
+  <div class='pre p1 fill-light mt0'>get(event: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#trackingevent">TrackingEvent</a>></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>event</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the event type.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#trackingevent">TrackingEvent</a>></code>:
+        the tracking event configurations.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='TrackingEvents#add'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>add(event, config)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Adds a tracking event configuration for the given event type.</p>
+
+
+  <div class='pre p1 fill-light mt0'>add(event: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, config: <a href="#trackingevent">TrackingEvent</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>event</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    the event type.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>config</span> <code class='quiet'>(<a href="#trackingevent">TrackingEvent</a>)</code>
+	    the tracking event configuration.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='click'>
+      Click
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Describes a click configuration.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new Click()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='Click#id'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>id</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The ID of this click.</p>
+
+
+  <div class='pre p1 fill-light mt0'>id</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='Click#uri'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>uri</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The URI of this tracking pixel.</p>
+
+
+  <div class='pre p1 fill-light mt0'>uri</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sortedlistitem'>
+      SortedListItem
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents an item in a <a href="#sortedlist">SortedList</a>. Base class for <a href="#ad">Ad</a> and
+<a href="#creative">Creative</a>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new SortedListItem()</div>
+  
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='SortedListItem#sequence'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>sequence</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The sequence number of this item within its parent.</p>
+
+
+  <div class='pre p1 fill-light mt0'>sequence</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sortedlist'>
+      SortedList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a list of <a href="#sortedlistitem">SortedListItem</a>s, ordered by
+<a href="#sortedlistitemsequence">SortedListItem#sequence</a>.</p>
+
+
+  <div class='pre p1 fill-light mt0'>new SortedList()</div>
+  
+  
+    <p>
+      Extends
+      
+        Iterable
+      
+    </p>
+  
+
+  
+  
+  
+  <div>Author: Tim De Pauw &lt;tim.depauw@zentrick.com&gt;</div>
+  <div>Copyright: © 2016 Zentrick nv
+</div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='SortedList#length'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>length</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>The length of this list.</p>
+
+
+  <div class='pre p1 fill-light mt0'>length</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='SortedList#add'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>add(item)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Adds the given item to this list.</p>
+
+
+  <div class='pre p1 fill-light mt0'>add(item: T): void</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>item</span> <code class='quiet'>(T)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='SortedList#remove'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>remove(item)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Removes the given item from this list.</p>
+
+
+  <div class='pre p1 fill-light mt0'>remove(item: T)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>item</span> <code class='quiet'>(T)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='SortedList#get'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>get(index)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Gets the item at the given index.</p>
+
+
+  <div class='pre p1 fill-light mt0'>get(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): T</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>index</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>T</code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='SortedList#clear'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>clear()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Empties this list.</p>
+
+
+  <div class='pre p1 fill-light mt0'>clear()</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='SortedList#toArray'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>toArray()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Creates an array representation of this list.</p>
+
+
+  <div class='pre p1 fill-light mt0'>toArray(): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;T></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;T></code>
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
 </body>
 </html>

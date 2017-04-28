@@ -8,16 +8,12 @@ import type { Type } from '../type'
  * Represents a list of {@link SortedListItem}s, ordered by
  * {@link SortedListItem#sequence}.
  *
- * @class SortedList
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
 export class SortedList<T: SortedListItem> extends Iterable<T> {
   /**
    * The length of this list.
-   *
-   * @type {number}
-   * @readonly
    */
   get length (): number {
     return this._contents.length
@@ -25,8 +21,6 @@ export class SortedList<T: SortedListItem> extends Iterable<T> {
 
   /**
    * Adds the given item to this list.
-   *
-   * @param {SortedListItem} item - the item.
    */
   add (item: T): void {
     this._contents.push(item)
@@ -35,8 +29,6 @@ export class SortedList<T: SortedListItem> extends Iterable<T> {
 
   /**
    * Removes the given item from this list.
-   *
-   * @param {SortedListItem} item - the item.
    */
   remove (item: T) {
     let index = this._contents.indexOf(item)
@@ -48,9 +40,6 @@ export class SortedList<T: SortedListItem> extends Iterable<T> {
 
   /**
    * Gets the item at the given index.
-   *
-   * @param {number} index - the index.
-   * @return {SortedListItem} the item.
    */
   get (index: number): T {
     return this._contents[index]
@@ -65,8 +54,6 @@ export class SortedList<T: SortedListItem> extends Iterable<T> {
 
   /**
    * Creates an array representation of this list.
-   *
-   * @return {SortedListItem[]} the item array.
    */
   toArray (): T[] {
     return this._contents.slice()

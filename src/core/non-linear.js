@@ -7,7 +7,6 @@ import type { Type } from '../type'
 /**
  * Represents a single non-linear ad. Used in a {@link NonLinearAds} creative.
  *
- * @class NonLinear
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
@@ -32,8 +31,6 @@ export class NonLinear {
 
   /**
    * The ID of this non-linear ad.
-   *
-   * @type {string}
    */
   get id (): string {
     return this._id
@@ -45,8 +42,6 @@ export class NonLinear {
 
   /**
    * The width of this non-linear ad in pixels.
-   *
-   * @type {number}
    */
   get width (): number {
     return this._width
@@ -58,8 +53,6 @@ export class NonLinear {
 
   /**
    * The height of this non-linear ad in pixels.
-   *
-   * @type {number}
    */
   get height (): number {
     return this._height
@@ -71,8 +64,6 @@ export class NonLinear {
 
   /**
    * The expanded width of this non-linear ad in pixels.
-   *
-   * @type {number}
    */
   get expandedWidth (): number {
     return this._expandedWidth
@@ -84,8 +75,6 @@ export class NonLinear {
 
   /**
    * The expanded height of this non-linear ad in pixels.
-   *
-   * @type {number}
    */
   get expandedHeight (): number {
     return this._expandedHeight
@@ -97,8 +86,6 @@ export class NonLinear {
 
   /**
    * Whether this non-linear ad is meant to scale to larger dimensions.
-   *
-   * @type {boolean}
    */
   get scalable (): boolean {
     return this._scalable
@@ -110,8 +97,6 @@ export class NonLinear {
 
   /**
    * Whether this non-linear ad's aspect ratio should be maintained when scaled.
-   *
-   * @type {boolean}
    */
   get maintainAspectRatio (): boolean {
     return this._maintainAspectRatio
@@ -123,8 +108,6 @@ export class NonLinear {
 
   /**
    * The minimum suggested duration of this non-linear ad in seconds.
-   *
-   * @type {number}
    */
   get minSuggestedDuration (): number {
     return this._minSuggestedDuration
@@ -136,8 +119,6 @@ export class NonLinear {
 
   /**
    * The API framework used by this non-linear ad.
-   *
-   * @type {string}
    */
   get apiFramework (): string {
     return this._apiFramework
@@ -149,8 +130,6 @@ export class NonLinear {
 
   /**
    * The resource associated with this non-linear ad.
-   *
-   * @type {Resource}
    */
   get resource (): Resource {
     return this._resource
@@ -162,8 +141,6 @@ export class NonLinear {
 
   /**
    * The clickthrough configuration for this non-linear ad.
-   *
-   * @type {Click}
    */
   get clickThrough (): Click {
     return this._clickThrough
@@ -175,9 +152,6 @@ export class NonLinear {
 
   /**
    * The click tracking configurations for this non-linear ad.
-   *
-   * @type {Click[]}
-   * @readonly
    */
   get clickTrackings (): Click[] {
     return this._clickTrackings
@@ -185,8 +159,6 @@ export class NonLinear {
 
   /**
    * The ad parameters for this non-linear ad.
-   *
-   * @type {string}
    */
   get adParameters (): string {
     return this._adParameters
