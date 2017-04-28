@@ -1,0 +1,8 @@
+// @flow
+
+import type { SortedListItem } from './sorted-list-item'
+
+declare export class Iterable<T: SortedListItem> {
+  _contents: T[];
+  @@iterator(): Iterator<T>;
+}

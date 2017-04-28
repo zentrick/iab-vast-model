@@ -2,6 +2,8 @@
 
 import { Ad } from './base'
 
+import type { Type } from '../type'
+
 /**
  * Wrapper ad.
  *
@@ -69,7 +71,7 @@ export class Wrapper extends Ad {
     this._fallbackOnNoAd = value
   }
 
-  get $type (): 'Wrapper' {
+  get $type (): Type {
     return 'Wrapper'
   }
 }

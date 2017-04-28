@@ -2,6 +2,7 @@
 
 import type { Resource } from '../resource/base'
 import type { Click } from '../util/click'
+import type { Type } from '../type'
 
 /**
  * Represents a single non-linear ad. Used in a {@link NonLinearAds} creative.
@@ -195,7 +196,7 @@ export class NonLinear {
     this._adParameters = value
   }
 
-  get $type (): 'NonLinear' {
+  get $type (): Type {
     return 'NonLinear'
   }
 }

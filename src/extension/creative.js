@@ -1,6 +1,7 @@
 // @flow
 
 import { AbstractExtension } from './abstract'
+import type { Type } from '../type'
 
 /**
  * Represents a creative extension.
@@ -11,7 +12,7 @@ import { AbstractExtension } from './abstract'
  * @copyright © 2016 Zentrick nv
  */
 export class CreativeExtension extends AbstractExtension {
-  get $type (): 'CreativeExtension' {
+  get $type (): Type {
     return 'CreativeExtension'
   }
 }

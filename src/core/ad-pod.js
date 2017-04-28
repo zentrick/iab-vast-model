@@ -2,6 +2,7 @@
 
 import { SortedList } from '../util/sorted-list'
 import { Ad } from '../ad/base'
+import type { Type } from '../type'
 
 /**
  * Represents a VAST ad pod.
@@ -27,7 +28,7 @@ export class AdPod {
     return this._ads
   }
 
-  get $type (): 'AdPod' {
+  get $type (): Type {
     return 'AdPod'
   }
 }

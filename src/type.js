@@ -3,11 +3,29 @@
 export type Type =
   'AbsoluteTimeOffset' |
   'AdBuffet' |
+  'AdPod' |
+  'AdSystem' |
+  'Click' |
+  'Companion' |
   'CompanionAds' |
+  'CreativeExtension' |
+  'Extension' |
   'HTMLResource' |
+  'Icon' |
+  'IconClicks' |
   'IFrameResource' |
+  'Impression' |
+  'InLine' |
   'Linear' |
+  'MediaFile' |
+  'NonLinear' |
   'NonLinearAds' |
+  'Pricing' |
   'RelativeTimeOffset' |
+  'SortedList' |
   'StaticResource' |
-  'VAST'
+  'TrackingEvent' |
+  'TrackingEvents' |
+  'VAST' |
+  'VideoClicks' |
+  'Wrapper'

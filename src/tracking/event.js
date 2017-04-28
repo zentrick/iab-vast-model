@@ -1,6 +1,7 @@
 // @flow
 
 import type { TimeOffset } from '../time-offset/base'
+import type { Type } from '../type'
 
 /**
  * Represents a tracking event configuration.
@@ -40,7 +41,7 @@ export class TrackingEvent {
     this._offset = value
   }
 
-  get $type (): 'TrackingEvent' {
+  get $type (): Type {
     return 'TrackingEvent'
   }
 }

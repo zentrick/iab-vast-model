@@ -2,6 +2,8 @@
 
 import { AbstractClicks } from './abstract'
 
+import type { Type } from '../type'
+
 /**
  * Represents the click tracking configuration for an {@link Icon}.
  *
@@ -11,7 +13,7 @@ import { AbstractClicks } from './abstract'
  * @copyright © 2016 Zentrick nv
  */
 export class IconClicks extends AbstractClicks {
-  get $type (): 'IconClicks' {
+  get $type (): Type {
     return 'IconClicks'
   }
 }

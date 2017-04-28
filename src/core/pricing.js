@@ -1,5 +1,7 @@
 // @flow
 
+import type { Type } from '../type'
+
 /**
  * Pricing information for real-time bidding.
  *
@@ -51,7 +53,7 @@ export class Pricing {
     this._value = value
   }
 
-  get $type (): 'Pricing' {
+  get $type (): Type{
     return 'Pricing'
   }
 }

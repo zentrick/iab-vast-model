@@ -1,6 +1,7 @@
 // @flow
 
 import type { TrackingEvent } from './event'
+import type { Type } from '../type'
 
 /**
  * Configures tracking events. Binds VAST event types to arrays of
@@ -47,7 +48,7 @@ export class TrackingEvents {
     this._map[event].push(config)
   }
 
-  get $type (): 'TrackingEvents' {
+  get $type (): Type {
     return 'TrackingEvents'
   }
 }

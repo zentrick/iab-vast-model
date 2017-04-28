@@ -3,6 +3,7 @@
 import { IconClicks } from '../clicks/icon'
 import type { Resource } from '../resource/base'
 import type { Click } from '../util/click'
+import type { Type } from '../type'
 
 /**
  * Represents an icon used in a {@link Linear} creative.
@@ -165,7 +166,7 @@ export class Icon {
     return this._viewTrackings
   }
 
-  get $type (): 'Icon' {
+  get $type (): Type {
     return 'Icon'
   }
 }

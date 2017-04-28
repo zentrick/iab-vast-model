@@ -1,5 +1,7 @@
 // @flow
 
+import type { Type } from '../type'
+
 /**
  * Represents a media file used in a {@link Linear} creative.
  *
@@ -191,7 +193,7 @@ export class MediaFile {
     this._uri = value
   }
 
-  get $type (): 'MediaFile' {
+  get $type (): Type {
     return 'MediaFile'
   }
 }

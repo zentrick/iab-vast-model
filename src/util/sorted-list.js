@@ -1,8 +1,8 @@
 // @flow
 
-type HasSequence = {
-  sequence?: number
-}
+import { Iterable } from './iterable'
+import type { SortedListItem } from './sorted-list-item'
+import type { Type } from '../type'
 
 /**
  * Represents a list of {@link SortedListItem}s, ordered by
@@ -12,13 +12,7 @@ type HasSequence = {
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class SortedList<T: HasSequence> {
-  _contents: T[]
-
-  constructor () {
-    this._contents = []
-  }
-
+export class SortedList<T: SortedListItem> extends Iterable<T> {
   /**
    * The length of this list.
    *
@@ -58,7 +52,7 @@ export class SortedList<T: HasSequence> {
    * @param {number} index - the index.
    * @return {SortedListItem} the item.
    */
-  get (index: number) {
+  get (index: number): T {
     return this._contents[index]
   }
 
@@ -69,27 +63,16 @@ export class SortedList<T: HasSequence> {
     this._contents.length = 0
   }
 
-  // [Symbol.iterator] () {
-  //   const that = this
-  //   let i = 0
-  //   return {
-  //     next () {
-  //       return (i < that.length) ? { value: that.get(i++), done: false }
-  //         : { value: undefined, done: true }
-  //     }
-  //   }
-  // }
-
   /**
    * Creates an array representation of this list.
    *
    * @return {SortedListItem[]} the item array.
    */
-  toArray () {
+  toArray (): T[] {
     return this._contents.slice()
   }
 
-  get $type (): 'SortedList' {
+  get $type (): Type {
     return 'SortedList'
   }
 }

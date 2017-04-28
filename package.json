@@ -58,6 +58,9 @@
       "describe",
       "it",
       "expect"
+    ],
+    "ignore": [
+      "**/*.js.flow"
     ]
   }
 }

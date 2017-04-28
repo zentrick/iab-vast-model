@@ -2,6 +2,7 @@
 
 import { Ad } from './base'
 import type { Pricing } from '../core/pricing'
+import type { Type } from '../type'
 
 /**
  * Inline ad.
@@ -83,7 +84,7 @@ export class InLine extends Ad {
     this._pricing = value
   }
 
-  get $type (): 'InLine' {
+  get $type (): Type {
     return 'InLine'
   }
 }

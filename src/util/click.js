@@ -1,5 +1,7 @@
 // @flow
 
+import type { Type } from '../type'
+
 /**
  * Describes a click configuration.
  *
@@ -37,7 +39,7 @@ export class Click {
     this._uri = value
   }
 
-  get $type (): 'Click' {
+  get $type (): Type {
     return 'Click'
   }
 }

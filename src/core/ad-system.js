@@ -1,5 +1,7 @@
 // @flow
 
+import type { Type } from '../type'
+
 /**
  * Stores information about the ad system.
  *
@@ -37,7 +39,7 @@ export class AdSystem {
     this._version = value
   }
 
-  get $type (): 'AdSystem' {
+  get $type (): Type {
     return 'AdSystem'
   }
 }

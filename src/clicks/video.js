@@ -2,6 +2,7 @@
 
 import { AbstractClicks } from './abstract'
 import type { Click } from '../util/click'
+import type { Type } from '../type'
 
 /**
  * Represents the click tracking configuration for a {@link Linear} creative.
@@ -28,7 +29,7 @@ export class VideoClicks extends AbstractClicks {
     return this._customClicks
   }
 
-  get $type (): 'VideoClicks' {
+  get $type (): Type {
     return 'VideoClicks'
   }
 }

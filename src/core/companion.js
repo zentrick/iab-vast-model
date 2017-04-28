@@ -3,6 +3,7 @@
 import { TrackingEvents } from '../tracking/events'
 import type { Resource } from '../resource/base'
 import type { Click } from '../util/click'
+import type { Type } from '../type'
 
 /**
  * Represents a single companion ad. Used in a {@link CompanionAds} creative.
@@ -222,7 +223,7 @@ export class Companion {
     return this._trackingEvents
   }
 
-  get $type (): 'Companion' {
+  get $type (): Type {
     return 'Companion'
   }
 }
