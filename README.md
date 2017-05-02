@@ -22,11 +22,15 @@ const vast = new VAST()
 
 Automatically generated API documentation can be found on
 [GitHub Pages](https://zentrick.github.io/iab-vast-model/). You can also
-open `docs/index.html` in a Web browser. Running `gulp doc` will (re)build the
+open `docs/index.html` in a Web browser. Running `npm run doc` will (re)build the
 `docs` directory.
 
 Additionally, feel free to look at the source code. We recommend starting with
 `src/index.js`, which should export all the classes you need.
+
+## Typing
+
+All APIs are statically typed using (flow)[https://flow.org].
 
 ## TODO
 

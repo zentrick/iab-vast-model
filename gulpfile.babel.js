@@ -72,17 +72,15 @@ gulp.task('coveralls', () => {
     .pipe($.coveralls())
 })
 
-gulp.task('test', (cb) => seq('lint', 'coverage', 'coveralls', cb))
+gulp.task('test', (cb) => seq('lint', 'flow', 'coverage', 'coveralls', cb))
 
 gulp.task('watch', () => gulp.watch('src/**/*', ['build']))
 
-gulp.task('doc:clean', () => del('docs'))
+gulp.task('flow', async () => {
+  const cmd = 'node_modules/.bin/flow'
+  const args = ['check']
 
-gulp.task('doc', ['doc:clean'], () => {
-  const cmd = 'node_modules/.bin/jsdoc'
-  const args = ['-c', 'jsdoc.json']
-  const options = { cwd: __dirname, stdio: 'inherit' }
-  return spawn(cmd, args, options)
+  return spawn(cmd, args)
 })
 
 gulp.task('default', ['build'], () => gulp.start('watch'))

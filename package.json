@@ -21,8 +21,8 @@
     "build": "gulp build",
     "prepublish": "in-publish && npm run build || not-in-publish",
     "test": "gulp test",
-    "flow": "flow",
-    "docs": "rimraf docs && documentation build src/** -f html -o docs"
+    "flow": "flow check",
+    "doc": "rimraf docs && documentation build src/** -f html -o docs"
   },
   "repository": "zentrick/iab-vast-model",
   "bugs": "https://github.com/zentrick/iab-vast-model/issues",
