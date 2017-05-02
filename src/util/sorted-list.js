@@ -1,5 +1,10 @@
 // @flow
 
+// A SortedList inherits from an Iterable because of this issue:
+// https://github.com/facebook/flow/issues/1163
+// We apply the technique demonstrated here:
+// https://github.com/facebook/flow/issues/2590
+
 import { Iterable } from './iterable'
 import type { SortedListItem } from './sorted-list-item'
 import type { Type } from '../type'
