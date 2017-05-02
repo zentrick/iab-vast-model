@@ -7,7 +7,7 @@ import type { CreativeExtension } from '../extension/creative'
  * Base class for creatives.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class Creative extends SortedListItem {
   _id: string

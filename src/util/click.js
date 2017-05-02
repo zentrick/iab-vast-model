@@ -6,7 +6,7 @@ import type { Type } from '../type'
  * Describes a click configuration.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class Click {
   _id: string

@@ -6,7 +6,7 @@ import type { Type } from '../type'
  * Represents a tracking pixel configuration for an impression.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class Impression {
   _id: string

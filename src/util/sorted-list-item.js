@@ -5,7 +5,7 @@
  * {@link Creative}.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class SortedListItem {
   _sequence: number

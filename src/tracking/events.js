@@ -8,7 +8,7 @@ import type { Type } from '../type'
  * {@link TrackingEvent} instances.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class TrackingEvents {
   _map: { [type: string]: TrackingEvent[] }

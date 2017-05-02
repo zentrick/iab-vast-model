@@ -11,7 +11,7 @@ import type { Extension } from '../extension/default'
  * Base class for ads.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class Ad extends SortedListItem {
   _id: string

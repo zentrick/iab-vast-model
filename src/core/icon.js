@@ -9,7 +9,7 @@ import type { Type } from '../type'
  * Represents an icon used in a {@link Linear} creative.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class Icon {
   _program: string
