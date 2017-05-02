@@ -1,3 +1,4 @@
 {
-  "presets": ["es2015", "flow"]
+  "presets": ["es2015", "stage-3", "flow"],
+  "plugins": ["transform-runtime"]
 }
