@@ -12,10 +12,10 @@ import type { Type } from '../type'
  */
 export class InLine extends Ad {
   _adTitle: string
-  _description: string
-  _advertiser: string
-  _survey: string
-  _pricing: Pricing
+  _description: ?string
+  _advertiser: ?string
+  _survey: ?string
+  _pricing: ?Pricing
 
   /**
    * The title for this ad.
@@ -31,44 +31,44 @@ export class InLine extends Ad {
   /**
    * The description for this ad.
    */
-  get description (): string {
+  get description (): ?string {
     return this._description
   }
 
-  set description (value: string) {
+  set description (value: ?string) {
     this._description = value
   }
 
   /**
    * The advertiser name for this ad.
    */
-  get advertiser (): string {
+  get advertiser (): ?string {
     return this._advertiser
   }
 
-  set advertiser (value: string) {
+  set advertiser (value: ?string) {
     this._advertiser = value
   }
 
   /**
    * The survey URI for this ad.
    */
-  get survey (): string {
+  get survey (): ?string {
     return this._survey
   }
 
-  set survey (value: string) {
+  set survey (value: ?string) {
     this._survey = value
   }
 
   /**
    * The pricing configuration for this ad.
    */
-  get pricing (): Pricing {
+  get pricing (): ?Pricing {
     return this._pricing
   }
 
-  set pricing (value: Pricing) {
+  set pricing (value: ?Pricing) {
     this._pricing = value
   }
 

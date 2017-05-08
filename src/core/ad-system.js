@@ -1,5 +1,6 @@
 // @flow
 
+import { Base } from '../base'
 import type { Type } from '../type'
 
 /**
@@ -8,9 +9,9 @@ import type { Type } from '../type'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class AdSystem {
+export class AdSystem extends Base {
   _name: string
-  _version: string
+  _version: ?string
 
   /**
    * The name of the ad system.
@@ -26,11 +27,11 @@ export class AdSystem {
   /**
    * The version of the ad system.
    */
-  get version (): string {
+  get version (): ?string {
     return this._version
   }
 
-  set version (value: string) {
+  set version (value: ?string) {
     this._version = value
   }
 

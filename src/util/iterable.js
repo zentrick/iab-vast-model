@@ -1,7 +1,10 @@
-export class Iterable {
+import { Base } from '../base'
+
+export class Iterable extends Base {
   _contents
 
   constructor () {
+    super()
     this._contents = []
   }
 

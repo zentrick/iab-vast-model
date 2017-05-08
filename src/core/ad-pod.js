@@ -2,6 +2,7 @@
 
 import { SortedList } from '../util/sorted-list'
 import { Ad } from '../ad/base'
+import { Base } from '../base'
 import type { Type } from '../type'
 
 /**
@@ -10,10 +11,11 @@ import type { Type } from '../type'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class AdPod {
+export class AdPod extends Base {
   _ads: SortedList<Ad>
 
   constructor () {
+    super()
     this._ads = new SortedList()
   }
 

@@ -1,23 +1,25 @@
 // @flow
 
+import { Base } from '../base'
+
 /**
  * Base class for VAST {@link Extension} as well as {@link CreativeExtension}.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class AbstractExtension {
-  _type: string
+export class AbstractExtension extends Base {
+  _type: ?string
   _content: string
 
   /**
    * The type of this extension.
    */
-  get type (): string {
+  get type (): ?string {
     return this._type
   }
 
-  set type (value: string) {
+  set type (value: ?string) {
     this._type = value
   }
 

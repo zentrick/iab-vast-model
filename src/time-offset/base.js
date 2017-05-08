@@ -1,12 +1,14 @@
 // @flow
 
+import { Base } from '../base'
+
 /**
  * Represents a time offset.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class TimeOffset {
+export class TimeOffset extends Base {
   _value: number
 
   /**

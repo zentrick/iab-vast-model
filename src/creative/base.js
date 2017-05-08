@@ -10,9 +10,9 @@ import type { CreativeExtension } from '../extension/creative'
  * @copyright © 2016 Zentrick nv
  */
 export class Creative extends SortedListItem {
-  _id: string
-  _adID: string
-  _apiFramework: string
+  _id: ?string
+  _adID: ?string
+  _apiFramework: ?string
   _extensions: CreativeExtension[]
 
   constructor () {
@@ -23,33 +23,33 @@ export class Creative extends SortedListItem {
   /**
    * The ID of this creative.
    */
-  get id (): string {
+  get id (): ?string {
     return this._id
   }
 
-  set id (value: string) {
+  set id (value: ?string) {
     this._id = value
   }
 
   /**
    * The ID of the {@link Ad} with which this creative is served.
    */
-  get adID (): string {
+  get adID (): ?string {
     return this._adID
   }
 
-  set adID (value: string) {
+  set adID (value: ?string) {
     this._adID = value
   }
 
   /**
    * The API framework used by this creative.
    */
-  get apiFramework (): string {
+  get apiFramework (): ?string {
     return this._apiFramework
   }
 
-  set apiFramework (value: string) {
+  set apiFramework (value: ?string) {
     this._apiFramework = value
   }
 

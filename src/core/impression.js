@@ -1,5 +1,6 @@
 // @flow
 
+import { Base } from '../base'
 import type { Type } from '../type'
 
 /**
@@ -8,18 +9,18 @@ import type { Type } from '../type'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class Impression {
-  _id: string
+export class Impression extends Base {
+  _id: ?string
   _uri: string
 
   /**
    * The ID of this impression pixel.
    */
-  get id (): string {
+  get id (): ?string {
     return this._id
   }
 
-  set id (value: string) {
+  set id (value: ?string) {
     this._id = value
   }
 

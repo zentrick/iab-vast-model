@@ -1,6 +1,7 @@
 // @flow
 
 import { SortedList } from '../util/sorted-list'
+import { Base } from '../base'
 import type { Ad } from '../ad/base'
 import type { AdPod } from './ad-pod'
 import type { Type } from '../type'
@@ -11,11 +12,12 @@ import type { Type } from '../type'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class AdBuffet {
+export class AdBuffet extends Base {
   _ads: SortedList<Ad>
-  _adPod: AdPod
+  _adPod: ?AdPod
 
   constructor () {
+    super()
     this._ads = new SortedList()
   }
 
@@ -29,11 +31,11 @@ export class AdBuffet {
   /**
    * The ad pod for this ad buffet.
    */
-  get adPod (): AdPod {
+  get adPod (): ?AdPod {
     return this._adPod
   }
 
-  set adPod (value: AdPod) {
+  set adPod (value: ?AdPod) {
     this._adPod = value
   }
 

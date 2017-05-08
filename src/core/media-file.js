@@ -1,6 +1,9 @@
 // @flow
 
+import { Base } from '../base'
 import type { Type } from '../type'
+
+type Delivery = 'streaming' | 'progressive'
 
 /**
  * Represents a media file used in a {@link Linear} creative.
@@ -8,40 +11,40 @@ import type { Type } from '../type'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class MediaFile {
-  _id: string
-  _delivery: string
+export class MediaFile extends Base {
+  _id: ?string
+  _delivery: Delivery
   _type: string
-  _bitrate: number
-  _minBitrate: number
-  _maxBitrate: number
+  _bitrate: ?number
+  _minBitrate: ?number
+  _maxBitrate: ?number
   _width: number
   _height: number
-  _scalable: boolean
-  _maintainAspectRatio: boolean
-  _codec: string
-  _apiFramework: string
+  _scalable: ?boolean
+  _maintainAspectRatio: ?boolean
+  _codec: ?string
+  _apiFramework: ?string
   _uri: string
 
   /**
    * The ID of this media file.
    */
-  get id (): string {
+  get id (): ?string {
     return this._id
   }
 
-  set id (value: string) {
+  set id (value: ?string) {
     this._id = value
   }
 
   /**
    * The delivery method for this media file.
    */
-  get delivery (): string {
+  get delivery (): Delivery {
     return this._delivery
   }
 
-  set delivery (value: string) {
+  set delivery (value: Delivery) {
     this._delivery = value
   }
 
@@ -59,33 +62,33 @@ export class MediaFile {
   /**
    * The bitrate of this media file in kbps.
    */
-  get bitrate (): number {
+  get bitrate (): ?number {
     return this._bitrate
   }
 
-  set bitrate (value: number) {
+  set bitrate (value: ?number) {
     this._bitrate = value
   }
 
   /**
    * The minimum bitrate of this media file in kbps.
    */
-  get minBitrate (): number {
+  get minBitrate (): ?number {
     return this._minBitrate
   }
 
-  set minBitrate (value: number) {
+  set minBitrate (value: ?number) {
     this._minBitrate = value
   }
 
   /**
    * The maximum bitrate of this media file in kbps.
    */
-  get maxBitrate (): number {
+  get maxBitrate (): ?number {
     return this._maxBitrate
   }
 
-  set maxBitrate (value: number) {
+  set maxBitrate (value: ?number) {
     this._maxBitrate = value
   }
 
@@ -114,44 +117,44 @@ export class MediaFile {
   /**
    * Whether this media file is meant to scale to larger dimensions.
    */
-  get scalable (): boolean {
+  get scalable (): ?boolean {
     return this._scalable
   }
 
-  set scalable (value: boolean) {
+  set scalable (value: ?boolean) {
     this._scalable = value
   }
 
   /**
    * Whether this media file's aspect ratio should be maintained when scaled.
    */
-  get maintainAspectRatio (): boolean {
+  get maintainAspectRatio (): ?boolean {
     return this._maintainAspectRatio
   }
 
-  set maintainAspectRatio (value: boolean) {
+  set maintainAspectRatio (value: ?boolean) {
     this._maintainAspectRatio = value
   }
 
   /**
    * The codec of this media file in RFC 4281 format.
    */
-  get codec (): string {
+  get codec (): ?string {
     return this._codec
   }
 
-  set codec (value: string) {
+  set codec (value: ?string) {
     this._codec = value
   }
 
   /**
    * The API framework used by this media file.
    */
-  get apiFramework (): string {
+  get apiFramework (): ?string {
     return this._apiFramework
   }
 
-  set apiFramework (value: string) {
+  set apiFramework (value: ?string) {
     this._apiFramework = value
   }
 

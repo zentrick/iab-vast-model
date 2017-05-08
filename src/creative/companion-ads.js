@@ -14,7 +14,7 @@ type Required = 'all' | 'any' | 'none'
  */
 export class CompanionAds extends Creative {
   _companions: Companion[]
-  _required: Required
+  _required: ?Required
 
   constructor () {
     super()
@@ -33,11 +33,11 @@ export class CompanionAds extends Creative {
    * are supplied and whether the ad can be displayed without its companion
    * creative. Either `"all"`, `"any"`, or `"none"`.
    */
-  get required (): Required {
+  get required (): ?Required {
     return this._required
   }
 
-  set required (value: Required) {
+  set required (value: ?Required) {
     this._required = value
   }
 

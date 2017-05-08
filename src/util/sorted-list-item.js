@@ -1,5 +1,7 @@
 // @flow
 
+import { Base } from '../base'
+
 /**
  * Represents an item in a {@link SortedList}. Base class for {@link Ad} and
  * {@link Creative}.
@@ -7,17 +9,17 @@
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class SortedListItem {
-  _sequence: number
+export class SortedListItem extends Base {
+  _sequence: ?number
 
   /**
    * The sequence number of this item within its parent.
    */
-  get sequence (): number {
+  get sequence (): ?number {
     return this._sequence
   }
 
-  set sequence (value: number) {
+  set sequence (value: ?number) {
     this._sequence = value
   }
 }

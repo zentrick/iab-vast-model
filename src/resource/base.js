@@ -1,5 +1,7 @@
 // @flow
 
+import { Base } from '../base'
+
 /**
  * Base class for a resource used by an {@link Icon}, a {@link Companion}, or
  * a {@link NonLinear}.
@@ -7,7 +9,7 @@
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class Resource {
+export class Resource extends Base {
   _content: string
 
   /**

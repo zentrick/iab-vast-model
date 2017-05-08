@@ -1,5 +1,6 @@
 // @flow
 
+import { Base } from '../base'
 import type { TimeOffset } from '../time-offset/base'
 import type { Type } from '../type'
 
@@ -9,34 +10,30 @@ import type { Type } from '../type'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class TrackingEvent {
-  _uri: string[]
-  _offset: TimeOffset
+export class TrackingEvent extends Base {
+  _uri: string
+  _offset: ?TimeOffset
 
   /**
    * The tracking URI for this event configuration.
-   *
-   * @type {string[]}
    */
-  get uri (): string[] {
+  get uri (): string {
     return this._uri
   }
 
-  set uri (value: string[]) {
+  set uri (value: string) {
     this._uri = value
   }
 
   /**
    * The time offset for this event configuration. Only applies to `progress`
    * events.
-   *
-   * @type {TimeOffset}
    */
-  get offset (): TimeOffset {
+  get offset (): ?TimeOffset {
     return this._offset
   }
 
-  set offset (value: TimeOffset) {
+  set offset (value: ?TimeOffset) {
     this._offset = value
   }
 

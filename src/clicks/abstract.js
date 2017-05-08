@@ -1,5 +1,6 @@
 // @flow
 
+import { Base } from '../base'
 import type { Click } from '../util/click'
 
 /**
@@ -8,22 +9,23 @@ import type { Click } from '../util/click'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class AbstractClicks {
-  _clickThrough: Click
+export class AbstractClicks extends Base {
+  _clickThrough: ?Click
   _clickTrackings: Click[]
 
   constructor () {
+    super()
     this._clickTrackings = []
   }
 
   /**
    * The click-through configuration.
    */
-  get clickThrough (): Click {
+  get clickThrough (): ?Click {
     return this._clickThrough
   }
 
-  set clickThrough (value: Click) {
+  set clickThrough (value: ?Click) {
     this._clickThrough = value
   }
 

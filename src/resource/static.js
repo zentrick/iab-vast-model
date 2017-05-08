@@ -10,16 +10,16 @@ import type { Type } from '../type'
  * @copyright © 2016 Zentrick nv
  */
 export class StaticResource extends Resource {
-  _creativeType: string
+  _creativeType: ?string
 
   /**
    * The MIME type of this resource.
    */
-  get creativeType (): string {
+  get creativeType (): ?string {
     return this._creativeType
   }
 
-  set creativeType (value: string) {
+  set creativeType (value: ?string) {
     this._creativeType = value
   }
 

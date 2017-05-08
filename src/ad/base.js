@@ -14,7 +14,7 @@ import type { Extension } from '../extension/default'
  * @copyright © 2016 Zentrick nv
  */
 export class Ad extends SortedListItem {
-  _id: string
+  _id: ?string
   _adSystem: AdSystem
 
   _creatives: SortedList<Creative>
@@ -33,11 +33,11 @@ export class Ad extends SortedListItem {
   /**
    * The ID of this ad.
    */
-  get id (): string {
+  get id (): ?string {
     return this._id
   }
 
-  set id (value: string) {
+  set id (value: ?string) {
     this._id = value
   }
 

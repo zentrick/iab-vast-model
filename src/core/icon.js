@@ -1,5 +1,6 @@
 // @flow
 
+import { Base } from '../base'
 import { IconClicks } from '../clicks/icon'
 import type { Resource } from '../resource/base'
 import type { Click } from '../util/click'
@@ -11,20 +12,21 @@ import type { Type } from '../type'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class Icon {
+export class Icon extends Base {
   _program: string
   _width: number
   _height: number
   _xPosition: number
   _yPosition: number
-  _duration: number
-  _offset: number
-  _apiFramework: string
-  _resource: Resource
+  _duration: ?number
+  _offset: ?number
+  _apiFramework: ?string
+  _resource: ?Resource
   _clicks: IconClicks
   _viewTrackings: Click[]
 
   constructor () {
+    super()
     this._clicks = new IconClicks()
     this._viewTrackings = []
   }
@@ -87,44 +89,44 @@ export class Icon {
   /**
    * The duration of this icon in seconds.
    */
-  get duration (): number {
+  get duration (): ?number {
     return this._duration
   }
 
-  set duration (value: number) {
+  set duration (value: ?number) {
     this._duration = value
   }
 
   /**
    * The time offset of this icon in seconds.
    */
-  get offset (): number {
+  get offset (): ?number {
     return this._offset
   }
 
-  set offset (value: number) {
+  set offset (value: ?number) {
     this._offset = value
   }
 
   /**
    * The API framework used by this icon.
    */
-  get apiFramework (): string {
+  get apiFramework (): ?string {
     return this._apiFramework
   }
 
-  set apiFramework (value: string) {
+  set apiFramework (value: ?string) {
     this._apiFramework = value
   }
 
   /**
    * The resource associated with this icon.
    */
-  get resource (): Resource {
+  get resource (): ?Resource {
     return this._resource
   }
 
-  set resource (value: Resource) {
+  set resource (value: ?Resource) {
     this._resource = value
   }
 

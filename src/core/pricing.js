@@ -1,8 +1,9 @@
 // @flow
 
+import { Base } from '../base'
 import type { Type } from '../type'
 
-type PricingModel = 'CPM' | 'CPC' | 'CPE' | 'CPV'
+type PricingModel = 'cpc' | 'cpm' | 'cpe' | 'cpv'
 
 /**
  * Pricing information for real-time bidding.
@@ -10,13 +11,13 @@ type PricingModel = 'CPM' | 'CPC' | 'CPE' | 'CPV'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class Pricing {
+export class Pricing extends Base {
   _model: PricingModel
   _currency: string
   _value: number
 
   /**
-   * The pricing model. Either `"CPM"`, `"CPC"`, `"CPE"`, or `"CPV"`.
+   * The pricing model.
    */
   get model (): PricingModel {
     return this._model

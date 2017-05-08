@@ -1,5 +1,6 @@
 // @flow
 
+import { Base } from '../base'
 import { TrackingEvents } from '../tracking/events'
 import type { Resource } from '../resource/base'
 import type { Click } from '../util/click'
@@ -11,24 +12,25 @@ import type { Type } from '../type'
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2016 Zentrick nv
  */
-export class Companion {
-  _id: string
+export class Companion extends Base {
+  _id: ?string
   _width: number
   _height: number
-  _assetWidth: number
-  _assetHeight: number
-  _expandedWidth: number
-  _expandedHeight: number
-  _apiFramework: string
-  _adSlotID: string
-  _resource: Resource
-  _adParameters: string
-  _altText: string
-  _clickThrough: Click
+  _assetWidth: ?number
+  _assetHeight: ?number
+  _expandedWidth: ?number
+  _expandedHeight: ?number
+  _apiFramework: ?string
+  _adSlotID: ?string
+  _resource: ?Resource
+  _adParameters: ?string
+  _altText: ?string
+  _clickThrough: ?Click
   _clickTrackings: Click[]
   _trackingEvents: TrackingEvents
 
   constructor () {
+    super()
     this._clickTrackings = []
     this._trackingEvents = new TrackingEvents()
   }
@@ -36,11 +38,11 @@ export class Companion {
   /**
    * The ID for this companion ad.
    */
-  get id (): string {
+  get id (): ?string {
     return this._id
   }
 
-  set id (value: string) {
+  set id (value: ?string) {
     this._id = value
   }
 
@@ -69,110 +71,110 @@ export class Companion {
   /**
    * The width of this companion ad's asset in pixels.
    */
-  get assetWidth (): number {
+  get assetWidth (): ?number {
     return this._assetWidth
   }
 
-  set assetWidth (value: number) {
+  set assetWidth (value: ?number) {
     this._assetWidth = value
   }
 
   /**
    * The height of this companion ad's asset in pixels.
    */
-  get assetHeight (): number {
+  get assetHeight (): ?number {
     return this._assetHeight
   }
 
-  set assetHeight (value: number) {
+  set assetHeight (value: ?number) {
     this._assetHeight = value
   }
 
   /**
    * The expanded width of this companion ad in pixels.
    */
-  get expandedWidth (): number {
+  get expandedWidth (): ?number {
     return this._expandedWidth
   }
 
-  set expandedWidth (value: number) {
+  set expandedWidth (value: ?number) {
     this._expandedWidth = value
   }
 
   /**
    * The expanded height of this companion ad in pixels.
    */
-  get expandedHeight (): number {
+  get expandedHeight (): ?number {
     return this._expandedHeight
   }
 
-  set expandedHeight (value: number) {
+  set expandedHeight (value: ?number) {
     this._expandedHeight = value
   }
 
   /**
    * The API framework used by this companion ad.
    */
-  get apiFramework (): string {
+  get apiFramework (): ?string {
     return this._apiFramework
   }
 
-  set apiFramework (value: string) {
+  set apiFramework (value: ?string) {
     this._apiFramework = value
   }
 
   /**
    * The ad slot ID of this companion ad.
    */
-  get adSlotID (): string {
+  get adSlotID (): ?string {
     return this._adSlotID
   }
 
-  set adSlotID (value: string) {
+  set adSlotID (value: ?string) {
     this._adSlotID = value
   }
 
   /**
    * The resource associated with this companion ad.
    */
-  get resource (): Resource {
+  get resource (): ?Resource {
     return this._resource
   }
 
-  set resource (value: Resource) {
+  set resource (value: ?Resource) {
     this._resource = value
   }
 
   /**
    * The ad parameters for this companion ad.
    */
-  get adParameters (): string {
+  get adParameters (): ?string {
     return this._adParameters
   }
 
-  set adParameters (value: string) {
+  set adParameters (value: ?string) {
     this._adParameters = value
   }
 
   /**
    * The alt text of this companion ad.
    */
-  get altText (): string {
+  get altText (): ?string {
     return this._altText
   }
 
-  set altText (value: string) {
+  set altText (value: ?string) {
     this._altText = value
   }
 
   /**
    * The clickthrough configuration for this companion ad.
    */
-  get clickThrough (): Click {
+  get clickThrough (): ?Click {
     return this._clickThrough
   }
 
-  set clickThrough (value: Click) {
+  set clickThrough (value: ?Click) {
     this._clickThrough = value
   }
 

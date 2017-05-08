@@ -15,8 +15,8 @@ import type { Type } from '../type'
  * @copyright © 2016 Zentrick nv
  */
 export class Linear extends Creative {
-  _skipoffset: TimeOffset
-  _adParameters: string
+  _skipoffset: ?TimeOffset
+  _adParameters: ?string
   _duration: number
   _mediaFiles: MediaFile[]
   _trackingEvents: TrackingEvents
@@ -34,22 +34,22 @@ export class Linear extends Creative {
   /**
    * The time interval after which this linear creative can be skipped.
    */
-  get skipoffset (): TimeOffset {
+  get skipoffset (): ?TimeOffset {
     return this._skipoffset
   }
 
-  set skipoffset (value: TimeOffset) {
+  set skipoffset (value: ?TimeOffset) {
     this._skipoffset = value
   }
 
   /**
    * The ad parameters for this linear creative.
    */
-  get adParameters (): string {
+  get adParameters (): ?string {
     return this._adParameters
   }
 
-  set adParameters (value: string) {
+  set adParameters (value: ?string) {
     this._adParameters = value
   }
 
