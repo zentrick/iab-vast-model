@@ -30,7 +30,7 @@ Additionally, feel free to look at the source code. We recommend starting with
 
 ## Typing
 
-All APIs are statically typed using (flow)[https://flow.org].
+All APIs are statically typed using (flow)[https://flow.org]. Type checking is automatically performed when running `npm test`. You can also run type checking only by using the command `npm run flow`. Static typing adds an additional layer of defense against errors and can also improve the development experience by enabling autocompletion. For (atom.io)[https://atom.io], we recommend (Flow-IDE)[https://atom.io/packages/flow-ide].
 
 ## TODO
 
