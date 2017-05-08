@@ -22,4 +22,8 @@ export class SortedListItem extends Base {
   set sequence (value: ?number) {
     this._sequence = value
   }
+
+  get $type (): 'CompanionAds' | 'InLine' | 'Linear' | 'Wrapper' | 'NonLinearAds' {
+    throw new Error('Abstract method')
+  }
 }

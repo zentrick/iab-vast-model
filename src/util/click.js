@@ -1,7 +1,6 @@
 // @flow
 
 import { Base } from '../base'
-import type { Type } from '../type'
 
 /**
  * Describes a click configuration.
@@ -35,7 +34,7 @@ export class Click extends Base {
     this._uri = value
   }
 
-  get $type (): Type {
+  get $type (): 'Click' {
     return 'Click'
   }
 }

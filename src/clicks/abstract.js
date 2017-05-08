@@ -35,4 +35,8 @@ export class AbstractClicks extends Base {
   get clickTrackings (): Click[] {
     return this._clickTrackings
   }
+
+  get $type (): 'IconClicks' | 'VideoClicks' {
+    throw new Error('Abstract method')
+  }
 }

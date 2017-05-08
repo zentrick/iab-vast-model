@@ -1,7 +1,6 @@
 // @flow
 
 import { Base } from '../base'
-import type { Type } from '../type'
 
 type PricingModel = 'cpc' | 'cpm' | 'cpe' | 'cpv'
 
@@ -49,7 +48,7 @@ export class Pricing extends Base {
     this._value = value
   }
 
-  get $type (): Type {
+  get $type (): 'Pricing' {
     return 'Pricing'
   }
 }

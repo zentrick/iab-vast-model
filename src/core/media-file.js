@@ -1,7 +1,6 @@
 // @flow
 
 import { Base } from '../base'
-import type { Type } from '../type'
 
 type Delivery = 'streaming' | 'progressive'
 
@@ -169,7 +168,7 @@ export class MediaFile extends Base {
     this._uri = value
   }
 
-  get $type (): Type {
+  get $type (): 'MediaFile' {
     return 'MediaFile'
   }
 }

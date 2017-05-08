@@ -33,4 +33,8 @@ export class AbstractExtension extends Base {
   set content (value: string) {
     this._content = value
   }
+
+  get $type (): 'Extension' | 'CreativeExtension' {
+    throw new Error('Abstract method')
+  }
 }

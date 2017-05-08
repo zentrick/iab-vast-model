@@ -7,7 +7,6 @@
 
 import { Iterable } from './iterable'
 import type { SortedListItem } from './sorted-list-item'
-import type { Type } from '../type'
 
 /**
  * Represents a list of {@link SortedListItem}s, ordered by
@@ -64,7 +63,7 @@ export class SortedList<T: SortedListItem> extends Iterable<T> {
     return this._contents.slice()
   }
 
-  get $type (): Type {
+  get $type (): 'SortedList' {
     return 'SortedList'
   }
 }

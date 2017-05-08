@@ -1,7 +1,6 @@
 // @flow
 
 import { Resource } from './base'
-import type { Type } from '../type'
 
 /**
  * Describes non-HTML creative.
@@ -23,7 +22,7 @@ export class StaticResource extends Resource {
     this._creativeType = value
   }
 
-  get $type (): Type {
+  get $type (): 'StaticResource' {
     return 'StaticResource'
   }
 }

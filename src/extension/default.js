@@ -1,7 +1,6 @@
 // @flow
 
 import { AbstractExtension } from './abstract'
-import type { Type } from '../type'
 
 /**
  * Represents a VAST extension.
@@ -10,7 +9,7 @@ import type { Type } from '../type'
  * @copyright © 2017 Zentrick nv
  */
 export class Extension extends AbstractExtension {
-  get $type (): Type {
+  get $type (): 'Extension' {
     return 'Extension'
   }
 }

@@ -6,7 +6,6 @@ import { TrackingEvents } from '../tracking/events'
 import type { TimeOffset } from '../time-offset/base'
 import type { MediaFile } from '../core/media-file'
 import type { Icon } from '../core/icon'
-import type { Type } from '../type'
 
 /**
  * Represents a linear creative.
@@ -92,7 +91,7 @@ export class Linear extends Creative {
     return this._icons
   }
 
-  get $type (): Type {
+  get $type (): 'Linear' {
     return 'Linear'
   }
 }

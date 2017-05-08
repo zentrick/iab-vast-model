@@ -1,7 +1,6 @@
 // @flow
 
 import { AbstractClicks } from './abstract'
-import type { Type } from '../type'
 
 /**
  * Represents the click tracking configuration for an {@link Icon}.
@@ -10,7 +9,7 @@ import type { Type } from '../type'
  * @copyright © 2017 Zentrick nv
  */
 export class IconClicks extends AbstractClicks {
-  get $type (): Type {
+  get $type (): 'IconClicks' {
     return 'IconClicks'
   }
 }

@@ -1,7 +1,6 @@
 // @flow
 
 import { Base } from '../base'
-import type { Type } from '../type'
 
 /**
  * Stores information about the ad system.
@@ -35,7 +34,7 @@ export class AdSystem extends Base {
     this._version = value
   }
 
-  get $type (): Type {
+  get $type (): 'AdSystem' {
     return 'AdSystem'
   }
 }

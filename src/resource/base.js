@@ -22,4 +22,8 @@ export class Resource extends Base {
   set content (value: string) {
     this._content = value
   }
+
+  get $type (): 'HTMLResource' | 'IFrameResource' | 'StaticResource' {
+    throw new Error('Abstract method')
+  }
 }

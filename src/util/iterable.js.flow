@@ -1,7 +1,6 @@
 // @flow
 
 import { Base } from '../base'
-import type { Type } from '../type'
 import type { SortedListItem } from './sorted-list-item'
 
 declare export class Iterable<T: SortedListItem> extends Base {

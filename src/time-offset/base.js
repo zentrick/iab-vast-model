@@ -21,4 +21,8 @@ export class TimeOffset extends Base {
   set value (value: number) {
     this._value = value
   }
+
+  get $type (): 'AbsoluteTimeOffset' | 'RelativeTimeOffset' {
+    throw new Error('Abstract method')
+  }
 }

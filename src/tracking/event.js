@@ -2,7 +2,6 @@
 
 import { Base } from '../base'
 import type { TimeOffset } from '../time-offset/base'
-import type { Type } from '../type'
 
 /**
  * Represents a tracking event configuration.
@@ -37,7 +36,7 @@ export class TrackingEvent extends Base {
     this._offset = value
   }
 
-  get $type (): Type {
+  get $type (): 'TrackingEvent' {
     return 'TrackingEvent'
   }
 }

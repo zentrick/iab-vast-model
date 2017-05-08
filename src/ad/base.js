@@ -93,4 +93,8 @@ export class Ad extends SortedListItem {
   get extensions (): Extension[] {
     return this._extensions
   }
+
+  get $type (): 'Wrapper' | 'InLine' {
+    throw new Error('Abstract method')
+  }
 }

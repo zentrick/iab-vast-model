@@ -1,7 +1,6 @@
 // @flow
 
 import { AdBuffet } from './ad-buffet'
-import type { Type } from '../type'
 
 /**
  * Represents a VAST document.
@@ -36,7 +35,7 @@ export class VAST extends AdBuffet {
     return this._errors
   }
 
-  get $type (): Type {
+  get $type (): 'VAST' {
     return 'VAST'
   }
 }

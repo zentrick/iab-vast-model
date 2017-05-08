@@ -4,7 +4,6 @@ import { Base } from '../base'
 import { IconClicks } from '../clicks/icon'
 import type { Resource } from '../resource/base'
 import type { Click } from '../util/click'
-import type { Type } from '../type'
 
 /**
  * Represents an icon used in a {@link Linear} creative.
@@ -144,7 +143,7 @@ export class Icon extends Base {
     return this._viewTrackings
   }
 
-  get $type (): Type {
+  get $type (): 'Icon' {
     return 'Icon'
   }
 }

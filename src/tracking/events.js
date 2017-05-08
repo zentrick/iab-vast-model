@@ -2,7 +2,6 @@
 
 import { Base } from '../base'
 import type { TrackingEvent } from './event'
-import type { Type } from '../type'
 
 type EventType =
   'creativeView' |
@@ -68,7 +67,7 @@ export class TrackingEvents extends Base {
     this._map[event].push(config)
   }
 
-  get $type (): Type {
+  get $type (): 'TrackingEvents' {
     return 'TrackingEvents'
   }
 }

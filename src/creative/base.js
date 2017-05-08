@@ -59,4 +59,8 @@ export class Creative extends SortedListItem {
   get extensions (): CreativeExtension[] {
     return this._extensions
   }
+
+  get $type (): 'CompanionAds' | 'Linear' | 'NonLinearAds' {
+    throw new Error('Abstract method')
+  }
 }

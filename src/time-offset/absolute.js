@@ -1,7 +1,6 @@
 // @flow
 
 import { TimeOffset } from './base'
-import type { Type } from '../type'
 
 /**
  * Represents a time offset expressed as an absolute duration in seconds.
@@ -10,7 +9,7 @@ import type { Type } from '../type'
  * @copyright © 2017 Zentrick nv
  */
 export class AbsoluteTimeOffset extends TimeOffset {
-  get $type (): Type {
+  get $type (): 'AbsoluteTimeOffset' {
     return 'AbsoluteTimeOffset'
   }
 }

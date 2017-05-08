@@ -1,7 +1,6 @@
 // @flow
 
 import { Base } from '../base'
-import type { Type } from '../type'
 
 /**
  * Represents a tracking pixel configuration for an impression.
@@ -35,7 +34,7 @@ export class Impression extends Base {
     this._uri = value
   }
 
-  get $type (): Type {
+  get $type (): 'Impression' {
     return 'Impression'
   }
 }

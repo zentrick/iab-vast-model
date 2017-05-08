@@ -3,7 +3,6 @@
 import { Creative } from './base'
 import { TrackingEvents } from '../tracking/events'
 import type { NonLinear } from '../core/non-linear'
-import type { Type } from '../type'
 
 /**
  * Represents a creative with non-linear ads.
@@ -35,7 +34,7 @@ export class NonLinearAds extends Creative {
     return this._trackingEvents
   }
 
-  get $type (): Type {
+  get $type (): 'NonLinearAds' {
     return 'NonLinearAds'
   }
 }

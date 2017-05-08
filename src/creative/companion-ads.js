@@ -2,7 +2,6 @@
 
 import { Creative } from './base'
 import type { Companion } from '../core/companion'
-import type { Type } from '../type'
 
 type Required = 'all' | 'any' | 'none'
 
@@ -41,7 +40,7 @@ export class CompanionAds extends Creative {
     this._required = value
   }
 
-  get $type (): Type {
+  get $type (): 'CompanionAds' {
     return 'CompanionAds'
   }
 }

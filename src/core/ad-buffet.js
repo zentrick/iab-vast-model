@@ -4,7 +4,6 @@ import { SortedList } from '../util/sorted-list'
 import { Base } from '../base'
 import type { Ad } from '../ad/base'
 import type { AdPod } from './ad-pod'
-import type { Type } from '../type'
 
 /**
  * Represents a VAST ad buffet.
@@ -39,7 +38,7 @@ export class AdBuffet extends Base {
     this._adPod = value
   }
 
-  get $type (): Type {
+  get $type (): 'VAST' | 'AdBuffet' {
     return 'AdBuffet'
   }
 }
