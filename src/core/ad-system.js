@@ -7,7 +7,7 @@ import type { Type } from '../type'
  * Stores information about the ad system.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class AdSystem extends Base {
   _name: string

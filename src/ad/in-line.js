@@ -8,7 +8,7 @@ import type { Type } from '../type'
  * Inline ad.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class InLine extends Ad {
   _adTitle: string

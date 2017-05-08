@@ -10,7 +10,7 @@ import type { Type } from '../type'
  * Represents a VAST ad buffet.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class AdBuffet extends Base {
   _ads: SortedList<Ad>

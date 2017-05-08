@@ -7,7 +7,7 @@ import type { Type } from '../type'
  * Wrapper ad.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class Wrapper extends Ad {
   _vastAdTagURI: string

@@ -9,7 +9,7 @@ type PricingModel = 'cpc' | 'cpm' | 'cpe' | 'cpv'
  * Pricing information for real-time bidding.
  *
  * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @copyright © 2017 Zentrick nv
  */
 export class Pricing extends Base {
   _model: PricingModel
