@@ -1,3 +1,5 @@
+// @flow
+
 import { TrackingEvent } from '../../../src/tracking/event'
 import { TrackingEvents } from '../../../src/tracking/events'
 

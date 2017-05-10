@@ -1,5 +1,8 @@
+// @flow
+
 import { NonLinear } from '../../../src/core/non-linear'
 import { StaticResource } from '../../../src/resource/static'
+import { Click } from '../../../src/util/click'
 
 describe('NonLinear', () => {
   const createInstance = () => {
@@ -107,7 +110,7 @@ describe('NonLinear', () => {
   describe('#clickThrough', () => {
     it('sets clickThrough', () => {
       const inst = createInstance()
-      const value = 'https://example.com/clickthrough'
+      const value = new Click()
       inst.clickThrough = value
       expect(inst.clickThrough).to.equal(value)
     })

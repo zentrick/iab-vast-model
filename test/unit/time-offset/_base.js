@@ -1,4 +1,10 @@
-export default (createInstance) => {
+// @flow
+
+import { TimeOffset } from '../../../src/time-offset/base'
+
+type CreateInstance = () => TimeOffset
+
+export default (createInstance: CreateInstance) => {
   describe('#value', () => {
     it('sets value', () => {
       const inst = createInstance()
@@ -8,3 +14,12 @@ export default (createInstance) => {
     })
   })
 }
+
+describe('TimeOffset', () => {
+  describe('#$type', () => {
+    it('throws an Error', () => {
+      const inst = new TimeOffset()
+      expect(() => inst.$type).to.throw(Error)
+    })
+  })
+})

@@ -1,3 +1,5 @@
+// @flow
+
 import { AdPod } from '../../../src/core/ad-pod'
 import { SortedList } from '../../../src/util/sorted-list'
 

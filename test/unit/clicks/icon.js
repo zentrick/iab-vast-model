@@ -1,3 +1,5 @@
+// @flow
+
 import { IconClicks } from '../../../src/clicks/icon'
 import testBase from './_base'
 

@@ -1,3 +1,5 @@
+// @flow
+
 import { Impression } from '../../../src/core/impression'
 
 describe('Impression', () => {

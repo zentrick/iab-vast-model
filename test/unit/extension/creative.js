@@ -1,3 +1,5 @@
+// @flow
+
 import { CreativeExtension } from '../../../src/extension/creative'
 import testBase from './_base'
 

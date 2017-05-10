@@ -1,6 +1,12 @@
-import { SortedList } from '../../../src/util/sorted-list'
+// @flow
 
-export default (createInstance) => {
+import { SortedList } from '../../../src/util/sorted-list'
+import { Ad } from '../../../src/ad/base'
+import { AdSystem } from '../../../src/core/ad-system'
+
+type CreateInstance = () => Ad
+
+export default (createInstance: CreateInstance) => {
   describe('#creatives', () => {
     it('gets creatives', () => {
       const inst = createInstance()
@@ -34,7 +40,7 @@ export default (createInstance) => {
   describe('#adSystem', () => {
     it('sets adSystem', () => {
       const inst = createInstance()
-      const value = 'dummy'
+      const value = new AdSystem()
       inst.adSystem = value
       expect(inst.adSystem).to.equal(value)
     })
@@ -73,3 +79,12 @@ export default (createInstance) => {
     })
   })
 }
+
+describe('Ad', () => {
+  describe('#$type', () => {
+    it('throws an Error', () => {
+      const inst = new Ad()
+      expect(() => inst.$type).to.throw(Error)
+    })
+  })
+})

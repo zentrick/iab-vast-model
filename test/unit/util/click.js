@@ -1,3 +1,5 @@
+// @flow
+
 import { Click } from '../../../src/util/click'
 
 describe('Click', () => {

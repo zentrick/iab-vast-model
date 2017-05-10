@@ -1,3 +1,5 @@
+// @flow
+
 import { AdSystem } from '../../../src/core/ad-system'
 
 describe('AdSystem', () => {
@@ -18,7 +20,7 @@ describe('AdSystem', () => {
   describe('#version', () => {
     it('sets version', () => {
       const inst = createInstance()
-      const value = 42
+      const value = '42'
       inst.version = value
       expect(inst.version).to.equal(value)
     })

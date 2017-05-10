@@ -1,3 +1,5 @@
+// @flow
+
 import { VAST } from '../../../src/core/vast'
 
 describe('VAST', () => {
@@ -16,7 +18,7 @@ describe('VAST', () => {
   describe('#version', () => {
     it('sets version', () => {
       const inst = createInstance()
-      const value = 123
+      const value = '123'
       inst.version = value
       expect(inst.version).to.equal(value)
     })

@@ -1,4 +1,10 @@
-export default (createInstance) => {
+// @flow
+
+import { Creative } from '../../../src/creative/base'
+
+type CreateInstance = () => Creative
+
+export default (createInstance: CreateInstance) => {
   describe('#extensions', () => {
     it('gets extensions', () => {
       const inst = createInstance()
@@ -33,3 +39,12 @@ export default (createInstance) => {
     })
   })
 }
+
+describe('Creative', () => {
+  describe('#$type', () => {
+    it('throws an Error', () => {
+      const inst = new Creative()
+      expect(() => inst.$type).to.throw(Error)
+    })
+  })
+})

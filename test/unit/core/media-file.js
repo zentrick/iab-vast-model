@@ -1,3 +1,5 @@
+// @flow
+
 import { MediaFile } from '../../../src/core/media-file'
 
 describe('MediaFile', () => {

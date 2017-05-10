@@ -1,3 +1,5 @@
+// @flow
+
 import { AbsoluteTimeOffset } from '../../../src/time-offset/absolute'
 import testBase from './_base'
 

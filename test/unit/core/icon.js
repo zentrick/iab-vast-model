@@ -1,3 +1,5 @@
+// @flow
+
 import { Icon } from '../../../src/core/icon'
 import { IconClicks } from '../../../src/clicks/icon'
 import { StaticResource } from '../../../src/resource/static'

@@ -6,6 +6,7 @@ import type { Click } from '../util/click'
 /**
  * Stores the clickthrough URI and a set of click tracking pixels.
  *
+ * @abstract
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2017 Zentrick nv
  */

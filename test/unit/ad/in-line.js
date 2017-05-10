@@ -1,3 +1,5 @@
+// @flow
+
 import { InLine } from '../../../src/ad/in-line'
 import { Pricing } from '../../../src/core/pricing'
 import testBase from './_base'

@@ -1,3 +1,5 @@
+// @flow
+
 import { HTMLResource } from '../../../src/resource/html'
 import testBase from './_base'
 

@@ -1,3 +1,5 @@
+// @flow
+
 import { StaticResource } from '../../../src/resource/static'
 import testBase from './_base'
 

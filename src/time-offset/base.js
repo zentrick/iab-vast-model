@@ -5,6 +5,7 @@ import { Base } from '../base'
 /**
  * Represents a time offset.
  *
+ * @abstract
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2017 Zentrick nv
  */

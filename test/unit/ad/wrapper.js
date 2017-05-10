@@ -1,3 +1,5 @@
+// @flow
+
 import { Wrapper } from '../../../src/ad/wrapper'
 import testBase from './_base'
 

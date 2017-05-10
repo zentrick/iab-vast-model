@@ -1,6 +1,9 @@
+// @flow
+
 import { Companion } from '../../../src/core/companion'
 import { TrackingEvents } from '../../../src/tracking/events'
 import { StaticResource } from '../../../src/resource/static'
+import { Click } from '../../../src/util/click'
 
 describe('Companion', () => {
   const createInstance = () => {
@@ -115,7 +118,7 @@ describe('Companion', () => {
   describe('#adParameters', () => {
     it('sets adParameters', () => {
       const inst = createInstance()
-      const value = {}
+      const value = '{}'
       inst.adParameters = value
       expect(inst.adParameters).to.equal(value)
     })
@@ -133,7 +136,7 @@ describe('Companion', () => {
   describe('#clickThrough', () => {
     it('sets clickThrough', () => {
       const inst = createInstance()
-      const value = 'https://example.com/clickthrough'
+      const value = new Click()
       inst.clickThrough = value
       expect(inst.clickThrough).to.equal(value)
     })

@@ -1,3 +1,5 @@
+// @flow
+
 import { TrackingEvent } from '../../../src/tracking/event'
 import { RelativeTimeOffset } from '../../../src/time-offset/relative'
 

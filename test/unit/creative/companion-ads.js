@@ -1,3 +1,5 @@
+// @flow
+
 import { CompanionAds } from '../../../src/creative/companion-ads'
 import testBase from './_base'
 
@@ -19,7 +21,7 @@ describe('CompanionAds', () => {
   describe('#required', () => {
     it('sets required', () => {
       const inst = createInstance()
-      const value = true
+      const value = 'all'
       inst.required = value
       expect(inst.required).to.equal(value)
     })

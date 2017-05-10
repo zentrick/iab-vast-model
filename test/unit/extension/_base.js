@@ -1,4 +1,10 @@
-export default (createInstance) => {
+// @flow
+
+import { AbstractExtension } from '../../../src/extension/abstract'
+
+type CreateInstance = () => AbstractExtension
+
+export default (createInstance: CreateInstance) => {
   describe('#type', () => {
     it('sets type', () => {
       const inst = createInstance()
@@ -11,9 +17,18 @@ export default (createInstance) => {
   describe('#content', () => {
     it('sets content', () => {
       const inst = createInstance()
-      const value = {}
+      const value = '{}'
       inst.content = value
       expect(inst.content).to.equal(value)
     })
   })
 }
+
+describe('AbstractExtension', () => {
+  describe('#$type', () => {
+    it('throws an Error', () => {
+      const inst = new AbstractExtension()
+      expect(() => inst.$type).to.throw(Error)
+    })
+  })
+})

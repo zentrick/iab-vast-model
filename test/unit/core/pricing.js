@@ -1,3 +1,5 @@
+// @flow
+
 import { Pricing } from '../../../src/core/pricing'
 
 describe('Pricing', () => {
@@ -9,7 +11,7 @@ describe('Pricing', () => {
   describe('#model', () => {
     it('sets model', () => {
       const inst = createInstance()
-      const value = 'CPM'
+      const value = 'cpm'
       inst.model = value
       expect(inst.model).to.equal(value)
     })

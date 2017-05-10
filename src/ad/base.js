@@ -10,6 +10,7 @@ import type { Extension } from '../extension/default'
 /**
  * Base class for ads.
  *
+ * @abstract
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2017 Zentrick nv
  */

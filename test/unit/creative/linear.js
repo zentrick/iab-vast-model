@@ -1,3 +1,5 @@
+// @flow
+
 import { Linear } from '../../../src/creative/linear'
 import { VideoClicks } from '../../../src/clicks/video'
 import { TrackingEvents } from '../../../src/tracking/events'
@@ -53,7 +55,7 @@ describe('Linear', () => {
   describe('#adParameters', () => {
     it('sets adParameters', () => {
       const inst = createInstance()
-      const value = {}
+      const value = '{}'
       inst.adParameters = value
       expect(inst.adParameters).to.equal(value)
     })

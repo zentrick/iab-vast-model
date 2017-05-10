@@ -6,6 +6,7 @@ import { Base } from '../base'
  * Base class for a resource used by an {@link Icon}, a {@link Companion}, or
  * a {@link NonLinear}.
  *
+ * @abstract
  * @author Tim De Pauw <tim.depauw@zentrick.com>
  * @copyright © 2017 Zentrick nv
  */
