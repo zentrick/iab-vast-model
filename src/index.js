@@ -4,7 +4,7 @@ export { VAST } from './core/vast'
 
 export { AdSystem } from './core/ad-system'
 
-export { AdPod } from './core/ad-pod'
+export { Ad } from './ad/base'
 export { InLine } from './ad/in-line'
 export { Wrapper } from './ad/wrapper'
 
