@@ -3,6 +3,7 @@
 import { SortedList } from '../../../src/util/sorted-list'
 import { Ad } from '../../../src/ad/base'
 import { AdSystem } from '../../../src/core/ad-system'
+import { VAST } from '../../../src/core/vast'
 
 type CreateInstance = () => Ad
 
@@ -43,6 +44,15 @@ export default (createInstance: CreateInstance) => {
       const value = new AdSystem()
       inst.adSystem = value
       expect(inst.adSystem).to.equal(value)
+    })
+  })
+
+  describe('#parent', () => {
+    it('sets parent', () => {
+      const inst = createInstance()
+      const value = new VAST()
+      inst.parent = value
+      expect(inst.parent).to.equal(value)
     })
   })
 
