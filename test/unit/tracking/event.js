@@ -21,7 +21,7 @@ describe('TrackingEvent', () => {
   describe('#offset', () => {
     it('sets offset', () => {
       const inst = createInstance()
-      const value = new RelativeTimeOffset(50)
+      const value = new RelativeTimeOffset()
       inst.offset = value
       expect(inst.offset).to.equal(value)
     })

@@ -39,7 +39,7 @@
     "del": "^2.2.0",
     "dirty-chai": "^2.0.0",
     "documentation": "^4.0.0-rc.1",
-    "flow-bin": "^0.44.2",
+    "flow-bin": "^0.48.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-coveralls": "^0.1.4",
