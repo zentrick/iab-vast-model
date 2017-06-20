@@ -2,7 +2,7 @@
   "name": "iab-vast-model",
   "version": "0.4.0",
   "description": "Base classes for IAB VAST handling.",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "author": "Zentrick nv (https://www.zentrick.com/)",
   "contributors": [
@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "clean": "gulp clean",
-    "build": "gulp build",
+    "build": "gulp build && flow-copy-source src lib",
     "prepublish": "in-publish && npm run build || not-in-publish",
     "test": "gulp test",
     "flow": "flow check",
@@ -40,6 +40,7 @@
     "dirty-chai": "^2.0.0",
     "documentation": "^4.0.0-rc.1",
     "flow-bin": "^0.48.0",
+    "flow-copy-source": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-coveralls": "^0.1.4",
