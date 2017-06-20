@@ -101,9 +101,6 @@ export class VAST extends Base {
    * wrappers should be loaded.
    */
   followAdditionalWrappers (): boolean {
-    if (this._parent != null) {
-      console.log('this._parent.followAdditionalWrappers', this._parent.followAdditionalWrappers)
-    }
     // followAdditionalWrappers can be undefined so we explicitly need to check for false.
     return this._parent == null || this._parent.followAdditionalWrappers !== false
   }
