@@ -18,7 +18,9 @@
   ],
   "scripts": {
     "clean": "gulp clean",
-    "build": "gulp build && flow-copy-source src lib",
+    "build": "gulp build && npm run flow-copy-source && npm run copy-iterable-file",
+    "flow-copy-source": "flow-copy-source -i \"**util/iterable.js\" src lib",
+    "copy-iterable-file": "shx cp \"src/util/iterable.js.flow\" \"lib/util/iterable.js.flow\"",
     "prepublish": "in-publish && npm run build || not-in-publish",
     "test": "gulp test",
     "flow": "flow check",
