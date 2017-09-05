@@ -90,13 +90,6 @@ export class VAST extends Base {
   }
 
   /**
-   * The ads from both the ad pod and ad buffet of this VAST document.
-   */
-  get ads (): Ad[] {
-    return [...this._adPod.toArray(), ...this._adBuffet.toArray()]
-  }
-
-  /**
    * This will check if this VAST was wrapped and check if additional VAST
    * wrappers should be loaded.
    */
