@@ -6,7 +6,6 @@ import type { AdSystem } from '../core/ad-system'
 import type { Creative } from '../creative/base'
 import type { Impression } from '../core/impression'
 import type { Extension } from '../extension/default'
-import type { VAST } from '../core/vast'
 
 /**
  * Base class for ads.
@@ -19,7 +18,7 @@ export class Ad extends SortedListItem {
   _id: ?string
   _adSystem: AdSystem
 
-  _parent: VAST
+  // _parent: VAST
   _creatives: SortedList<Creative>
   _impressions: Impression[]
   _errors: string[]
@@ -55,13 +54,13 @@ export class Ad extends SortedListItem {
     this._adSystem = value
   }
 
-  get parent (): VAST {
-    return this._parent
-  }
-
-  set parent (value: VAST) {
-    this._parent = value
-  }
+  // get parent (): VAST {
+  //   return this._parent
+  // }
+  //
+  // set parent (value: VAST) {
+  //   this._parent = value
+  // }
 
   /**
    * The creatives for this ad.

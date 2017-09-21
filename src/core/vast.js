@@ -3,7 +3,7 @@
 import { SortedList } from '../util/sorted-list'
 import { Base } from '../base'
 import type { Ad } from '../ad/base'
-import { Wrapper } from '../ad/wrapper'
+// import { Wrapper } from '../ad/wrapper'
 
 /**
  * Represents a VAST document.
@@ -14,7 +14,7 @@ import { Wrapper } from '../ad/wrapper'
 export class VAST extends Base {
   _version: string
   _errors: string[]
-  _parent: ?Wrapper
+  // _parent: ?Wrapper
 
   _adPod: SortedList<Ad>
   _adBuffet: SortedList<Ad>
@@ -22,7 +22,7 @@ export class VAST extends Base {
   constructor () {
     super()
     this._errors = []
-    this._parent = null
+    // this._parent = null
     this._adPod = new SortedList()
     this._adBuffet = new SortedList()
   }
@@ -49,31 +49,31 @@ export class VAST extends Base {
    * This property contains a reference to the VAST wrapper,
    * if this VAST instance is wrapped by another.
    */
-  get parent (): ?Wrapper {
-    return this._parent
-  }
-
-  set parent (value: ?Wrapper) {
-    this._parent = value
-  }
+  // get parent (): ?Wrapper {
+  //   return this._parent
+  // }
+  //
+  // set parent (value: ?Wrapper) {
+  //   this._parent = value
+  // }
 
   /**
    * The depth of this VAST document within the VAST chain.
    */
-  get depth (): number {
-    let depth = 0
-    let parentWrapper = this._parent
-
-    while (parentWrapper != null) {
-      depth++
-      // We need to move up two levels:
-      // 1. From the parent Wrapper to its parent VAST
-      // 2. From the parent VAST to its maybe parent Wrapper
-      parentWrapper = parentWrapper.parent.parent
-    }
-
-    return depth
-  }
+  // get depth (): number {
+  //   let depth = 0
+  //   let parentWrapper = this._parent
+  //
+  //   while (parentWrapper != null) {
+  //     depth++
+  //     // We need to move up two levels:
+  //     // 1. From the parent Wrapper to its parent VAST
+  //     // 2. From the parent VAST to its maybe parent Wrapper
+  //     parentWrapper = parentWrapper.parent.parent
+  //   }
+  //
+  //   return depth
+  // }
 
   /**
    * The ad pod of this VAST document.
@@ -93,10 +93,10 @@ export class VAST extends Base {
    * This will check if this VAST was wrapped and check if additional VAST
    * wrappers should be loaded.
    */
-  followAdditionalWrappers (): boolean {
-    // followAdditionalWrappers can be undefined so we explicitly need to check for false.
-    return this._parent == null || this._parent.followAdditionalWrappers !== false
-  }
+  // followAdditionalWrappers (): boolean {
+  //   // followAdditionalWrappers can be undefined so we explicitly need to check for false.
+  //   return this._parent == null || this._parent.followAdditionalWrappers !== false
+  // }
 
   get $type (): 'VAST' {
     return 'VAST'
