@@ -6,6 +6,15 @@ describe('VAST', () => {
     return inst
   }
 
+  describe('#uri', () => {
+    it('sets uri', () => {
+      const inst = createInstance()
+      const value = 'http://example.com/vast.xml'
+      inst.uri = value
+      expect(inst.uri).to.equal(value)
+    })
+  })
+
   describe('#errors', () => {
     it('gets errors', () => {
       const inst = createInstance()

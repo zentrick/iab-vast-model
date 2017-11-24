@@ -15,6 +15,19 @@ export class VAST extends AdBuffet {
   }
 
   /**
+   * The URI of this document.
+   *
+   * @type string
+   */
+  get uri () {
+    return this._uri
+  }
+
+  set uri (uri) {
+    this._uri = uri
+  }
+
+  /**
    * The VAST version used by this document.
    *
    * @type {string}
