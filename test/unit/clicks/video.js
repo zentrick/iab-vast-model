@@ -1,5 +1,5 @@
 import { VideoClicks } from '../../../src/clicks/video'
-import testBase from './_base'
+import testBase from './default'
 
 describe('VideoClicks', () => {
   const createInstance = () => {

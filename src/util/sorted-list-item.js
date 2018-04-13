@@ -2,12 +2,13 @@
  * Represents an item in a {@link SortedList}. Base class for {@link Ad} and
  * {@link Creative}.
  *
- * @class SortedListItem
  * @abstract
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
  */
 export class SortedListItem {
+  constructor () {
+    this._sequence = null
+  }
+
   /**
    * The sequence number of this item within its parent.
    *

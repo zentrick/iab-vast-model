@@ -1,16 +1,16 @@
 /**
- * Stores the clickthrough URI and a set of click tracking pixels.
+ * Stores the click-through URI and a set of click-tracking pixels.
  *
- * @class AbstractClicks
- * @protected
  * @abstract
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @protected
  */
 export class AbstractClicks {
   constructor () {
+    this._clickThrough = null
     this._clickTrackings = []
   }
+
+  // Children.
 
   /**
    * The click-through configuration.
@@ -26,10 +26,9 @@ export class AbstractClicks {
   }
 
   /**
-   * The click tracking configurations.
+   * The click-tracking configurations.
    *
    * @type {Click[]}
-   * @readonly
    */
   get clickTrackings () {
     return this._clickTrackings

@@ -1,11 +1,4 @@
-import { SortedListItem } from '../../../src/util/sorted-list-item'
-
-describe('SortedListItem', () => {
-  const createInstance = () => {
-    const inst = new SortedListItem()
-    return inst
-  }
-
+export default (createInstance) => {
   describe('#sequence', () => {
     it('sets sequence', () => {
       const inst = createInstance()
@@ -14,4 +7,4 @@ describe('SortedListItem', () => {
       expect(inst.sequence).to.equal(value)
     })
   })
-})
+}

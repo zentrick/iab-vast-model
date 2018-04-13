@@ -1,5 +1,5 @@
 import { IconClicks } from '../../../src/clicks/icon'
-import testBase from './_base'
+import testBase from './default'
 
 describe('IconClicks', () => {
   const createInstance = () => {

@@ -1,17 +1,23 @@
-import { IconClicks } from '../clicks/icon'
-
 /**
  * Represents an icon used in a {@link Linear} creative.
- *
- * @class Icon
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
  */
 export class Icon {
   constructor () {
-    this._clicks = new IconClicks()
+    this._program = null
+    this._width = null
+    this._height = null
+    this._xPosition = null
+    this._yPosition = null
+    this._duration = null
+    this._offset = null
+    this._apiFramework = null
+    this._pxratio = null
+    this._resource = null
+    this._clicks = null
     this._viewTrackings = []
   }
+
+  // Attribute(s).
 
   /**
    * The industry initiative that this icon supports.
@@ -53,9 +59,10 @@ export class Icon {
   }
 
   /**
-   * The horizontal position of this icon in pixels.
+   * The horizontal position of this icon. Either a number of pixels or the
+   * string `"left"` or `"right"`.
    *
-   * @type {number}
+   * @type {number|string}
    */
   get xPosition () {
     return this._xPosition
@@ -66,9 +73,10 @@ export class Icon {
   }
 
   /**
-   * The vertical position of this icon in pixels.
+   * The vertical position of this icon. Either a number of pixels or the
+   * string `"top"` or `"bottom"`.
    *
-   * @type {number}
+   * @type {number|string}
    */
   get yPosition () {
     return this._yPosition
@@ -118,6 +126,21 @@ export class Icon {
   }
 
   /**
+   * The pixel ratio for which the icon creative is intended.
+   *
+   * @type {string}
+   */
+  get pxratio () {
+    return this._pxratio
+  }
+
+  set pxratio (value) {
+    this._pxratio = value
+  }
+
+  // Children.
+
+  /**
    * The resource associated with this icon.
    *
    * @type {Resource}
@@ -131,19 +154,22 @@ export class Icon {
   }
 
   /**
-   * The click tracking configuration for this icon.
+   * The click-tracking configuration for this icon.
    *
    * @type {IconClicks}
-   * @readonly
    */
   get clicks () {
     return this._clicks
   }
 
+  set clicks (value) {
+    this._clicks = value
+  }
+
   /**
-   * The view tracking configuration.
+   * The view-tracking URIs for this icon.
    *
-   * @type {Click[]}
+   * @type {string[]}
    */
   get viewTrackings () {
     return this._viewTrackings

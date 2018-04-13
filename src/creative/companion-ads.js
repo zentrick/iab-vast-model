@@ -1,28 +1,13 @@
-import { Creative } from './base'
-
 /**
- * Represents a creative with companion ads.
- *
- * @class CompanionAds
- * @extends Creative
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * Represents companion ads within a {@link Creative}.
  */
-export class CompanionAds extends Creative {
+export class CompanionAds {
   constructor () {
-    super()
+    this._required = null
     this._companions = []
   }
 
-  /**
-   * The companion ads within this creative.
-   *
-   * @type {Companion[]}
-   * @readonly
-   */
-  get companions () {
-    return this._companions
-  }
+  // Attribute(s).
 
   /**
    * Determines which companion creative to display when multiple companions
@@ -37,6 +22,17 @@ export class CompanionAds extends Creative {
 
   set required (value) {
     this._required = value
+  }
+
+  // Children.
+
+  /**
+   * The companion ads.
+   *
+   * @type {Companion[]}
+   */
+  get companions () {
+    return this._companions
   }
 
   get $type () {

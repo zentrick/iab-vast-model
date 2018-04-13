@@ -26,7 +26,7 @@ describe('SortedList', () => {
 
     it('gets undefined outside contents', () => {
       const list = new SortedList()
-      expect(list.get(0)).to.be.undefined
+      expect(list.get(0)).to.equal(undefined)
     })
   })
 

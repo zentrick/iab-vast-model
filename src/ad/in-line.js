@@ -1,14 +1,19 @@
-import { Ad } from './base'
+import { AbstractAd } from './abstract'
 
 /**
- * Inline ad.
- *
- * @class InLine
- * @extends Ad
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * Represents an InLine ad.
  */
-export class InLine extends Ad {
+export class InLine extends AbstractAd {
+  constructor () {
+    super()
+    this._adTitle = null
+    this._categories = []
+    this._description = null
+    this._surveys = []
+  }
+
+  // Children.
+
   /**
    * The title for this ad.
    *
@@ -20,6 +25,15 @@ export class InLine extends Ad {
 
   set adTitle (value) {
     this._adTitle = value
+  }
+
+  /**
+   * The categories for this ad.
+   *
+   * @type {Category[]}
+   */
+  get categories () {
+    return this._categories
   }
 
   /**
@@ -51,27 +65,10 @@ export class InLine extends Ad {
   /**
    * The survey URI for this ad.
    *
-   * @type {string}
+   * @type {Survey[]}
    */
-  get survey () {
-    return this._survey
-  }
-
-  set survey (value) {
-    this._survey = value
-  }
-
-  /**
-   * The pricing configuration for this ad.
-   *
-   * @type {Pricing}
-   */
-  get pricing () {
-    return this._pricing
-  }
-
-  set pricing (value) {
-    this._pricing = value
+  get surveys () {
+    return this._surveys
   }
 
   get $type () {

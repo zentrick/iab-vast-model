@@ -6,15 +6,6 @@ describe('MediaFile', () => {
     return inst
   }
 
-  describe('#id', () => {
-    it('sets id', () => {
-      const inst = createInstance()
-      const value = 'dummy'
-      inst.id = value
-      expect(inst.id).to.equal(value)
-    })
-  })
-
   describe('#delivery', () => {
     it('sets delivery', () => {
       const inst = createInstance()
@@ -30,6 +21,42 @@ describe('MediaFile', () => {
       const value = 'video/mp4'
       inst.type = value
       expect(inst.type).to.equal(value)
+    })
+  })
+
+  describe('#width', () => {
+    it('sets width', () => {
+      const inst = createInstance()
+      const value = 960
+      inst.width = value
+      expect(inst.width).to.equal(value)
+    })
+  })
+
+  describe('#height', () => {
+    it('sets height', () => {
+      const inst = createInstance()
+      const value = 540
+      inst.height = value
+      expect(inst.height).to.equal(value)
+    })
+  })
+
+  describe('#codec', () => {
+    it('sets codec', () => {
+      const inst = createInstance()
+      const value = 'avc1.77.12'
+      inst.codec = value
+      expect(inst.codec).to.equal(value)
+    })
+  })
+
+  describe('#id', () => {
+    it('sets id', () => {
+      const inst = createInstance()
+      const value = 'dummy'
+      inst.id = value
+      expect(inst.id).to.equal(value)
     })
   })
 
@@ -60,24 +87,6 @@ describe('MediaFile', () => {
     })
   })
 
-  describe('#width', () => {
-    it('sets width', () => {
-      const inst = createInstance()
-      const value = 960
-      inst.width = value
-      expect(inst.width).to.equal(value)
-    })
-  })
-
-  describe('#height', () => {
-    it('sets height', () => {
-      const inst = createInstance()
-      const value = 540
-      inst.height = value
-      expect(inst.height).to.equal(value)
-    })
-  })
-
   describe('#scalable', () => {
     it('sets scalable', () => {
       const inst = createInstance()
@@ -93,15 +102,6 @@ describe('MediaFile', () => {
       const value = true
       inst.maintainAspectRatio = value
       expect(inst.maintainAspectRatio).to.equal(value)
-    })
-  })
-
-  describe('#codec', () => {
-    it('sets codec', () => {
-      const inst = createInstance()
-      const value = 'avc1.77.12'
-      inst.codec = value
-      expect(inst.codec).to.equal(value)
     })
   })
 

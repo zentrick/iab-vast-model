@@ -1,26 +1,18 @@
-import { Ad } from './base'
+import { AbstractAd } from './abstract'
 
 /**
- * Wrapper ad.
- *
- * @class Wrapper
- * @extends Ad
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * Represents a wrapper ad.
  */
-export class Wrapper extends Ad {
-  /**
-   * The URI of the tag that this ad wraps.
-   *
-   * @type {string}
-   */
-  get vastAdTagURI () {
-    return this._vastAdTagURI
+export class Wrapper extends AbstractAd {
+  constructor () {
+    super()
+    this._followAdditionalWrappers = true
+    this._allowMultipleAds = false
+    this._fallbackOnNoAd = false
+    this._vastAdTagURI = null
   }
 
-  set vastAdTagURI (value) {
-    this._vastAdTagURI = value
-  }
+  // Attribute(s).
 
   /**
    * Whether subsequent wrappers after a requested VAST response is allowed.
@@ -60,6 +52,22 @@ export class Wrapper extends Ad {
 
   set fallbackOnNoAd (value) {
     this._fallbackOnNoAd = value
+  }
+
+  // Children.
+
+  /**
+   * The URI to a VAST response that may be another VAST {@link Wrapper} or a
+   * VAST {@link InLine} ad.
+   *
+   * @type {string}
+   */
+  get vastAdTagURI () {
+    return this._vastAdTagURI
+  }
+
+  set vastAdTagURI (value) {
+    this._vastAdTagURI = value
   }
 
   get $type () {

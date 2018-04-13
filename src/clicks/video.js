@@ -1,18 +1,15 @@
 import { AbstractClicks } from './abstract'
 
 /**
- * Represents the click tracking configuration for a {@link Linear} creative.
- *
- * @class VideoClicks
- * @extends AbstractClicks
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * Represents the click-tracking configuration for a {@link Linear} creative.
  */
 export class VideoClicks extends AbstractClicks {
   constructor () {
     super()
     this._customClicks = []
   }
+
+  // Children.
 
   /**
    * The custom-click configurations.

@@ -1,23 +1,24 @@
 /**
  * Represents a media file used in a {@link Linear} creative.
- *
- * @class MediaFile
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
  */
 export class MediaFile {
-  /**
-   * The ID of this media file.
-   *
-   * @type {string}
-   */
-  get id () {
-    return this._id
+  constructor () {
+    this._delivery = null
+    this._type = null
+    this._width = null
+    this._height = null
+    this._codec = null
+    this._id = null
+    this._bitrate = null
+    this._minBitrate = null
+    this._maxBitrate = null
+    this._scalable = false
+    this._maintainAspectRatio = false
+    this._apiFramework = null
+    this._uri = null
   }
 
-  set id (value) {
-    this._id = value
-  }
+  // Attribute(s).
 
   /**
    * The delivery method for this media file.
@@ -43,6 +44,58 @@ export class MediaFile {
 
   set type (value) {
     this._type = value
+  }
+
+  /**
+   * The width of this media file in pixels.
+   *
+   * @type {number}
+   */
+  get width () {
+    return this._width
+  }
+
+  set width (value) {
+    this._width = value
+  }
+
+  /**
+   * The height of this media file in pixels.
+   *
+   * @type {number}
+   */
+  get height () {
+    return this._height
+  }
+
+  set height (value) {
+    this._height = value
+  }
+
+  /**
+   * The codec of this media file in RFC 4281 format.
+   *
+   * @type {string}
+   */
+  get codec () {
+    return this._codec
+  }
+
+  set codec (value) {
+    this._codec = value
+  }
+
+  /**
+   * The ID of this media file.
+   *
+   * @type {string}
+   */
+  get id () {
+    return this._id
+  }
+
+  set id (value) {
+    this._id = value
   }
 
   /**
@@ -85,32 +138,6 @@ export class MediaFile {
   }
 
   /**
-   * The width of this media file in pixels.
-   *
-   * @type {number}
-   */
-  get width () {
-    return this._width
-  }
-
-  set width (value) {
-    this._width = value
-  }
-
-  /**
-   * The height of this media file in pixels.
-   *
-   * @type {number}
-   */
-  get height () {
-    return this._height
-  }
-
-  set height (value) {
-    this._height = value
-  }
-
-  /**
    * Whether this media file is meant to scale to larger dimensions.
    *
    * @type {boolean}
@@ -137,19 +164,6 @@ export class MediaFile {
   }
 
   /**
-   * The codec of this media file in RFC 4281 format.
-   *
-   * @type {string}
-   */
-  get codec () {
-    return this._codec
-  }
-
-  set codec (value) {
-    this._codec = value
-  }
-
-  /**
    * The API framework used by this media file.
    *
    * @type {string}
@@ -161,6 +175,8 @@ export class MediaFile {
   set apiFramework (value) {
     this._apiFramework = value
   }
+
+  // Content.
 
   /**
    * The URI to this media file.

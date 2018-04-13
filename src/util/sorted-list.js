@@ -1,10 +1,6 @@
 /**
  * Represents a list of {@link SortedListItem}s, ordered by
  * {@link SortedListItem#sequence}.
- *
- * @class SortedList
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
  */
 export class SortedList {
   constructor () {
@@ -15,7 +11,6 @@ export class SortedList {
    * The length of this list.
    *
    * @type {number}
-   * @readonly
    */
   get length () {
     return this._contents.length

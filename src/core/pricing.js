@@ -1,11 +1,15 @@
 /**
- * Pricing information for real-time bidding.
- *
- * @class Pricing
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * Represents pricing information for real-time bidding.
  */
 export class Pricing {
+  constructor () {
+    this._model = null
+    this._currency = null
+    this._value = null
+  }
+
+  // Attribute(s).
+
   /**
    * The pricing model. Either `"CPM"`, `"CPC"`, `"CPE"`, or `"CPV"`.
    *
@@ -20,7 +24,8 @@ export class Pricing {
   }
 
   /**
-   * The pricing currency.
+   * The three-letter ISO-4217 currency symbol that identifies the currency of
+   * the value provided (e.g. `"USD"`, `"GBP"`, etc.).
    *
    * @type {string}
    */
@@ -32,8 +37,10 @@ export class Pricing {
     this._currency = value
   }
 
+  // Content.
+
   /**
-   * The price.
+   * The price that can be used in real-time bidding systems.
    *
    * @type {number}
    */

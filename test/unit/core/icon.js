@@ -1,26 +1,12 @@
 import { Icon } from '../../../src/core/icon'
 import { IconClicks } from '../../../src/clicks/icon'
-import { StaticResource } from '../../../src/resource/static'
+import { StaticResource } from '../../../src/resource/creative/static'
 
 describe('Icon', () => {
   const createInstance = () => {
     const inst = new Icon()
     return inst
   }
-
-  describe('#clicks', () => {
-    it('gets clicks', () => {
-      const inst = createInstance()
-      expect(inst.clicks).to.be.an.instanceof(IconClicks)
-    })
-  })
-
-  describe('#viewTrackings', () => {
-    it('gets viewTrackings', () => {
-      const inst = createInstance()
-      expect(inst.viewTrackings).to.be.an.instanceof(Array)
-    })
-  })
 
   describe('#program', () => {
     it('sets program', () => {
@@ -94,12 +80,37 @@ describe('Icon', () => {
     })
   })
 
+  describe('#pxratio', () => {
+    it('sets pxratio', () => {
+      const inst = createInstance()
+      const value = 'dummy'
+      inst.pxratio = value
+      expect(inst.pxratio).to.equal(value)
+    })
+  })
+
   describe('#resource', () => {
     it('sets resource', () => {
       const inst = createInstance()
       const value = new StaticResource()
       inst.resource = value
       expect(inst.resource).to.equal(value)
+    })
+  })
+
+  describe('#clicks', () => {
+    it('sets clicks', () => {
+      const inst = createInstance()
+      const value = new IconClicks()
+      inst.clicks = value
+      expect(inst.clicks).to.equal(value)
+    })
+  })
+
+  describe('#viewTrackings', () => {
+    it('gets viewTrackings', () => {
+      const inst = createInstance()
+      expect(inst.viewTrackings).to.be.an.instanceof(Array)
     })
   })
 

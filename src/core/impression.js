@@ -1,13 +1,16 @@
 /**
- * Represents a tracking pixel configuration for an impression.
- *
- * @class Impression
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * Represents an impression.
  */
 export class Impression {
+  constructor () {
+    this._id = null
+    this._uri = null
+  }
+
+  // Attribute(s).
+
   /**
-   * The ID of this impression pixel.
+   * The ad server id for the impression.
    *
    * @type {string}
    */
@@ -19,8 +22,10 @@ export class Impression {
     this._id = value
   }
 
+  // Content.
+
   /**
-   * The URI of this impression pixel.
+   * The URI of this impression resource.
    *
    * @type {string}
    */

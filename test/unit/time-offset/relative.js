@@ -1,5 +1,5 @@
 import { RelativeTimeOffset } from '../../../src/time-offset/relative'
-import testBase from './_base'
+import testBase from './_abstract'
 
 describe('RelativeTimeOffset', () => {
   const createInstance = () => {

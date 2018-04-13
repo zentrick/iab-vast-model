@@ -1,5 +1,5 @@
 import { CreativeExtension } from '../../../src/extension/creative'
-import testBase from './_base'
+import testBase from './_abstract'
 
 describe('CreativeExtension', () => {
   const createInstance = () => {

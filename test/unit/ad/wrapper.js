@@ -1,5 +1,5 @@
 import { Wrapper } from '../../../src/ad/wrapper'
-import testBase from './_base'
+import testBase from './_abstract'
 
 describe('Wrapper', () => {
   const createInstance = () => {
@@ -9,25 +9,24 @@ describe('Wrapper', () => {
 
   testBase(createInstance)
 
-  describe('#vastAdTagURI', () => {
-    it('sets vastAdTagURI', () => {
-      const inst = createInstance()
-      const value = 'https://example.com/tag'
-      inst.vastAdTagURI = value
-      expect(inst.vastAdTagURI).to.equal(value)
-    })
-  })
-
   describe('#followAdditionalWrappers', () => {
+    it('equals to true by default', () => {
+      const inst = createInstance()
+      expect(inst.followAdditionalWrappers).to.equal(true)
+    })
     it('sets followAdditionalWrappers', () => {
       const inst = createInstance()
-      const value = true
+      const value = false
       inst.followAdditionalWrappers = value
       expect(inst.followAdditionalWrappers).to.equal(value)
     })
   })
 
   describe('#allowMultipleAds', () => {
+    it('equals to false by default', () => {
+      const inst = createInstance()
+      expect(inst.allowMultipleAds).to.equal(false)
+    })
     it('sets allowMultipleAds', () => {
       const inst = createInstance()
       const value = true
@@ -42,6 +41,15 @@ describe('Wrapper', () => {
       const value = true
       inst.fallbackOnNoAd = value
       expect(inst.fallbackOnNoAd).to.equal(value)
+    })
+  })
+
+  describe('#vastAdTagURI', () => {
+    it('sets vastAdTagURI', () => {
+      const inst = createInstance()
+      const value = 'https://example.com/tag'
+      inst.vastAdTagURI = value
+      expect(inst.vastAdTagURI).to.equal(value)
     })
   })
 

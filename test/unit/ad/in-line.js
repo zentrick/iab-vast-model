@@ -1,6 +1,5 @@
 import { InLine } from '../../../src/ad/in-line'
-import { Pricing } from '../../../src/core/pricing'
-import testBase from './_base'
+import testBase from './_abstract'
 
 describe('InLine', () => {
   const createInstance = () => {
@@ -16,6 +15,13 @@ describe('InLine', () => {
       const value = 'dummy'
       inst.adTitle = value
       expect(inst.adTitle).to.equal(value)
+    })
+  })
+
+  describe('#categories', () => {
+    it('gets categories', () => {
+      const inst = createInstance()
+      expect(inst.categories).to.be.an.instanceof(Array)
     })
   })
 
@@ -37,21 +43,10 @@ describe('InLine', () => {
     })
   })
 
-  describe('#survey', () => {
-    it('sets survey', () => {
+  describe('#surveys', () => {
+    it('sets surveys', () => {
       const inst = createInstance()
-      const value = 'https://example.com/survey'
-      inst.survey = value
-      expect(inst.survey).to.equal(value)
-    })
-  })
-
-  describe('#pricing', () => {
-    it('sets pricing', () => {
-      const inst = createInstance()
-      const value = new Pricing()
-      inst.pricing = value
-      expect(inst.pricing).to.equal(value)
+      expect(inst.surveys).to.be.an.instanceof(Array)
     })
   })
 

@@ -1,15 +1,19 @@
 /**
  * Base class for VAST {@link Extension} as well as {@link CreativeExtension}.
  *
- * @class AbstractExtension
- * @protected
  * @abstract
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * @protected
  */
 export class AbstractExtension {
+  constructor () {
+    this._type = null
+    this._xmlElement = null
+  }
+
+  // Attribute(s).
+
   /**
-   * The type of this extension.
+   * The MIME type of any code that might be included in the extension.
    *
    * @type {string}
    */
@@ -21,16 +25,18 @@ export class AbstractExtension {
     this._type = value
   }
 
+  // Content.
+
   /**
-   * The content of this extension.
+   * The `<Extension>` XML DOM element.
    *
    * @type {Element}
    */
-  get content () {
-    return this._content
+  get xmlElement () {
+    return this._xmlElement
   }
 
-  set content (value) {
-    this._content = value
+  set xmlElement (value) {
+    this._xmlElement = value
   }
 }

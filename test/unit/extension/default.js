@@ -1,5 +1,5 @@
 import { Extension } from '../../../src/extension/default'
-import testBase from './_base'
+import testBase from './_abstract'
 
 describe('Extension', () => {
   const createInstance = () => {

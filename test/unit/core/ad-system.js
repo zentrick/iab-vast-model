@@ -6,21 +6,21 @@ describe('AdSystem', () => {
     return inst
   }
 
-  describe('#name', () => {
-    it('sets name', () => {
-      const inst = createInstance()
-      const value = 'dummy'
-      inst.name = value
-      expect(inst.name).to.equal(value)
-    })
-  })
-
   describe('#version', () => {
     it('sets version', () => {
       const inst = createInstance()
       const value = 42
       inst.version = value
       expect(inst.version).to.equal(value)
+    })
+  })
+
+  describe('#name', () => {
+    it('sets name', () => {
+      const inst = createInstance()
+      const value = 'dummy'
+      inst.name = value
+      expect(inst.name).to.equal(value)
     })
   })
 

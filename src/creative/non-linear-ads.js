@@ -1,39 +1,34 @@
-import { Creative } from './base'
-import { TrackingEvents } from '../tracking/events'
-
 /**
- * Represents a creative with non-linear ads.
- *
- * @class NonLinearAds
- * @extends Creative
- * @author Tim De Pauw <tim.depauw@zentrick.com>
- * @copyright © 2016 Zentrick nv
+ * Represents non-linear ads within a {@link Creative}.
  */
-export class NonLinearAds extends Creative {
+export class NonLinearAds {
   constructor () {
-    super()
     this._nonLinears = []
-    this._trackingEvents = new TrackingEvents()
+    this._trackingEvents = null
   }
 
+  // Children.
+
   /**
-   * The non-linear ads within this creative.
+   * The non-linear ads.
    *
    * @type {NonLinear[]}
-   * @readonly
    */
   get nonLinears () {
     return this._nonLinears
   }
 
   /**
-   * The event tracking configuration for this non-linear creative.
+   * The event-tracking configuration.
    *
    * @type {TrackingEvents}
-   * @readonly
    */
   get trackingEvents () {
     return this._trackingEvents
+  }
+
+  set trackingEvents (value) {
+    this._trackingEvents = value
   }
 
   get $type () {

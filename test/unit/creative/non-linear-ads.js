@@ -1,14 +1,11 @@
 import { NonLinearAds } from '../../../src/creative/non-linear-ads'
-import { TrackingEvents } from '../../../src/tracking/events'
-import testBase from './_base'
+import { TrackingEvents } from '../../../src/core/tracking-events'
 
 describe('NonLinearAds', () => {
   const createInstance = () => {
     const inst = new NonLinearAds()
     return inst
   }
-
-  testBase(createInstance)
 
   describe('#nonLinears', () => {
     it('gets nonLinears', () => {
@@ -18,9 +15,11 @@ describe('NonLinearAds', () => {
   })
 
   describe('#trackingEvents', () => {
-    it('gets trackingEvents', () => {
+    it('sets trackingEvents', () => {
       const inst = createInstance()
-      expect(inst.trackingEvents).to.be.an.instanceof(TrackingEvents)
+      const value = new TrackingEvents()
+      inst.trackingEvents = value
+      expect(inst.trackingEvents).to.equal(value)
     })
   })
 
