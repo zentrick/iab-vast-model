@@ -38,7 +38,7 @@
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "cross-env": "^5.1.3",
-    "documentation": "^6.1.0",
+    "documentation": "^7.1.0",
     "in-publish": "^2.0.0",
     "mocha": "^5.0.1",
     "mocha-junit-reporter": "^1.17.0",
