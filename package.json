@@ -31,7 +31,7 @@
   "bugs": "https://github.com/zentrick/iab-vast-model/issues",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-plugin-istanbul": "^4.1.5",
+    "babel-plugin-istanbul": "^5.2.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
