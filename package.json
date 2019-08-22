@@ -44,7 +44,7 @@
     "mocha-junit-reporter": "^1.17.0",
     "nyc": "^11.4.1",
     "rimraf": "^2.6.2",
-    "standard": "^11.0.0"
+    "standard": "^14.0.2"
   },
   "standard": {
     "globals": [
