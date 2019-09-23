@@ -1,6 +1,6 @@
 {
   "name": "iab-vast-model",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Base classes for IAB VAST handling.",
   "main": "lib/index.js",
   "module": "src/index.js",
