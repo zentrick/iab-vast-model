@@ -68,17 +68,22 @@ specifications to classes one-to-one. That has a few implications:
 -   [AdBuffet](#adbuffet)
     -   [adPod](#adpod)
     -   [ads](#ads)
--   [SortedList](#sortedlist)
+-   [TrackingEvents](#trackingevents)
     -   [add](#add)
-    -   [clear](#clear)
+        -   [Parameters](#parameters)
     -   [get](#get)
+        -   [Parameters](#parameters-1)
+    -   [types](#types)
+-   [SortedList](#sortedlist)
+    -   [add](#add-1)
+        -   [Parameters](#parameters-2)
+    -   [clear](#clear)
+    -   [get](#get-1)
+        -   [Parameters](#parameters-3)
     -   [length](#length)
     -   [remove](#remove)
+        -   [Parameters](#parameters-4)
     -   [toArray](#toarray)
--   [TrackingEvents](#trackingevents)
-    -   [add](#add-1)
-    -   [get](#get-1)
-    -   [types](#types)
 -   [Creative](#creative)
     -   [adID](#adid)
     -   [apiFramework](#apiframework-1)
@@ -158,8 +163,12 @@ specifications to classes one-to-one. That has a few implications:
     -   [width](#width-2)
     -   [xPosition](#xposition)
     -   [yPosition](#yposition)
--   [MediaFile](#mediafile)
+-   [InteractiveCreativeFile](#interactivecreativefile)
     -   [apiFramework](#apiframework-5)
+    -   [type](#type-1)
+    -   [uri](#uri-1)
+-   [MediaFile](#mediafile)
+    -   [apiFramework](#apiframework-6)
     -   [bitrate](#bitrate)
     -   [codec](#codec)
     -   [delivery](#delivery)
@@ -169,13 +178,9 @@ specifications to classes one-to-one. That has a few implications:
     -   [maxBitrate](#maxbitrate)
     -   [minBitrate](#minbitrate)
     -   [scalable](#scalable-1)
-    -   [type](#type-1)
-    -   [uri](#uri-1)
-    -   [width](#width-3)
--   [InteractiveCreativeFile](#interactivecreativefile)
-    -   [apiFramework](#apiframework-6)
     -   [type](#type-2)
     -   [uri](#uri-2)
+    -   [width](#width-3)
 -   [Category](#category)
     -   [authority](#authority)
     -   [code](#code)
@@ -211,14 +216,14 @@ specifications to classes one-to-one. That has a few implications:
     -   [viewableImpression](#viewableimpression-1)
 -   [HTMLResource](#htmlresource)
 -   [IconClicks](#iconclicks)
--   [ViewableImpression](#viewableimpression-2)
+-   [Impression](#impression)
     -   [id](#id-6)
+    -   [uri](#uri-5)
+-   [ViewableImpression](#viewableimpression-2)
+    -   [id](#id-7)
     -   [notViewables](#notviewables)
     -   [viewables](#viewables)
     -   [viewUndetermineds](#viewundetermineds)
--   [Impression](#impression)
-    -   [id](#id-7)
-    -   [uri](#uri-5)
 -   [IFrameResource](#iframeresource)
 -   [JavaScriptResource](#javascriptresource)
 -   [NonLinearAds](#nonlinearads-1)
@@ -388,6 +393,36 @@ The ads in this ad buffet.
 
 Type: [SortedList](#sortedlist)
 
+### TrackingEvents
+
+Configures tracking events. Maps VAST event types to arrays of
+[TrackingEvent](#trackingevent) instances.
+
+#### add
+
+Adds a tracking-event configuration for the given event type.
+
+##### Parameters
+
+-   `event` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the event type.
+-   `config` **[TrackingEvent](#trackingevent)** the tracking event configuration.
+
+#### get
+
+Gets the tracking-event configurations for the given event type.
+
+##### Parameters
+
+-   `event` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the event type.
+
+Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[TrackingEvent](#trackingevent)>** the tracking event configurations.
+
+#### types
+
+The event types tracked by this configuration.
+
+Type: [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>
+
 ### SortedList
 
 Represents a list of [SortedListItem](#sortedlistitem)s, ordered by
@@ -397,7 +432,7 @@ Represents a list of [SortedListItem](#sortedlistitem)s, ordered by
 
 Adds the given item to this list.
 
-**Parameters**
+##### Parameters
 
 -   `item` **[SortedListItem](#sortedlistitem)** the item.
 
@@ -409,7 +444,7 @@ Empties this list.
 
 Gets the item at the given index.
 
-**Parameters**
+##### Parameters
 
 -   `index` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** the index.
 
@@ -425,7 +460,7 @@ Type: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 
 Removes the given item from this list.
 
-**Parameters**
+##### Parameters
 
 -   `item` **[SortedListItem](#sortedlistitem)** the item.
 
@@ -434,36 +469,6 @@ Removes the given item from this list.
 Creates an array representation of this list.
 
 Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[SortedListItem](#sortedlistitem)>** the item array.
-
-### TrackingEvents
-
-Configures tracking events. Maps VAST event types to arrays of
-[TrackingEvent](#trackingevent) instances.
-
-#### add
-
-Adds a tracking-event configuration for the given event type.
-
-**Parameters**
-
--   `event` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the event type.
--   `config` **[TrackingEvent](#trackingevent)** the tracking event configuration.
-
-#### get
-
-Gets the tracking-event configurations for the given event type.
-
-**Parameters**
-
--   `event` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** the event type.
-
-Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[TrackingEvent](#trackingevent)>** the tracking event configurations.
-
-#### types
-
-The event types tracked by this configuration.
-
-Type: [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>
 
 ### Creative
 
@@ -952,6 +957,28 @@ string `"top"` or `"bottom"`.
 
 Type: ([number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number) \| [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String))
 
+### InteractiveCreativeFile
+
+Represents an interactive creative file used in a [Linear](#linear) creative.
+
+#### apiFramework
+
+The API framework used by this interactive creative file.
+
+Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+#### type
+
+The MIME type of this interactive creative file.
+
+Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+#### uri
+
+The URI to this interactive creative file.
+
+Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
+
 ### MediaFile
 
 Represents a media file used in a [Linear](#linear) creative.
@@ -1033,28 +1060,6 @@ Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Globa
 The width of this media file in pixels.
 
 Type: [number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)
-
-### InteractiveCreativeFile
-
-Represents an interactive creative file used in a [Linear](#linear) creative.
-
-#### apiFramework
-
-The API framework used by this interactive creative file.
-
-Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
-
-#### type
-
-The MIME type of this interactive creative file.
-
-Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
-
-#### uri
-
-The URI to this interactive creative file.
-
-Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 ### Category
 
@@ -1259,6 +1264,22 @@ Describes an HTML snippet.
 
 Represents the click tracking configuration for an [Icon](#icon).
 
+### Impression
+
+Represents an impression.
+
+#### id
+
+The ad server id for the impression.
+
+Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+#### uri
+
+The URI of this impression resource.
+
+Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
+
 ### ViewableImpression
 
 Represents the impression-tracking URIs for both an [InLine](#inline) and any
@@ -1293,22 +1314,6 @@ video player should request if the player cannot determine whether criteria
 is met for a viewable impression.
 
 Type: [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>
-
-### Impression
-
-Represents an impression.
-
-#### id
-
-The ad server id for the impression.
-
-Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
-
-#### uri
-
-The URI of this impression resource.
-
-Type: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 ### IFrameResource
 
