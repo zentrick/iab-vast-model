@@ -5,6 +5,7 @@ export class CompanionAds {
   constructor () {
     this._required = null
     this._companions = []
+    this._xmlElement = null
   }
 
   // Attribute(s).
@@ -33,6 +34,21 @@ export class CompanionAds {
    */
   get companions () {
     return this._companions
+  }
+
+  // Content.
+
+  /**
+   * The `<CompanionAds>` XML DOM element.
+   *
+   * @type {Element}
+   */
+  get xmlElement () {
+    return this._xmlElement
+  }
+
+  set xmlElement (value) {
+    this._xmlElement = value
   }
 
   get $type () {
