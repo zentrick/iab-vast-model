@@ -22,6 +22,15 @@ describe('CompanionAds', () => {
     })
   })
 
+  describe('#xmlElement', () => {
+    it('sets xmlElement', () => {
+      const inst = createInstance()
+      const value = {}
+      inst.xmlElement = value
+      expect(inst.xmlElement).to.equal(value)
+    })
+  })
+
   describe('#$type', () => {
     it('is CompanionAds', () => {
       const inst = createInstance()
